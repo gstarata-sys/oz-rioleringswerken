@@ -4,6 +4,38 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 
+  /* ===== GSAP HERO ANIMATIE ===== */
+  if (typeof gsap !== 'undefined' && document.querySelector('.hero__band')) {
+    gsap.registerPlugin(ScrollTrigger);
+
+    // Laadanimatie (timeline)
+    const tl = gsap.timeline({ defaults: { ease: 'power3.out' } });
+    tl.fromTo('.hero__band',     { x: '-70vw' },                          { x: 0, duration: 0.9 })
+      .fromTo('.hero__badge',    { y: 18, opacity: 0 },                   { y: 0, opacity: 1, duration: 0.5 }, '-=0.4')
+      .fromTo('.hero__title',    { y: 40, opacity: 0 },                   { y: 0, opacity: 1, duration: 0.7 }, '-=0.3')
+      .fromTo('.hero__subtitle', { y: 30, opacity: 0 },                   { y: 0, opacity: 1, duration: 0.6 }, '-=0.4')
+      .fromTo('.hero__ctas',     { y: 20, opacity: 0 },                   { y: 0, opacity: 1, duration: 0.5 }, '-=0.3')
+      .fromTo('.hero__card',     { x: '18vw', scale: 0.96, opacity: 0 }, { x: 0, scale: 1, opacity: 1, duration: 0.9 }, '-=0.6');
+
+    // Scroll-exit animatie (pinned hero)
+    const exitTl = gsap.timeline({
+      scrollTrigger: {
+        trigger: '.hero',
+        start: 'top top',
+        end: '+=130%',
+        pin: true,
+        scrub: 0.6,
+      }
+    });
+    exitTl
+      .to('.hero__band',    { x: '-18vw', opacity: 0, ease: 'power2.in' }, 0.7)
+      .to('.hero__title',   { y: '-10vh', opacity: 0, ease: 'power2.in' }, 0.7)
+      .to('.hero__subtitle',{ y: '-8vh',  opacity: 0, ease: 'power2.in' }, 0.7)
+      .to('.hero__card',    { x: '12vw', scale: 0.98, opacity: 0, ease: 'power2.in' }, 0.7)
+      .to('.hero__ctas',    { y: '6vh',  opacity: 0, ease: 'power2.in' }, 0.7)
+      .to('.hero__badge',   { y: '4vh',  opacity: 0, ease: 'power2.in' }, 0.7);
+  }
+
   /* ===== NAVBAR: sticky + hamburger ===== */
   const navbar    = document.getElementById('navbar');
   const navToggle = document.getElementById('navToggle');
