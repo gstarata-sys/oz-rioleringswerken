@@ -8,7 +8,7 @@
   <meta name="keywords" content="rioleringswerken Gent, septische put Oost-Vlaanderen, grondwerken Gent, leidingen aanleggen, vloerverwarming Gent, tegelwerken, riool herstellen" />
   <meta name="robots" content="index, follow" />
 
-  <!-- Open Graph (Facebook, WhatsApp preview) -->
+  <!-- Open Graph -->
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Oz Rioleringswerken | Rioleringen &amp; Grondwerken Gent" />
   <meta property="og:description" content="Uw specialist voor riolering, septische putten en grondwerken in Gent en Oost-Vlaanderen. Vraag gratis een offerte aan." />
@@ -24,7 +24,6 @@
     "description": "Specialist in rioleringswerken, septische putten, grondwerken, leidingen, tegelwerken en ondergrondse verwarming in Gent en Oost-Vlaanderen.",
     "image": "images/logo.jpg",
     "telephone": "+32477531777",
-    "email": "EMAIL_ADRES",
     "areaServed": ["Gent", "Oost-Vlaanderen"],
     "address": {
       "@type": "PostalAddress",
@@ -34,9 +33,9 @@
     },
     "openingHoursSpecification": {
       "@type": "OpeningHoursSpecification",
-      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
-      "opens": "08:00",
-      "closes": "18:00"
+      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
+      "opens": "07:00",
+      "closes": "19:00"
     },
     "serviceArea": {
       "@type": "GeoCircle",
@@ -64,6 +63,46 @@
   }
   </script>
 
+  <!-- Schema.org FAQ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Hoelang duurt een rioleringswerk?",
+        "acceptedAnswer": { "@type": "Answer", "text": "De duur hangt af van de omvang. Een standaard rioolaansluiting duurt 1 à 2 dagen. Grotere projecten kunnen tot een week duren. Na een gratis inspectie geven wij u een concrete timing." }
+      },
+      {
+        "@type": "Question",
+        "name": "Wat kost een septische put plaatsen?",
+        "acceptedAnswer": { "@type": "Answer", "text": "De prijs voor een septische put varieert naargelang het type en de capaciteit. Een standaard installatie start vanaf €2.500. Voor een exacte offerte op maat, contacteer ons vrijblijvend." }
+      },
+      {
+        "@type": "Question",
+        "name": "Werken jullie ook in het weekend?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Ja, wij zijn bereikbaar op zaterdag voor dringende interventies. Voor geplande werken kunnen wij ook zaterdagochtend inplannen. Neem contact op om een afspraak te maken." }
+      },
+      {
+        "@type": "Question",
+        "name": "Hoe snel kunnen jullie ter plaatse bij een dringende herstelling?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Bij dringende problemen zoals een verstopt of gebarsten riool streven wij ernaar om binnen de 24 uur ter plaatse te zijn. Bel ons direct op +32 477 53 17 77." }
+      },
+      {
+        "@type": "Question",
+        "name": "Welke garantie geven jullie op uitgevoerde werken?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Wij bieden 2 jaar garantie op al onze uitgevoerde werken. Wij werken uitsluitend met kwalitatieve materialen en conform de geldende normen." }
+      },
+      {
+        "@type": "Question",
+        "name": "In welke regio zijn jullie actief?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Wij zijn actief in Gent en de ruimere regio Oost-Vlaanderen: Gent, Merelbeke, Melle, Wetteren, Aalst, Dendermonde, Sint-Niklaas en omstreken." }
+      }
+    ]
+  }
+  </script>
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
@@ -72,11 +111,25 @@
 </head>
 <body>
 
+  <!-- ===== URGENTIE BANNER ===== -->
+  <div class="urgency-banner" id="urgencyBanner">
+    <div class="container urgency-banner__inner">
+      <p>
+        <i class="fas fa-tools"></i>
+        <strong>Dringende herstelling?</strong> Verstopt riool of gebarsten leiding?
+        <a href="tel:+32477531777">Bel nu: +32 477 53 17 77</a>
+      </p>
+      <button class="urgency-banner__close" id="urgencyClose" aria-label="Banner sluiten">
+        <i class="fas fa-times"></i>
+      </button>
+    </div>
+  </div>
+
   <!-- ===== NAVIGATIE ===== -->
   <header class="navbar" id="navbar">
     <div class="container navbar__inner">
       <a href="#" class="navbar__logo">
-        <img src="images/logo.jpg" alt="Oz Rioleringswerken logo" height="50" />
+        <img src="images/logo.jpg" alt="Oz Rioleringswerken logo" />
       </a>
       <button class="navbar__toggle" id="navToggle" aria-label="Menu openen" aria-expanded="false">
         <span></span><span></span><span></span>
@@ -86,6 +139,7 @@
           <li><a href="#diensten">Diensten</a></li>
           <li><a href="#realisaties">Realisaties</a></li>
           <li><a href="#over-ons">Over ons</a></li>
+          <li><a href="#faq">FAQ</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
         <a href="#contact" class="btn btn--accent">Offerte aanvragen</a>
@@ -96,17 +150,35 @@
   <!-- ===== HERO ===== -->
   <section class="hero" id="home">
     <div class="hero__overlay"></div>
-    <div class="container hero__content">
-      <span class="hero__tag">Actief in Gent &amp; Oost-Vlaanderen</span>
-      <h1 class="hero__title">Rioleringen &amp; Grondwerken<br /><span>Vakkundig &amp; Betrouwbaar</span></h1>
-      <p class="hero__subtitle">Van septische putten en rioleringswerken tot tegels en ondergrondse verwarming — wij zorgen voor een degelijke uitvoering van A tot Z.</p>
-      <div class="hero__ctas">
-        <a href="#contact" class="btn btn--accent btn--lg">
-          <i class="fas fa-envelope"></i> Offerte aanvragen
-        </a>
-        <a href="https://wa.me/32477531777?text=Hallo%2C%20ik%20wil%20graag%20een%20offerte%20aanvragen." class="btn btn--whatsapp btn--lg" target="_blank" rel="noopener">
-          <i class="fab fa-whatsapp"></i> WhatsApp ons
-        </a>
+    <div class="container hero__layout">
+      <div class="hero__content">
+        <span class="hero__tag">Actief in Gent &amp; Oost-Vlaanderen</span>
+        <h1 class="hero__title">Rioleringen &amp; Grondwerken<br /><span>Vakkundig &amp; Betrouwbaar</span></h1>
+        <p class="hero__subtitle">Van septische putten en rioleringswerken tot tegels en ondergrondse verwarming — wij zorgen voor een degelijke uitvoering van A tot Z.</p>
+        <div class="hero__ctas">
+          <a href="#contact" class="btn btn--accent btn--lg">
+            <i class="fas fa-envelope"></i> Offerte aanvragen
+          </a>
+          <a href="https://wa.me/32477531777?text=Hallo%2C%20ik%20wil%20graag%20een%20offerte%20aanvragen." class="btn btn--whatsapp btn--lg" target="_blank" rel="noopener">
+            <i class="fab fa-whatsapp"></i> WhatsApp ons
+          </a>
+          <a href="tel:+32477531777" class="btn btn--outline btn--lg">
+            <i class="fas fa-phone"></i> Gratis inspectie
+          </a>
+        </div>
+      </div>
+      <div class="hero__visual" aria-hidden="true">
+        <div class="pipe-illustration">
+          <div class="pipe pipe--h pipe--1"></div>
+          <div class="pipe pipe--v pipe--2"></div>
+          <div class="pipe pipe--h pipe--3"></div>
+          <div class="pipe pipe--v pipe--4"></div>
+          <div class="pipe-joint pipe-joint--1"></div>
+          <div class="pipe-joint pipe-joint--2"></div>
+          <div class="pipe-joint pipe-joint--3"></div>
+          <div class="flow flow--1"></div>
+          <div class="flow flow--2"></div>
+        </div>
       </div>
     </div>
     <div class="hero__scroll-indicator">
@@ -124,68 +196,60 @@
       </div>
       <div class="diensten__grid">
 
-        <article class="dienst-card">
-          <div class="dienst-card__icon">
-            <i class="fas fa-water"></i>
-          </div>
+        <article class="dienst-card" data-modal="riolering" tabindex="0" role="button" aria-label="Meer info over Rioleringswerken">
+          <div class="dienst-card__icon"><i class="fas fa-water"></i></div>
           <h3>Rioleringswerken</h3>
           <p>Aanleg en herstel van rioleringen voor particulieren en bedrijven. Correct en conform de normen uitgevoerd.</p>
+          <span class="dienst-card__meer">Meer info <i class="fas fa-arrow-right"></i></span>
         </article>
 
-        <article class="dienst-card">
-          <div class="dienst-card__icon">
-            <i class="fas fa-circle-dot"></i>
-          </div>
+        <article class="dienst-card" data-modal="septisch" tabindex="0" role="button" aria-label="Meer info over Septische putten">
+          <div class="dienst-card__icon"><i class="fas fa-circle-dot"></i></div>
           <h3>Septische putten</h3>
           <p>Plaatsing van septische putten en infiltratiesystemen. Wij zorgen voor de juiste vergunningen en uitvoering.</p>
+          <span class="dienst-card__meer">Meer info <i class="fas fa-arrow-right"></i></span>
         </article>
 
-        <article class="dienst-card">
-          <div class="dienst-card__icon">
-            <i class="fas fa-tractor"></i>
-          </div>
+        <article class="dienst-card" data-modal="grond" tabindex="0" role="button" aria-label="Meer info over Grondwerken">
+          <div class="dienst-card__icon"><i class="fas fa-tractor"></i></div>
           <h3>Grond- &amp; graafwerken</h3>
           <p>Professionele graafwerken voor fundaties, leidingen en andere ondergrondse toepassingen.</p>
+          <span class="dienst-card__meer">Meer info <i class="fas fa-arrow-right"></i></span>
         </article>
 
-        <article class="dienst-card">
-          <div class="dienst-card__icon">
-            <i class="fas fa-pipe-section"></i>
-          </div>
+        <article class="dienst-card" data-modal="leidingen" tabindex="0" role="button" aria-label="Meer info over Buizen en leidingen">
+          <div class="dienst-card__icon"><i class="fas fa-pipe-section"></i></div>
           <h3>Buizen &amp; leidingen</h3>
           <p>Aanleg van water-, gas- en rioolleidingen. Kwalitatieve materialen en zorgvuldige afwerking.</p>
+          <span class="dienst-card__meer">Meer info <i class="fas fa-arrow-right"></i></span>
         </article>
 
-        <article class="dienst-card">
-          <div class="dienst-card__icon">
-            <i class="fas fa-wrench"></i>
-          </div>
+        <article class="dienst-card" data-modal="herstellingen" tabindex="0" role="button" aria-label="Meer info over Herstellingen">
+          <div class="dienst-card__icon"><i class="fas fa-wrench"></i></div>
           <h3>Herstellingen</h3>
-          <p>Snel en efficiënt herstel van beschadigde leidingen, riolen en drainage. Dag en nacht bereikbaar voor dringende interventies.</p>
+          <p>Snel en efficiënt herstel van beschadigde leidingen, riolen en drainage. Bereikbaar voor dringende interventies.</p>
+          <span class="dienst-card__meer">Meer info <i class="fas fa-arrow-right"></i></span>
         </article>
 
-        <article class="dienst-card">
-          <div class="dienst-card__icon">
-            <i class="fas fa-border-all"></i>
-          </div>
+        <article class="dienst-card" data-modal="tegels" tabindex="0" role="button" aria-label="Meer info over Tegelwerken">
+          <div class="dienst-card__icon"><i class="fas fa-border-all"></i></div>
           <h3>Tegelwerken</h3>
           <p>Vakkundige plaatsing van binnen- en buitentegels. Nette afwerking na grondwerken en rioleringswerken.</p>
+          <span class="dienst-card__meer">Meer info <i class="fas fa-arrow-right"></i></span>
         </article>
 
-        <article class="dienst-card">
-          <div class="dienst-card__icon">
-            <i class="fas fa-temperature-half"></i>
-          </div>
+        <article class="dienst-card" data-modal="verwarming" tabindex="0" role="button" aria-label="Meer info over Ondergrondse verwarming">
+          <div class="dienst-card__icon"><i class="fas fa-temperature-half"></i></div>
           <h3>Ondergrondse verwarming</h3>
           <p>Installatie van vloerverwarmingssystemen. Energiezuinig, comfortabel en duurzaam.</p>
+          <span class="dienst-card__meer">Meer info <i class="fas fa-arrow-right"></i></span>
         </article>
 
-        <article class="dienst-card">
-          <div class="dienst-card__icon">
-            <i class="fas fa-hard-hat"></i>
-          </div>
+        <article class="dienst-card" data-modal="algemeen" tabindex="0" role="button" aria-label="Meer info over Algemene werken">
+          <div class="dienst-card__icon"><i class="fas fa-hard-hat"></i></div>
           <h3>Algemene werken</h3>
           <p>Diverse bouw- en renovatiewerken op maat. Neem contact op voor uw specifieke project.</p>
+          <span class="dienst-card__meer">Meer info <i class="fas fa-arrow-right"></i></span>
         </article>
 
       </div>
@@ -202,27 +266,39 @@
       <div class="troeven__grid">
 
         <div class="troef">
-          <div class="troef__icon"><i class="fas fa-map-marker-alt"></i></div>
-          <h3>Lokale expertise</h3>
-          <p>Jarenlange ervaring in Gent en de ruimere regio Oost-Vlaanderen. Wij kennen de lokale normen en regelgeving.</p>
+          <div class="troef__num">01</div>
+          <div class="troef__body">
+            <div class="troef__icon"><i class="fas fa-map-marker-alt"></i></div>
+            <h3>Lokale expertise</h3>
+            <p>Jarenlange ervaring in Gent en Oost-Vlaanderen. Wij kennen de lokale normen, regelgeving en bodemgesteldheid door en door.</p>
+          </div>
         </div>
 
         <div class="troef">
-          <div class="troef__icon"><i class="fas fa-bolt"></i></div>
-          <h3>Snelle respons</h3>
-          <p>Wij reageren snel op uw aanvraag en plannen de werken op een moment dat voor u past.</p>
+          <div class="troef__num">02</div>
+          <div class="troef__body">
+            <div class="troef__icon"><i class="fas fa-bolt"></i></div>
+            <h3>Snelle respons</h3>
+            <p>Wij reageren snel op uw aanvraag. Bij dringende problemen zijn wij binnen 24 uur ter plaatse — ook op zaterdag.</p>
+          </div>
         </div>
 
         <div class="troef">
-          <div class="troef__icon"><i class="fas fa-shield-halved"></i></div>
-          <h3>Kwaliteitsgarantie</h3>
-          <p>Wij werken met kwalitatieve materialen en staan garant voor een duurzame uitvoering.</p>
+          <div class="troef__num">03</div>
+          <div class="troef__body">
+            <div class="troef__icon"><i class="fas fa-shield-halved"></i></div>
+            <h3>Kwaliteitsgarantie</h3>
+            <p>Wij werken met kwalitatieve materialen en geven 2 jaar garantie op al onze uitgevoerde werken zonder discussie.</p>
+          </div>
         </div>
 
         <div class="troef">
-          <div class="troef__icon"><i class="fas fa-euro-sign"></i></div>
-          <h3>Transparante prijs</h3>
-          <p>Duidelijke offertes zonder verrassingen achteraf. U weet op voorhand wat de kosten zijn.</p>
+          <div class="troef__num">04</div>
+          <div class="troef__body">
+            <div class="troef__icon"><i class="fas fa-euro-sign"></i></div>
+            <h3>Transparante prijs</h3>
+            <p>Duidelijke offertes zonder verrassingen achteraf. U weet op voorhand exact wat de kosten zijn — geen verborgen kosten.</p>
+          </div>
         </div>
 
       </div>
@@ -237,70 +313,124 @@
         <h2 class="section__title">Realisaties</h2>
         <p class="section__subtitle">Een greep uit onze uitgevoerde projecten in Gent en omgeving.</p>
       </div>
+
+      <!-- Before / After Slider -->
+      <div class="before-after">
+        <div class="before-after__label">Vóór / Na vergelijking</div>
+        <div class="before-after__container" id="baContainer">
+          <div class="before-after__before">
+            <img src="images/portfolio/voor.jpg" alt="Situatie voor de werken" loading="lazy"
+              onerror="this.style.display='none'; this.parentElement.classList.add('ba-placeholder')" />
+            <span class="ba-label">Vóór</span>
+          </div>
+          <div class="before-after__after">
+            <img src="images/portfolio/na.jpg" alt="Situatie na de werken" loading="lazy"
+              onerror="this.style.display='none'" />
+            <span class="ba-label ba-label--after">Na</span>
+          </div>
+          <div class="before-after__handle" id="baHandle">
+            <div class="ba-handle__line"></div>
+            <div class="ba-handle__btn"><i class="fas fa-arrows-left-right"></i></div>
+          </div>
+        </div>
+        <p class="before-after__hint"><i class="fas fa-hand-pointer"></i> Sleep de schuif om voor en na te vergelijken</p>
+      </div>
+
       <div class="portfolio__grid">
-        <!-- Foto's worden toegevoegd door de gebruiker -->
         <div class="portfolio__item">
           <img src="images/portfolio/project-1.jpg" alt="Rioleringswerken project Gent" loading="lazy" />
-          <div class="portfolio__caption">
-            <span>Rioleringswerken</span>
-            <p>Gent</p>
-          </div>
+          <div class="portfolio__caption"><span>Rioleringswerken</span><p>Gent</p></div>
         </div>
         <div class="portfolio__item">
           <img src="images/portfolio/project-2.jpg" alt="Septische put plaatsing" loading="lazy" />
-          <div class="portfolio__caption">
-            <span>Septische put</span>
-            <p>Oost-Vlaanderen</p>
-          </div>
+          <div class="portfolio__caption"><span>Septische put</span><p>Oost-Vlaanderen</p></div>
         </div>
         <div class="portfolio__item">
           <img src="images/portfolio/project-3.jpg" alt="Grondwerken" loading="lazy" />
-          <div class="portfolio__caption">
-            <span>Grondwerken</span>
-            <p>Gent</p>
-          </div>
+          <div class="portfolio__caption"><span>Grondwerken</span><p>Gent</p></div>
         </div>
         <div class="portfolio__item">
           <img src="images/portfolio/project-4.jpg" alt="Tegelwerken" loading="lazy" />
-          <div class="portfolio__caption">
-            <span>Tegelwerken</span>
-            <p>Oost-Vlaanderen</p>
-          </div>
+          <div class="portfolio__caption"><span>Tegelwerken</span><p>Oost-Vlaanderen</p></div>
         </div>
         <div class="portfolio__item">
           <img src="images/portfolio/project-5.jpg" alt="Leidingen aanleggen" loading="lazy" />
-          <div class="portfolio__caption">
-            <span>Leidingen</span>
-            <p>Gent</p>
-          </div>
+          <div class="portfolio__caption"><span>Leidingen</span><p>Gent</p></div>
         </div>
         <div class="portfolio__item">
           <img src="images/portfolio/project-6.jpg" alt="Ondergrondse verwarming" loading="lazy" />
-          <div class="portfolio__caption">
-            <span>Vloerverwarming</span>
-            <p>Oost-Vlaanderen</p>
-          </div>
+          <div class="portfolio__caption"><span>Vloerverwarming</span><p>Oost-Vlaanderen</p></div>
         </div>
       </div>
     </div>
 
     <!-- Lightbox -->
     <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Foto weergave">
-      <button class="lightbox__close" id="lightboxClose" aria-label="Sluiten">
-        <i class="fas fa-times"></i>
-      </button>
-      <button class="lightbox__prev" id="lightboxPrev" aria-label="Vorige foto">
-        <i class="fas fa-chevron-left"></i>
-      </button>
+      <button class="lightbox__close" id="lightboxClose" aria-label="Sluiten"><i class="fas fa-times"></i></button>
+      <button class="lightbox__prev" id="lightboxPrev" aria-label="Vorige foto"><i class="fas fa-chevron-left"></i></button>
       <img src="" alt="" id="lightboxImg" />
-      <button class="lightbox__next" id="lightboxNext" aria-label="Volgende foto">
-        <i class="fas fa-chevron-right"></i>
-      </button>
+      <button class="lightbox__next" id="lightboxNext" aria-label="Volgende foto"><i class="fas fa-chevron-right"></i></button>
+    </div>
+  </section>
+
+  <!-- ===== TESTIMONIALS ===== -->
+  <section class="section section--light" id="reviews">
+    <div class="container">
+      <div class="section__header">
+        <span class="section__tag">Wat klanten zeggen</span>
+        <h2 class="section__title">Klantenreviews</h2>
+        <p class="section__subtitle">Gebaseerd op Google Reviews van tevreden klanten uit Gent en omgeving.</p>
+      </div>
+      <div class="reviews__grid">
+
+        <div class="review-card">
+          <div class="review-card__stars">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+          </div>
+          <p class="review-card__text">"Oz Rioleringswerken heeft ons verstopt riool snel en netjes opgelost. Binnen 24 uur ter plaatse en zeer vakkundig werk. Zeker aan te bevelen!"</p>
+          <div class="review-card__author">
+            <div class="review-card__avatar">S</div>
+            <div>
+              <strong>Stefan V.</strong>
+              <span>Gent</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="review-card">
+          <div class="review-card__stars">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+          </div>
+          <p class="review-card__text">"Septische put laten plaatsen — perfect uitgevoerd, nette werf en eerlijke prijs. De offerte klopte precies met de eindafrekening. Topservice!"</p>
+          <div class="review-card__author">
+            <div class="review-card__avatar">M</div>
+            <div>
+              <strong>Marie D.</strong>
+              <span>Merelbeke</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="review-card">
+          <div class="review-card__stars">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+          </div>
+          <p class="review-card__text">"Grondwerken en tegels laten leggen. Alles in één keer geregeld door hetzelfde team. Snelle communicatie, kwalitatief werk en mooie afwerking."</p>
+          <div class="review-card__author">
+            <div class="review-card__avatar">K</div>
+            <div>
+              <strong>Kevin L.</strong>
+              <span>Wetteren</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
     </div>
   </section>
 
   <!-- ===== OVER ONS ===== -->
-  <section class="section section--light" id="over-ons">
+  <section class="section" id="over-ons">
     <div class="container over-ons__inner">
       <div class="over-ons__text">
         <span class="section__tag">Wie zijn wij</span>
@@ -311,21 +441,95 @@
       </div>
       <div class="over-ons__visual">
         <div class="over-ons__stat">
-          <span class="stat__number">10+</span>
+          <span class="stat__number" data-count="10" data-suffix="+">10+</span>
           <span class="stat__label">Jaar ervaring</span>
         </div>
         <div class="over-ons__stat">
-          <span class="stat__number">500+</span>
+          <span class="stat__number" data-count="500" data-suffix="+">500+</span>
           <span class="stat__label">Projecten uitgevoerd</span>
         </div>
         <div class="over-ons__stat">
-          <span class="stat__number">8</span>
+          <span class="stat__number" data-count="8" data-suffix="">8</span>
           <span class="stat__label">Diensten</span>
         </div>
         <div class="over-ons__stat">
-          <span class="stat__number">100%</span>
+          <span class="stat__number" data-count="100" data-suffix="%">100%</span>
           <span class="stat__label">Tevredenheid</span>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FAQ ===== -->
+  <section class="section section--light" id="faq">
+    <div class="container">
+      <div class="section__header">
+        <span class="section__tag">Veelgestelde vragen</span>
+        <h2 class="section__title">FAQ</h2>
+        <p class="section__subtitle">Antwoorden op de meest gestelde vragen over onze diensten.</p>
+      </div>
+      <div class="faq__list">
+
+        <div class="faq__item">
+          <button class="faq__question" aria-expanded="false">
+            <span>Hoelang duurt een rioleringswerk?</span>
+            <i class="fas fa-plus faq__icon"></i>
+          </button>
+          <div class="faq__answer">
+            <p>De duur hangt af van de omvang. Een standaard rioolaansluiting duurt 1 à 2 werkdagen. Grotere projecten kunnen tot een week duren. Na een gratis inspectie geven wij u een concrete timing.</p>
+          </div>
+        </div>
+
+        <div class="faq__item">
+          <button class="faq__question" aria-expanded="false">
+            <span>Wat kost een septische put plaatsen?</span>
+            <i class="fas fa-plus faq__icon"></i>
+          </button>
+          <div class="faq__answer">
+            <p>De prijs varieert naargelang het type en de capaciteit. Een standaard installatie start vanaf €2.500. Voor een exacte offerte op maat, contacteer ons vrijblijvend via telefoon of het formulier.</p>
+          </div>
+        </div>
+
+        <div class="faq__item">
+          <button class="faq__question" aria-expanded="false">
+            <span>Werken jullie ook in het weekend?</span>
+            <i class="fas fa-plus faq__icon"></i>
+          </button>
+          <div class="faq__answer">
+            <p>Ja, wij zijn bereikbaar op zaterdag voor dringende interventies. Voor geplande werken kunnen wij ook zaterdagochtend inplannen. Neem contact op om een afspraak te maken.</p>
+          </div>
+        </div>
+
+        <div class="faq__item">
+          <button class="faq__question" aria-expanded="false">
+            <span>Hoe snel zijn jullie ter plaatse bij een dringende herstelling?</span>
+            <i class="fas fa-plus faq__icon"></i>
+          </button>
+          <div class="faq__answer">
+            <p>Bij dringende problemen zoals een verstopt of gebarsten riool streven wij ernaar binnen de 24 uur ter plaatse te zijn. Bel ons direct op <a href="tel:+32477531777">+32 477 53 17 77</a>.</p>
+          </div>
+        </div>
+
+        <div class="faq__item">
+          <button class="faq__question" aria-expanded="false">
+            <span>Welke garantie geven jullie op uitgevoerde werken?</span>
+            <i class="fas fa-plus faq__icon"></i>
+          </button>
+          <div class="faq__answer">
+            <p>Wij bieden 2 jaar garantie op al onze uitgevoerde werken. Wij werken uitsluitend met kwalitatieve materialen en conform de geldende normen — zo bent u altijd zeker van een duurzaam resultaat.</p>
+          </div>
+        </div>
+
+        <div class="faq__item">
+          <button class="faq__question" aria-expanded="false">
+            <span>In welke regio zijn jullie actief?</span>
+            <i class="fas fa-plus faq__icon"></i>
+          </button>
+          <div class="faq__answer">
+            <p>Wij zijn actief in Gent en de ruimere regio Oost-Vlaanderen: Gent, Merelbeke, Melle, Wetteren, Aalst, Dendermonde, Sint-Niklaas en omstreken. Twijfelt u? Contacteer ons en wij kijken het samen na.</p>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
@@ -366,6 +570,7 @@
               <option value="herstellingen">Herstellingen</option>
               <option value="tegelwerken">Tegelwerken</option>
               <option value="vloerverwarming">Ondergrondse verwarming</option>
+              <option value="inspectie">Gratis inspectie</option>
               <option value="algemeen">Algemene werken</option>
             </select>
           </div>
@@ -379,35 +584,36 @@
           </button>
         </form>
 
-        <div class="contact__info">
-          <h3>Direct contact</h3>
-          <a href="tel:+32477531777" class="contact__link contact__link--tel">
-            <i class="fas fa-phone"></i>
-            <div>
-              <span>Bel ons</span>
-              <strong>+32 477 53 17 77</strong>
+        <div class="contact__sidebar">
+          <div class="contact__info">
+            <h3>Direct contact</h3>
+            <a href="tel:+32477531777" class="contact__link contact__link--tel">
+              <i class="fas fa-phone"></i>
+              <div><span>Bel ons</span><strong>+32 477 53 17 77</strong></div>
+            </a>
+            <a href="https://wa.me/32477531777?text=Hallo%2C%20ik%20wil%20graag%20een%20offerte%20aanvragen." class="contact__link contact__link--wa" target="_blank" rel="noopener">
+              <i class="fab fa-whatsapp"></i>
+              <div><span>WhatsApp</span><strong>Stuur een bericht</strong></div>
+            </a>
+            <a href="tel:+32477531777" class="contact__link contact__link--inspect">
+              <i class="fas fa-magnifying-glass"></i>
+              <div><span>Gratis inspectie</span><strong>Bel voor een afspraak</strong></div>
+            </a>
+            <div class="contact__area">
+              <i class="fas fa-map-marker-alt"></i>
+              <div><span>Werkgebied</span><strong>Gent &amp; Oost-Vlaanderen</strong></div>
             </div>
-          </a>
-          <a href="https://wa.me/32477531777?text=Hallo%2C%20ik%20wil%20graag%20een%20offerte%20aanvragen." class="contact__link contact__link--wa" target="_blank" rel="noopener">
-            <i class="fab fa-whatsapp"></i>
-            <div>
-              <span>WhatsApp</span>
-              <strong>Stuur een bericht</strong>
-            </div>
-          </a>
-          <a href="mailto:EMAIL_ADRES" class="contact__link contact__link--mail">
-            <i class="fas fa-envelope"></i>
-            <div>
-              <span>E-mail</span>
-              <strong>EMAIL_ADRES</strong>
-            </div>
-          </a>
-          <div class="contact__area">
-            <i class="fas fa-map-marker-alt"></i>
-            <div>
-              <span>Werkgebied</span>
-              <strong>Gent &amp; Oost-Vlaanderen</strong>
-            </div>
+          </div>
+
+          <!-- Google Maps -->
+          <div class="contact__map">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d80049.05563266427!2d3.6571247!3d51.0543422!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c3716bdcd73f69%3A0x11a40c0a1d696504!2sGent!5e0!3m2!1snl!2sbe!4v1703000000000!5m2!1snl!2sbe"
+              width="100%" height="220" style="border:0; border-radius: 12px;"
+              allowfullscreen="" loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              title="Werkgebied Oz Rioleringswerken — Gent & Oost-Vlaanderen">
+            </iframe>
           </div>
         </div>
 
@@ -428,6 +634,7 @@
           <li><a href="#diensten">Diensten</a></li>
           <li><a href="#realisaties">Realisaties</a></li>
           <li><a href="#over-ons">Over ons</a></li>
+          <li><a href="#faq">FAQ</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
       </div>
@@ -445,10 +652,45 @@
     </div>
   </footer>
 
-  <!-- ===== FLOATING WHATSAPP ===== -->
+  <!-- ===== FLOATING KNOPPEN ===== -->
+  <button class="back-to-top" id="backToTop" aria-label="Terug naar boven">
+    <i class="fas fa-chevron-up"></i>
+  </button>
   <a href="https://wa.me/32477531777?text=Hallo%2C%20ik%20wil%20graag%20een%20offerte%20aanvragen." class="whatsapp-float" target="_blank" rel="noopener" aria-label="Chat via WhatsApp">
     <i class="fab fa-whatsapp"></i>
   </a>
+
+  <!-- ===== COOKIE BANNER ===== -->
+  <div class="cookie-banner" id="cookieBanner" role="dialog" aria-label="Cookie melding">
+    <div class="cookie-banner__inner">
+      <div class="cookie-banner__text">
+        <i class="fas fa-cookie-bite"></i>
+        <p>Deze website gebruikt alleen <strong>functionele cookies</strong> — geen tracking of advertenties. Wij respecteren uw privacy volledig.</p>
+      </div>
+      <div class="cookie-banner__actions">
+        <button class="btn btn--accent" id="cookieAccept">Begrepen</button>
+        <a href="#" class="cookie-banner__link">Privacybeleid</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== DIENST MODAL ===== -->
+  <div class="modal" id="dienstModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal__backdrop" id="modalBackdrop"></div>
+    <div class="modal__content">
+      <button class="modal__close" id="modalClose" aria-label="Sluiten"><i class="fas fa-times"></i></button>
+      <div class="modal__icon" id="modalIcon"></div>
+      <h2 class="modal__title" id="modalTitle"></h2>
+      <p class="modal__desc" id="modalDesc"></p>
+      <div class="modal__details" id="modalDetails"></div>
+      <div class="modal__cta">
+        <a href="#contact" class="btn btn--accent" id="modalCTA">Offerte aanvragen</a>
+        <a href="https://wa.me/32477531777?text=Hallo%2C%20ik%20wil%20graag%20een%20offerte%20aanvragen." class="btn btn--whatsapp" target="_blank" rel="noopener">
+          <i class="fab fa-whatsapp"></i> WhatsApp
+        </a>
+      </div>
+    </div>
+  </div>
 
   <script src="js/main.js"></script>
 </body>
