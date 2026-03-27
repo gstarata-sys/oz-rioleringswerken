@@ -56,7 +56,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-  <link rel="stylesheet" href="css/style.css?v=3" />
+  <link rel="stylesheet" href="css/style.css?v=4" />
 </head>
 <body>
 
@@ -78,7 +78,8 @@
   <header class="navbar" id="navbar">
     <div class="container navbar__inner">
       <a href="#" class="navbar__logo">
-        <img src="images/logo.jpg" alt="Oz Rioleringswerken logo" />
+        <img src="images/logo.jpg" alt="Oz Rioleringswerken logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'" />
+        <span class="logo-fallback" style="display:none">OZ<span>Rioleringswerken</span></span>
       </a>
       <button class="navbar__toggle" id="navToggle" aria-label="Menu openen" aria-expanded="false">
         <span></span><span></span><span></span>
@@ -91,6 +92,9 @@
           <li><a href="#realisaties">Realisaties</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
+        <a href="tel:+32477531777" class="btn btn--spoed">
+          <i class="fas fa-circle-exclamation"></i> Spoed
+        </a>
         <a href="tel:+32477531777" class="btn btn--amber-phone">
           <i class="fas fa-phone"></i>
           <span class="mono">04 77 53 17 77</span>
@@ -100,7 +104,7 @@
   </header>
 
   <!-- ===== HERO ===== -->
-  <section class="hero" id="home">
+  <section class="hero" id="home" style="background-image: linear-gradient(135deg, rgba(15,23,42,0.82) 0%, rgba(15,23,42,0.55) 100%), url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1920&q=80&fit=crop&auto=format'); background-size: cover; background-position: center;">
     <!-- Achtergrond dotpatroon -->
     <div class="hero__bg" aria-hidden="true"></div>
     <!-- Diagonale cyan band -->
@@ -138,27 +142,28 @@
         </div>
       </div>
 
-      <!-- Floating card (alleen desktop) -->
+      <!-- Floating card (alleen desktop) — wit rechthoek met foto -->
       <div class="hero__card" aria-hidden="true">
-        <div class="hero__card-body">
-          <img src="images/logo.jpg" alt="Oz Rioleringswerken" class="hero__card-logo" />
-          <div class="hero__card-stats">
-            <div class="hero__card-stat">
-              <strong class="mono">500+</strong>
-              <span>Projecten afgerond</span>
-            </div>
-            <div class="hero__card-stat">
-              <strong class="mono">10+</strong>
-              <span>Jaar ervaring</span>
-            </div>
-          </div>
+        <!-- Reviews badge rechtsbovenhoek -->
+        <div class="hero__card-review-badge">
+          <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+          <strong>5.0</strong>
+          <span>Google</span>
         </div>
-        <div class="hero__card-trust">
-          <div class="hero__card-stars">
-            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-            <strong>5.0</strong>
+        <!-- Vakman foto -->
+        <img
+          src="https://images.unsplash.com/photo-1621905251189-08b45249b4b7?w=600&q=80&fit=crop&auto=format"
+          alt="Vakman aan het werk"
+          class="hero__card-photo"
+          loading="lazy"
+        />
+        <!-- Ervaring badge linksonder -->
+        <div class="hero__card-exp-badge">
+          <i class="fas fa-award"></i>
+          <div>
+            <strong>10+</strong>
+            <span>Jaar ervaring</span>
           </div>
-          <p>Gent &amp; Oost-Vlaanderen</p>
         </div>
       </div>
     </div>
@@ -230,7 +235,7 @@
         </article>
 
         <article class="dienst-card" data-modal="leidingen" tabindex="0" role="button" aria-label="Meer info over Buizen en leidingen">
-          <div class="dienst-card__icon"><i class="fas fa-pipe-section"></i></div>
+          <div class="dienst-card__icon"><i class="fas fa-faucet"></i></div>
           <h3>Buizen &amp; leidingen</h3>
           <p>Aanleg van water-, gas- en rioolleidingen. Kwalitatieve materialen en zorgvuldige afwerking.</p>
           <span class="dienst-card__meer">Meer info <i class="fas fa-arrow-right"></i></span>
@@ -312,7 +317,7 @@
 
         <!-- Spoed (featured) -->
         <div class="tarief-card tarief-card--featured">
-          <div class="tarief-card__badge">MEEST GEVRAAGD</div>
+          <div class="tarief-card__badge tarief-card__badge--spoed"><i class="fas fa-bolt"></i> MEEST GEVRAAGD</div>
           <div class="tarief-card__header">
             <h3>Spoedreparatie</h3>
             <div class="tarief-card__price">
@@ -466,13 +471,11 @@
         <div class="before-after__label">Vóór / Na vergelijking</div>
         <div class="before-after__container" id="baContainer">
           <div class="before-after__before">
-            <img src="images/portfolio/voor.jpg" alt="Situatie voor de werken" loading="lazy"
-              onerror="this.style.display='none'; this.parentElement.classList.add('ba-placeholder')" />
+            <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1200&q=80&fit=crop&auto=format" alt="Situatie voor de werken" loading="lazy" />
             <span class="ba-label">Vóór</span>
           </div>
           <div class="before-after__after">
-            <img src="images/portfolio/na.jpg" alt="Situatie na de werken" loading="lazy"
-              onerror="this.style.display='none'" />
+            <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=1200&q=80&fit=crop&auto=format" alt="Situatie na de werken" loading="lazy" />
             <span class="ba-label ba-label--after">Na</span>
           </div>
           <div class="before-after__handle" id="baHandle">
@@ -485,27 +488,27 @@
 
       <div class="portfolio__grid">
         <div class="portfolio__item">
-          <img src="images/portfolio/project-1.jpg" alt="Rioleringswerken project Gent" loading="lazy" />
+          <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=600&q=80&fit=crop&auto=format" alt="Rioleringswerken project Gent" loading="lazy" />
           <div class="portfolio__caption"><span>Rioleringswerken</span><p>Gent</p></div>
         </div>
         <div class="portfolio__item">
-          <img src="images/portfolio/project-2.jpg" alt="Septische put plaatsing" loading="lazy" />
+          <img src="https://images.unsplash.com/photo-1581094651181-35942459ef62?w=600&q=80&fit=crop&auto=format" alt="Septische put plaatsing" loading="lazy" />
           <div class="portfolio__caption"><span>Septische put</span><p>Oost-Vlaanderen</p></div>
         </div>
         <div class="portfolio__item">
-          <img src="images/portfolio/project-3.jpg" alt="Grondwerken" loading="lazy" />
+          <img src="https://images.unsplash.com/photo-1579864905783-4e7f71c7bfda?w=600&q=80&fit=crop&auto=format" alt="Grondwerken" loading="lazy" />
           <div class="portfolio__caption"><span>Grondwerken</span><p>Gent</p></div>
         </div>
         <div class="portfolio__item">
-          <img src="images/portfolio/project-4.jpg" alt="Tegelwerken" loading="lazy" />
+          <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&q=80&fit=crop&auto=format" alt="Tegelwerken" loading="lazy" />
           <div class="portfolio__caption"><span>Tegelwerken</span><p>Oost-Vlaanderen</p></div>
         </div>
         <div class="portfolio__item">
-          <img src="images/portfolio/project-5.jpg" alt="Leidingen aanleggen" loading="lazy" />
+          <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80&fit=crop&auto=format" alt="Leidingen aanleggen" loading="lazy" />
           <div class="portfolio__caption"><span>Leidingen</span><p>Gent</p></div>
         </div>
         <div class="portfolio__item">
-          <img src="images/portfolio/project-6.jpg" alt="Ondergrondse verwarming" loading="lazy" />
+          <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=600&q=80&fit=crop&auto=format" alt="Ondergrondse verwarming" loading="lazy" />
           <div class="portfolio__caption"><span>Vloerverwarming</span><p>Oost-Vlaanderen</p></div>
         </div>
       </div>
@@ -837,7 +840,7 @@
           <div class="contact__map">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d80049.05563266427!2d3.6571247!3d51.0543422!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c3716bdcd73f69%3A0x11a40c0a1d696504!2sGent!5e0!3m2!1snl!2sbe!4v1703000000000!5m2!1snl!2sbe"
-              width="100%" height="200" style="border:0; border-radius: 12px;"
+              width="100%" height="380" style="border:0; border-radius: 16px;"
               allowfullscreen="" loading="lazy"
               referrerpolicy="no-referrer-when-downgrade"
               title="Werkgebied Oz Rioleringswerken">
@@ -858,27 +861,56 @@
               <input type="tel" id="telefoon" name="telefoon" placeholder="+32 4XX XX XX XX" required autocomplete="tel" />
             </div>
           </div>
-          <div class="form__row">
-            <div class="form__group">
-              <label for="email">E-mailadres</label>
-              <input type="email" id="email" name="email" placeholder="uw@email.be" autocomplete="email" />
-            </div>
-            <div class="form__group">
-              <label for="dienst">Type werk</label>
-              <select id="dienst" name="dienst">
-                <option value="" disabled selected>Kies een dienst...</option>
-                <option value="rioleringswerken">Rioleringswerken</option>
-                <option value="septische-put">Septische put</option>
-                <option value="grondwerken">Grond- &amp; graafwerken</option>
-                <option value="leidingen">Buizen &amp; leidingen</option>
-                <option value="herstellingen">Herstellingen</option>
-                <option value="tegelwerken">Tegelwerken</option>
-                <option value="vloerverwarming">Ondergrondse verwarming</option>
-                <option value="inspectie">Gratis inspectie</option>
-                <option value="algemeen">Algemene werken</option>
-              </select>
-            </div>
+          <div class="form__group">
+            <label for="email">E-mailadres</label>
+            <input type="email" id="email" name="email" placeholder="uw@email.be" autocomplete="email" />
           </div>
+
+          <fieldset class="form__group form__checkboxes">
+            <legend>Gewenste dienst(en) <span aria-hidden="true">*</span></legend>
+            <div class="checkbox-grid">
+              <label class="checkbox-item">
+                <input type="checkbox" name="dienst[]" value="Rioleringswerken" />
+                <span><i class="fas fa-water"></i> Rioleringswerken</span>
+              </label>
+              <label class="checkbox-item">
+                <input type="checkbox" name="dienst[]" value="Septische put" />
+                <span><i class="fas fa-circle-dot"></i> Septische putten</span>
+              </label>
+              <label class="checkbox-item">
+                <input type="checkbox" name="dienst[]" value="Grondwerken" />
+                <span><i class="fas fa-tractor"></i> Grond- &amp; graafwerken</span>
+              </label>
+              <label class="checkbox-item">
+                <input type="checkbox" name="dienst[]" value="Buizen en leidingen" />
+                <span><i class="fas fa-faucet"></i> Buizen &amp; leidingen</span>
+              </label>
+              <label class="checkbox-item">
+                <input type="checkbox" name="dienst[]" value="Herstellingen" />
+                <span><i class="fas fa-wrench"></i> Herstellingen</span>
+              </label>
+              <label class="checkbox-item">
+                <input type="checkbox" name="dienst[]" value="Tegelwerken" />
+                <span><i class="fas fa-border-all"></i> Tegelwerken</span>
+              </label>
+              <label class="checkbox-item">
+                <input type="checkbox" name="dienst[]" value="Vloerverwarming" />
+                <span><i class="fas fa-temperature-half"></i> Vloerverwarming</span>
+              </label>
+              <label class="checkbox-item">
+                <input type="checkbox" name="dienst[]" value="Gratis inspectie" />
+                <span><i class="fas fa-magnifying-glass"></i> Gratis inspectie</span>
+              </label>
+              <label class="checkbox-item">
+                <input type="checkbox" name="dienst[]" value="Algemene werken" />
+                <span><i class="fas fa-hard-hat"></i> Algemene werken</span>
+              </label>
+              <label class="checkbox-item">
+                <input type="checkbox" name="dienst[]" value="Spoedinterventie" />
+                <span><i class="fas fa-bolt"></i> Spoedinterventie</span>
+              </label>
+            </div>
+          </fieldset>
           <div class="form__group">
             <label for="bericht">Bericht <span aria-hidden="true">*</span></label>
             <textarea id="bericht" name="bericht" rows="5" placeholder="Beschrijf uw project kort..." required></textarea>
@@ -898,7 +930,8 @@
     <div class="container footer__main">
 
       <div class="footer__col footer__brand">
-        <img src="images/logo.jpg" alt="Oz Rioleringswerken" height="48" />
+        <img src="images/logo.jpg" alt="Oz Rioleringswerken" height="48" class="footer__logo-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'" />
+        <span class="logo-fallback logo-fallback--footer" style="display:none">OZ<span>Rioleringswerken</span></span>
         <p>Uw specialist voor riolering en grondwerken in Gent &amp; Oost-Vlaanderen.</p>
         <div class="footer__contact-items">
           <a href="tel:+32477531777" class="footer__contact-item">
