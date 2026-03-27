@@ -5,6 +5,12 @@
 document.addEventListener('DOMContentLoaded', () => {
 
   /* ===== GSAP HERO ANIMATIE ===== */
+  // Fallback: als GSAP niet geladen is, toon alle hero-elementen direct
+  if (typeof gsap === 'undefined') {
+    document.querySelectorAll('.hero__badge, .hero__title, .hero__subtitle, .hero__ctas, .hero__card, .hero__band')
+      .forEach(el => { el.style.opacity = '1'; el.style.transform = 'none'; });
+  }
+
   if (typeof gsap !== 'undefined' && document.querySelector('.hero__band')) {
     gsap.registerPlugin(ScrollTrigger);
 
