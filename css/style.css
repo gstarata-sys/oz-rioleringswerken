@@ -78,7 +78,11 @@ body {
 }
 
 body.has-banner {
-  padding-top: 44px;
+  padding-top: calc(var(--navbar-h) + 44px);
+}
+
+body:not(.has-banner) {
+  padding-top: var(--navbar-h);
 }
 
 img, video {
@@ -338,13 +342,9 @@ button {
   background: var(--color-navy);
   color: var(--color-white);
   font-size: 0.85rem;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 10000; /* altijd bovenaan */
   border-bottom: 2px solid var(--color-cyan);
-  transition: transform var(--t-mid), opacity var(--t-mid);
+  transition: max-height var(--t-mid), opacity var(--t-mid), padding var(--t-mid);
+  overflow: hidden;
 }
 .urgency-banner.hidden {
   display: none;
@@ -389,25 +389,23 @@ button {
 }
 .urgency-banner__close:hover { color: var(--color-white); }
 
-/* ===== NAVIGATIE ===== */
-.navbar {
+/* ===== SITE HEADER WRAPPER ===== */
+.site-header {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  z-index: 9999; /* boven GSAP ScrollTrigger lagen */
+  z-index: 9999;
+  transform: translateZ(0); /* voorkomt GSAP z-index conflicten */
+}
+
+/* ===== NAVIGATIE ===== */
+.navbar {
   background: var(--color-white);
   border-bottom: 1px solid var(--color-gray-200);
   height: var(--navbar-h);
   box-shadow: 0 2px 12px rgba(15,23,42,0.08);
-  transition: box-shadow var(--t-mid), top var(--t-mid);
-  /* will-change zodat GSAP de positie niet overneemt */
-  will-change: top;
-  transform: translateZ(0);
-}
-
-body.has-banner .navbar {
-  top: 44px;
+  transition: box-shadow var(--t-mid);
 }
 
 .navbar.scrolled {
@@ -485,16 +483,14 @@ body.has-banner .navbar {
   align-items: flex-start;
   gap: 0.25rem;
   position: fixed;
-  top: var(--navbar-h);
+  top: var(--site-header-h, var(--navbar-h));
   left: 0;
   right: 0;
   background: var(--color-white);
   border-bottom: 1px solid var(--color-gray-200);
   padding: 1rem var(--container-pad) 1.5rem;
   box-shadow: var(--shadow-lg);
-}
-body.has-banner .navbar__nav.open {
-  top: calc(var(--navbar-h) + 44px);
+  z-index: 9998;
 }
 .navbar__nav.open ul {
   flex-direction: column;
@@ -515,9 +511,8 @@ body.has-banner .navbar__nav.open {
   justify-content: center;
 }
 
-/* Navbar offset for hero */
-.hero { padding-top: var(--navbar-h); }
-body.has-banner .hero { padding-top: calc(var(--navbar-h) + 44px); }
+/* Navbar offset voor hero — body padding-top doet het werk */
+.hero { padding-top: 0; }
 
 /* ===== HERO ===== */
 .hero {

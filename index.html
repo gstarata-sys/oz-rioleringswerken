@@ -56,28 +56,31 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-  <link rel="stylesheet" href="css/style.css?v=5" />
+  <link rel="stylesheet" href="css/style.css?v=6" />
 </head>
 <body>
 
-  <!-- ===== URGENTIE BANNER ===== -->
-  <div class="urgency-banner" id="urgencyBanner">
-    <div class="container urgency-banner__inner">
-      <p>
-        <i class="fas fa-tools"></i>
-        <strong>Dringende herstelling?</strong> Verstopt riool of gebarsten leiding?
-        <a href="tel:+32477531777" class="urgency-banner__cta">
-          <i class="fas fa-phone"></i> Bel nu: +32 477 53 17 77
-        </a>
-      </p>
-      <button class="urgency-banner__close" id="urgencyClose" aria-label="Banner sluiten">
-        <i class="fas fa-times"></i>
-      </button>
-    </div>
-  </div>
+  <!-- ===== SITE HEADER (banner + navbar samen vast) ===== -->
+  <div class="site-header" id="siteHeader">
 
-  <!-- ===== NAVIGATIE ===== -->
-  <header class="navbar" id="navbar">
+    <!-- Urgentie banner -->
+    <div class="urgency-banner" id="urgencyBanner">
+      <div class="container urgency-banner__inner">
+        <p>
+          <i class="fas fa-tools"></i>
+          <strong>Dringende herstelling?</strong> Verstopt riool of gebarsten leiding?
+          <a href="tel:+32477531777" class="urgency-banner__cta">
+            <i class="fas fa-phone"></i> Bel nu: +32 477 53 17 77
+          </a>
+        </p>
+        <button class="urgency-banner__close" id="urgencyClose" aria-label="Banner sluiten">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Navigatie -->
+    <header class="navbar" id="navbar">
     <div class="container navbar__inner">
       <a href="#" class="navbar__logo">
         <img src="images/logo.jpg" alt="Oz Rioleringswerken logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'" />
@@ -104,6 +107,8 @@
       </nav>
     </div>
   </header>
+
+  </div><!-- einde .site-header -->
 
   <!-- ===== HERO ===== -->
   <section class="hero" id="home" style="background-image: linear-gradient(135deg, rgba(15,23,42,0.82) 0%, rgba(15,23,42,0.55) 100%), url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1920&q=80&fit=crop&auto=format'); background-size: cover; background-position: center;">

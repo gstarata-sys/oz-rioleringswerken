@@ -43,17 +43,24 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   /* ===== NAVBAR: sticky + hamburger ===== */
-  const navbar    = document.getElementById('navbar');
-  const navToggle = document.getElementById('navToggle');
-  const navMenu   = document.getElementById('navMenu');
+  const navbar     = document.getElementById('navbar');
+  const navToggle  = document.getElementById('navToggle');
+  const navMenu    = document.getElementById('navMenu');
+  const siteHeader = document.getElementById('siteHeader');
+
+  // Stel CSS variabele in voor mobile nav hoogte
+  function updateHeaderHeight() {
+    if (siteHeader) {
+      document.documentElement.style.setProperty(
+        '--site-header-h', siteHeader.offsetHeight + 'px'
+      );
+    }
+  }
+  updateHeaderHeight();
+  window.addEventListener('resize', updateHeaderHeight, { passive: true });
 
   window.addEventListener('scroll', () => {
     navbar.classList.toggle('scrolled', window.scrollY > 60);
-    // Remove navbar offset when urgency banner has scrolled out of view
-    const urgBanner = document.getElementById('urgencyBanner');
-    if (urgBanner && !urgBanner.classList.contains('hidden')) {
-      document.body.classList.toggle('has-banner', window.scrollY < urgBanner.offsetHeight);
-    }
     showBackToTop();
   }, { passive: true });
 
@@ -120,6 +127,7 @@ document.addEventListener('DOMContentLoaded', () => {
         urgencyBanner.classList.add('hidden');
         document.body.classList.remove('has-banner');
         localStorage.setItem('urgency-closed', '1');
+        updateHeaderHeight();
       });
     }
   }
