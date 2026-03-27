@@ -342,7 +342,7 @@ button {
   top: 0;
   left: 0;
   right: 0;
-  z-index: 100;
+  z-index: 10000; /* altijd bovenaan */
   border-bottom: 2px solid var(--color-cyan);
   transition: transform var(--t-mid), opacity var(--t-mid);
 }
@@ -365,11 +365,21 @@ button {
   flex-wrap: wrap;
 }
 .urgency-banner__inner i { color: var(--color-cyan); }
-.urgency-banner__inner a {
-  color: var(--color-amber);
+.urgency-banner__cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: var(--color-amber);
+  color: var(--color-navy);
   font-weight: 700;
-  text-decoration: underline;
+  font-size: 0.82rem;
+  padding: 0.3rem 0.7rem;
+  border-radius: 100px;
+  white-space: nowrap;
+  transition: background var(--t-fast);
+  text-decoration: none;
 }
+.urgency-banner__cta:hover { background: var(--color-amber-dark); }
 .urgency-banner__close {
   color: var(--color-gray-400);
   font-size: 0.9rem;
@@ -385,11 +395,15 @@ button {
   top: 0;
   left: 0;
   right: 0;
-  z-index: 90;
+  z-index: 9999; /* boven GSAP ScrollTrigger lagen */
   background: var(--color-white);
   border-bottom: 1px solid var(--color-gray-200);
   height: var(--navbar-h);
-  transition: box-shadow var(--t-mid);
+  box-shadow: 0 2px 12px rgba(15,23,42,0.08);
+  transition: box-shadow var(--t-mid), top var(--t-mid);
+  /* will-change zodat GSAP de positie niet overneemt */
+  will-change: top;
+  transform: translateZ(0);
 }
 
 body.has-banner .navbar {
@@ -397,7 +411,7 @@ body.has-banner .navbar {
 }
 
 .navbar.scrolled {
-  box-shadow: 0 4px 24px rgba(15,23,42,0.10);
+  box-shadow: 0 4px 24px rgba(15,23,42,0.14);
 }
 
 .navbar__inner {
