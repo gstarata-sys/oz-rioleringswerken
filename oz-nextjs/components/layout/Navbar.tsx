@@ -44,9 +44,9 @@ export default function Navbar() {
         <div className="hidden lg:flex items-center gap-3">
           <a
             href={`tel:${TELEFOON_RAW}`}
-            className="flex items-center gap-2 bg-[#f59e0b] hover:bg-amber-500 font-black px-5 py-2.5 rounded-xl shadow-sm btn-press text-[#111111]"
+            className="flex items-center gap-2 bg-[#f59e0b] hover:bg-amber-500 font-semibold text-base px-6 py-3.5 rounded-xl shadow-lg shadow-amber-500/30 btn-press text-[#111111]"
           >
-            <Phone size={16} strokeWidth={2.5} className="text-[#111111]" />
+            <Phone size={18} strokeWidth={2.5} className="text-[#111111]" />
             <span className="text-[#111111]">Bel Nu: {TELEFOON}</span>
           </a>
         </div>
