@@ -13,8 +13,8 @@ export default function Hero() {
     >
       {/* Background image */}
       <Image
-        src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1920&q=80&fit=crop&auto=format"
-        alt="Rioleringswerken aan het werk"
+        src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1920&q=80&fit=crop&auto=format"
+        alt="Loodgieter aan het werk onder aanrecht"
         fill
         priority
         className="object-cover"
