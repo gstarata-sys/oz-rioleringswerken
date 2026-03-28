@@ -1,7 +1,6 @@
-import Image from "next/image";
-import { Phone, MapPin, Clock } from "lucide-react";
+import { Phone, MapPin, Clock, Mail } from "lucide-react";
 import WhatsAppIcon from "@/components/ui/WhatsAppIcon";
-import { TELEFOON, TELEFOON_RAW, WHATSAPP_URL, WERKGEBIED_STEDEN } from "@/lib/constants";
+import { TELEFOON, TELEFOON_RAW, WHATSAPP_URL, WERKGEBIED_STEDEN, EMAIL, STAD } from "@/lib/constants";
 
 const DIENSTEN_FOOTER = [
   "Rioleringswerken",
@@ -32,18 +31,9 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-8">
           {/* Brand */}
           <div className="lg:col-span-1">
-            <div className="flex items-center gap-3 mb-4">
-              <Image
-                src="/logo.jpg"
-                alt="Oz Rioleringswerken"
-                width={44}
-                height={44}
-                className="rounded-lg brightness-0 invert opacity-90"
-              />
-              <div>
-                <p className="font-bold text-white">OZ Rioleringswerken</p>
-                <p className="text-xs text-slate-400">Gent & Oost-Vlaanderen</p>
-              </div>
+            <div className="flex items-center gap-1 mb-4">
+              <span className="font-black text-xl text-white">Oz</span>
+              <span className="font-bold text-xl text-[--color-cyan]">Rioleringswerken</span>
             </div>
             <p className="text-slate-400 text-sm leading-relaxed mb-5">
               Uw specialist voor riolering, septische putten en grondwerken. Vakkundig, betrouwbaar en altijd bereikbaar.
@@ -65,9 +55,16 @@ export default function Footer() {
                 <WhatsAppIcon size={14} className="text-[#25D366]" />
                 WhatsApp
               </a>
+              <a
+                href={`mailto:${EMAIL}`}
+                className="flex items-center gap-2 text-sm text-slate-300 hover:text-white transition-colors"
+              >
+                <Mail size={14} className="text-[--color-cyan]" />
+                {EMAIL}
+              </a>
               <div className="flex items-center gap-2 text-sm text-slate-400">
                 <MapPin size={14} className="text-[--color-cyan]" />
-                Gent & Oost-Vlaanderen
+                {STAD} & Oost-Vlaanderen
               </div>
               <div className="flex items-center gap-2 text-sm text-slate-400">
                 <Clock size={14} className="text-[--color-cyan]" />

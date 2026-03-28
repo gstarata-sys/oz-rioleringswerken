@@ -1,105 +1,121 @@
 export const TELEFOON = "+32 477 53 17 77";
 export const TELEFOON_RAW = "+32477531777";
 export const WHATSAPP_NUMBER = "32477531777";
+export const EMAIL = "ataturk_2000@hotmail.com";
+export const STAD = "Gent";
+export const VOORRIJKOSTEN = "€49";
 export const FORMSPREE_ID = "xreobepr";
+
+// Kept for Portfolio component (not shown on main page)
+export const PORTFOLIO_ITEMS: Array<{ id: number; titel: string; categorie: string; afbeelding: string }> = [];
+
+export const REVIEWS: Array<{ naam: string; locatie: string; tekst: string; sterren: number }> = [];
 
 export const WHATSAPP_URL = `https://wa.me/${WHATSAPP_NUMBER}?text=Goedendag%2C%20ik%20wil%20graag%20een%20offerte%20aanvragen.`;
 
 export const DIENSTEN = [
   {
-    id: "rioleringswerken",
+    id: "riool-ontstoppen",
     icon: "Waves",
-    titel: "Rioleringswerken",
-    beschrijving: "Aanleg, herstelling en onderhoud van rioleringen voor woningen en bedrijven.",
+    titel: "Riool Ontstoppen",
+    prijs: "vanaf €149",
+    beschrijving: "Snelle en definitieve ontstopping van verstopte riolen.",
     details: [
-      "Aanleg nieuwe riolering",
-      "Herstelling beschadigde buizen",
-      "Camera-inspectie",
-      "Reiniging en ontstopping",
+      "Riool volledig vrijmaken",
+      "Camera-controle na werk",
+      "Ter plaatse binnen 35 min",
+      "2 jaar garantie",
     ],
   },
   {
-    id: "septische-putten",
-    icon: "CircleDot",
-    titel: "Septische putten",
-    beschrijving: "Plaatsing en onderhoud van septische putten en vetvangers.",
-    details: [
-      "Plaatsing nieuwe septische put",
-      "Ledigen bestaande put",
-      "Controle en keuring",
-      "Vetvanger plaatsen",
-    ],
-  },
-  {
-    id: "grondwerken",
-    icon: "Shovel",
-    titel: "Grond- & graafwerken",
-    beschrijving: "Professionele grond- en graafwerken voor alle ondergrondse projecten.",
-    details: [
-      "Mini-kraanwerken",
-      "Nivellering en opvulling",
-      "Afvoer van grond",
-      "Funderingswerken",
-    ],
-  },
-  {
-    id: "buizen-leidingen",
+    id: "afvoer-ontstoppen",
     icon: "Pipette",
-    titel: "Buizen & leidingen",
-    beschrijving: "Aanleg van water-, gas- en drainageleidingen met garantie.",
+    titel: "Afvoer Ontstoppen",
+    prijs: "vanaf €89",
+    beschrijving: "Bad, douche, wastafel, keukenafvoer — snel opgelost.",
     details: [
-      "Waterleiding aanleggen",
-      "Drainagesystemen",
-      "Gasleiding (erkend)",
-      "Leidingen verleggen",
+      "Binnenhuisafvoeren",
+      "Keuken & badkamer",
+      "Geen beschadigingen",
+      "Directe service",
     ],
   },
   {
-    id: "herstellingen",
-    icon: "Wrench",
-    titel: "Herstellingen",
-    beschrijving: "Snelle interventie bij verstoppingen, lekken en gebarsten leidingen.",
+    id: "camera-inspectie",
+    icon: "Camera",
+    titel: "Camera-inspectie",
+    prijs: "vanaf €125",
+    beschrijving: "Exacte diagnose met HD camera in uw riolering.",
     details: [
-      "Noodreparaties 24u/7d",
-      "Verstoppingen vrijmaken",
-      "Lekken dichten",
-      "Breukherstellingen",
+      "HD beeldkwaliteit",
+      "Rapport + videobeelden",
+      "Scheurinspectie",
+      "Locatiebepaling lek",
     ],
   },
   {
-    id: "tegelwerken",
-    icon: "Grid2X2",
-    titel: "Tegelwerken & afwerking",
-    beschrijving: "Professionele tegel- en afwerkingswerken na rioleringswerken.",
+    id: "rioleringswerken",
+    icon: "Shovel",
+    titel: "Rioleringswerken & Aanleg",
+    prijs: "Op offerte",
+    beschrijving: "Nieuwe aanleg en renovatie van rioleringen.",
     details: [
-      "Binnen- en buitentegels",
-      "Herstel opgebroken vloeren",
-      "Voegwerken",
-      "Cementdekvloer",
+      "Nieuwe riolering aanleggen",
+      "Renovatie bestaande riolering",
+      "Graafwerken inbegrepen",
+      "Conform EPB-normen",
     ],
   },
   {
-    id: "vloerverwarming",
-    icon: "Thermometer",
-    titel: "Ondergrondse verwarming",
-    beschrijving: "Installatie van vloerverwarmingssystemen voor optimaal comfort.",
+    id: "septische-put",
+    icon: "CircleDot",
+    titel: "Septische Put Ruimen",
+    prijs: "Op offerte",
+    beschrijving: "Professioneel ledigen en reinigen van septische putten.",
     details: [
-      "Aanleg vloerverwarming",
-      "Koppeling aan warmtepomp",
-      "Renovatie bestaand systeem",
-      "Regeling en commissioning",
+      "Vacuüm-lediging",
+      "Reiniging binnenwanden",
+      "Controle en keuring",
+      "Verslag voor gemeente",
     ],
   },
   {
-    id: "algemene-werken",
+    id: "vetafscheider",
+    icon: "Filter",
+    titel: "Vetafscheider Ruimen",
+    prijs: "Op offerte",
+    beschrijving: "Reinigen van vetafscheiders voor horeca en bedrijven.",
+    details: [
+      "Horecasector",
+      "Industrie & bedrijven",
+      "Conform wetgeving",
+      "Reinigingsattest",
+    ],
+  },
+  {
+    id: "huisaansluiting",
     icon: "HardHat",
-    titel: "Algemene werken",
-    beschrijving: "Van kleine herstellingen tot grotere werken — wij pakken alles aan.",
+    titel: "Huisaansluiting Riolering",
+    prijs: "Op offerte",
+    beschrijving: "Correcte aansluiting van uw woning op het rioolnet.",
     details: [
-      "Metselwerken",
-      "Betonwerken",
-      "Klein onderhoud",
-      "Advies op maat",
+      "Nieuwbouw & renovatie",
+      "Aansluiting rioolnet",
+      "DWA & RWA gescheiden",
+      "Keuring voorzien",
+    ],
+  },
+  {
+    id: "lekdetectie",
+    icon: "Droplets",
+    titel: "Waterlekkage Opsporen",
+    prijs: "vanaf €79",
+    beschrijving: "Lekdetectie zonder destructief zoeken.",
+    details: [
+      "Niet-destructief",
+      "Thermische camera",
+      "Exact lekpunt",
+      "Snel rapport",
     ],
   },
 ] as const;
@@ -108,70 +124,32 @@ export const FAQ_ITEMS = [
   {
     vraag: "Hoe snel zijn jullie ter plaatse bij een dringende herstelling?",
     antwoord:
-      "Bij dringende problemen streven wij ernaar binnen de 24 uur ter plaatse te zijn. Voor acute noodsituaties zoals een gebarsten leiding proberen wij nog dezelfde dag langs te komen.",
+      "Bij spoed zijn wij gemiddeld binnen 35 minuten ter plaatse in Gent en omgeving. Voor minder dringende gevallen plannen wij een afspraak op uw maat.",
   },
   {
-    vraag: "Geven jullie een garantie op uitgevoerde werken?",
+    vraag: "Wat kost een riool of afvoer ontstoppen?",
     antwoord:
-      "Ja, wij geven 2 jaar garantie op al onze uitgevoerde werken. Bij problemen die te wijten zijn aan onze uitvoering, komen wij kosteloos langst om dit te herstellen.",
+      "Een afvoer ontstoppen start vanaf €89, een riool vanaf €149. Altijd een vaste prijsopgave vooraf. Voorrijkosten zijn €49 inclusief diagnose.",
   },
   {
-    vraag: "Wat kost een gratis inspectie?",
+    vraag: "Werken jullie ook 's nachts en in het weekend?",
     antwoord:
-      "De inspectie en offerte zijn volledig gratis en vrijblijvend. Wij komen ter plaatse om de situatie te beoordelen en bezorgen u een duidelijke prijsopgave zonder verborgen kosten.",
+      "Ja, wij zijn 24/7 beschikbaar, ook op feestdagen. Het spoedtarief (€75/uur) is van toepassing buiten normale werkuren (ma–vr 07:00–19:00).",
+  },
+  {
+    vraag: "Geven jullie garantie op uitgevoerde werken?",
+    antwoord:
+      "Absoluut. Wij geven 2 jaar garantie op alle uitgevoerde werken. Bij problemen te wijten aan onze uitvoering komen wij kosteloos langs.",
   },
   {
     vraag: "In welke regio zijn jullie actief?",
     antwoord:
-      "Wij zijn actief in Gent en de volledige provincie Oost-Vlaanderen. Denk aan Merelbeke, Melle, Wetteren, Aalst, Dendermonde, Sint-Niklaas en omstreken.",
+      "Wij zijn actief in Gent en heel Oost-Vlaanderen: Merelbeke, Melle, Wetteren, Aalst, Dendermonde, Sint-Niklaas, Lochristi, Destelbergen en meer.",
   },
   {
-    vraag: "Kunnen jullie ook werken uitvoeren in het weekend?",
+    vraag: "Wat zijn de voorrijkosten?",
     antwoord:
-      "Wij zijn beschikbaar van maandag tot zaterdag van 07:00 tot 19:00. Voor dringende gevallen kunt u ons ook buiten deze uren contacteren via telefoon of WhatsApp.",
-  },
-  {
-    vraag: "Werken jullie ook voor bedrijven en KMO's?",
-    antwoord:
-      "Absoluut. Wij werken voor zowel particulieren als bedrijven en KMO's. Grotere projecten zijn welkom — wij beschikken over het nodige materieel en de expertise.",
-  },
-] as const;
-
-export const REVIEWS = [
-  {
-    naam: "Jan Vermeersch",
-    locatie: "Gent",
-    tekst:
-      "Uitstekende service! Snel ter plaatse, professioneel en netjes afgewerkt. De riolering was verstopt en ze hebben het in één bezoek opgelost. Zeker aan te bevelen.",
-    sterren: 5,
-  },
-  {
-    naam: "Marie De Smedt",
-    locatie: "Merelbeke",
-    tekst:
-      "Heel tevreden met de plaatsing van onze nieuwe septische put. Correcte prijs, geen verborgen kosten en keurig opgeruimd achtergelaten. Top vakmanschap!",
-    sterren: 5,
-  },
-  {
-    naam: "Kris Vandenberghe",
-    locatie: "Wetteren",
-    tekst:
-      "Na een dringende lekkage waren ze binnen het uur ter plaatse. Vriendelijk, eerlijk en het werk was snel klaar. Dit is echt een bedrijf dat zijn klanten respecteert.",
-    sterren: 5,
-  },
-  {
-    naam: "Sofie Claeys",
-    locatie: "Aalst",
-    tekst:
-      "De vloerverwarming werd perfect aangelegd. Ze legden alles duidelijk uit en werkten heel zorgvuldig. 2 jaar garantie geeft ook een gerust gevoel. Aanrader!",
-    sterren: 5,
-  },
-  {
-    naam: "Peter Goossens",
-    locatie: "Sint-Niklaas",
-    tekst:
-      "Professionele aanpak, correcte communicatie en een prijs die overeenkwam met de offerte. Grondwerken en riolering zijn prachtig uitgevoerd. Geen woord van commentaar.",
-    sterren: 5,
+      "Wij rekenen €49 voorrijkosten, inclusief de eerste diagnose ter plaatse. Geen verborgen kosten — altijd transparante prijzen.",
   },
 ] as const;
 
@@ -193,10 +171,10 @@ export const WERKGEBIED_STEDEN = [
 export const TARIEVEN = [
   {
     naam: "Standaard",
-    prijs: "Gratis offerte",
+    prijs: "€55/uur",
     omschrijving: "Voor geplande werken en onderhoud",
     kenmerken: [
-      "Gratis inspectie ter plaatse",
+      "Gratis diagnose ter plaatse",
       "Transparante prijsopgave",
       "Flexibele planning",
       "2 jaar garantie",
@@ -206,13 +184,13 @@ export const TARIEVEN = [
   },
   {
     naam: "Spoedreparatie",
-    prijs: "Op aanvraag",
-    omschrijving: "Dringende interventie binnen 24u",
+    prijs: "€75/uur",
+    omschrijving: "Avond, weekend & feestdagen",
     kenmerken: [
-      "Respons binnen 24 uur",
-      "Beschikbaar 6 dagen/week",
-      "Directe diagnose",
-      "Snelle definitieve oplossing",
+      "Respons binnen 35 min",
+      "7 dagen per week, 24/7",
+      "Directe oplossing ter plaatse",
+      "Noodreparatie & tijdelijke fix",
     ],
     featured: true,
     badge: "MEEST GEVRAAGD",
@@ -236,71 +214,26 @@ export const WERKWIJZE_STAPPEN = [
   {
     nummer: "01",
     titel: "Contact opnemen",
-    beschrijving: "Bel, WhatsApp of vul het contactformulier in. We reageren snel op uw aanvraag.",
+    beschrijving: "Bel, WhatsApp of vul het formulier in. We reageren onmiddellijk.",
   },
   {
     nummer: "02",
-    titel: "Gratis inspectie",
-    beschrijving: "We komen ter plaatse voor een grondige analyse van de situatie.",
+    titel: "Snelle diagnose",
+    beschrijving: "Wij komen ter plaatse en stellen het probleem exact vast.",
   },
   {
     nummer: "03",
-    titel: "Duidelijke offerte",
+    titel: "Offerte & akkoord",
     beschrijving: "U ontvangt een transparante prijsopgave zonder verborgen kosten.",
   },
   {
     nummer: "04",
     titel: "Vakkundige uitvoering",
-    beschrijving: "Onze specialisten voeren de werken professioneel en netjes uit.",
+    beschrijving: "Onze specialisten lossen het probleem professioneel op.",
   },
   {
     nummer: "05",
     titel: "Nazorg & garantie",
-    beschrijving: "Na de werken staat u 2 jaar onder garantie. Wij zijn er voor u.",
-  },
-] as const;
-
-export const PORTFOLIO_ITEMS = [
-  {
-    id: 1,
-    titel: "Rioleringssanering Gent-Zuid",
-    categorie: "Rioleringswerken",
-    afbeelding:
-      "https://images.unsplash.com/photo-1621905252507-b35492cc74b4?w=800&q=80&fit=crop&auto=format",
-  },
-  {
-    id: 2,
-    titel: "Septische put plaatsing Merelbeke",
-    categorie: "Septische putten",
-    afbeelding:
-      "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&q=80&fit=crop&auto=format",
-  },
-  {
-    id: 3,
-    titel: "Grondwerken nieuwbouw Wetteren",
-    categorie: "Grondwerken",
-    afbeelding:
-      "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=800&q=80&fit=crop&auto=format",
-  },
-  {
-    id: 4,
-    titel: "Tegelwerken afwerking Aalst",
-    categorie: "Tegelwerken",
-    afbeelding:
-      "https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?w=800&q=80&fit=crop&auto=format",
-  },
-  {
-    id: 5,
-    titel: "Leidingen aanleg Sint-Niklaas",
-    categorie: "Buizen & leidingen",
-    afbeelding:
-      "https://images.unsplash.com/photo-1607472586893-edb57bdc0e39?w=800&q=80&fit=crop&auto=format",
-  },
-  {
-    id: 6,
-    titel: "Vloerverwarming installatie Gent",
-    categorie: "Ondergrondse verwarming",
-    afbeelding:
-      "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80&fit=crop&auto=format",
+    beschrijving: "2 jaar garantie. Wij volgen uw dossier op achteraf.",
   },
 ] as const;

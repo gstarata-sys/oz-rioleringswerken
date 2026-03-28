@@ -8,10 +8,10 @@ export default function UrgencyBanner() {
     <div className="bg-[--color-amber] text-white py-2 px-4">
       <div className="max-w-7xl mx-auto flex items-center justify-between gap-3">
         <p className="text-sm font-semibold hidden sm:block">
-          🔧 Dringende herstelling? Verstopt riool of gebarsten leiding?
+          🔧 Verstopt riool of lekkage? Wij zijn 24/7 bereikbaar — ook in het weekend!
         </p>
         <p className="text-sm font-semibold sm:hidden">
-          🔧 Dringende herstelling?
+          🔧 24/7 spoedservice beschikbaar
         </p>
         <a
           href={`tel:${TELEFOON_RAW}`}

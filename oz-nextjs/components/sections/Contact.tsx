@@ -1,6 +1,6 @@
-import { Phone, Award, ShieldCheck, Clock, MapPin } from "lucide-react";
+import { Phone, Award, ShieldCheck, Clock, MapPin, Mail } from "lucide-react";
 import WhatsAppIcon from "@/components/ui/WhatsAppIcon";
-import { TELEFOON, TELEFOON_RAW, WHATSAPP_URL } from "@/lib/constants";
+import { TELEFOON, TELEFOON_RAW, WHATSAPP_URL, EMAIL, STAD } from "@/lib/constants";
 import FadeIn from "@/components/animations/FadeIn";
 import ContactForm from "./ContactForm";
 
@@ -57,13 +57,13 @@ export default function Contact() {
                   </div>
                 </a>
                 <a
-                  href={`tel:${TELEFOON_RAW}`}
-                  className="flex items-center gap-3 bg-[--color-cyan]/20 hover:bg-[--color-cyan]/30 rounded-xl px-4 py-3 transition-colors border border-[--color-cyan]/30"
+                  href={`mailto:${EMAIL}`}
+                  className="flex items-center gap-3 bg-white/10 hover:bg-white/20 rounded-xl px-4 py-3 transition-colors"
                 >
-                  <Award size={18} className="text-[--color-cyan] shrink-0" />
+                  <Mail size={18} className="text-[--color-cyan] shrink-0" />
                   <div>
-                    <p className="text-xs text-slate-400">Gratis inspectie</p>
-                    <p className="font-bold text-sm text-[--color-cyan]">Plan een bezoek</p>
+                    <p className="text-xs text-slate-400">E-mail</p>
+                    <p className="font-bold text-sm">{EMAIL}</p>
                   </div>
                 </a>
               </div>

@@ -12,11 +12,11 @@ export default function Werkwijze() {
           <span className="inline-block text-xs font-bold uppercase tracking-widest text-[--color-cyan] mb-3">
             Hoe het werkt
           </span>
-          <h2 className="text-3xl md:text-4xl font-extrabold text-[--color-navy] mb-4">
-            Van aanvraag tot oplevering
+          <h2 className="text-3xl md:text-4xl text-[--color-navy] mb-4">
+            5 stappen naar een oplossing
           </h2>
           <p className="text-slate-500 max-w-lg mx-auto text-base leading-relaxed">
-            Wij geloven in eenvoud en transparantie. Ons proces is helder van begin tot eind.
+            Ons werkproces is transparant en efficiënt — van uw eerste telefoontje tot de definitieve oplossing.
           </p>
         </FadeIn>
 
@@ -39,20 +39,20 @@ export default function Werkwijze() {
           ))}
         </StaggerContainer>
 
-        {/* Counter stats */}
+        {/* Stats banner */}
         <div className="bg-[--color-navy] rounded-2xl py-10 px-8">
           <div className="grid grid-cols-3 gap-6 divide-x divide-white/10">
-            <CounterStat value={500} suffix="+" label="Projecten afgerond" />
-            <CounterStat value={10}  suffix="+" label="Jaar ervaring"      />
+            <CounterStat value={35}  suffix=" min" label="Gemiddelde responstijd" />
+            <CounterStat value={0}   suffix="" label="24/7 bereikbaar" staticDisplay="24/7" />
             <CounterStat value={100} suffix="%" label="Tevredenheidsgarantie" />
           </div>
           <div className="mt-8 text-center">
             <a
               href={`tel:${TELEFOON_RAW}`}
-              className="inline-flex items-center gap-2 bg-[--color-cyan] hover:bg-[--color-cyan-dark] text-white font-bold px-6 py-3.5 rounded-xl transition-colors"
+              className="inline-flex items-center gap-2 bg-[--color-amber] hover:bg-amber-500 text-white font-black px-6 py-3.5 rounded-xl transition-colors"
             >
               <Phone size={18} />
-              Gratis offerte aanvragen
+              Bel ons direct aan
             </a>
           </div>
         </div>

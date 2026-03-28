@@ -1,15 +1,22 @@
-import { Zap, Receipt, ShieldCheck } from "lucide-react";
+import { Zap, Receipt, ShieldCheck, Clock } from "lucide-react";
+import FadeIn from "@/components/animations/FadeIn";
+import StaggerContainer, { StaggerItem } from "@/components/animations/StaggerContainer";
 
 const ITEMS = [
   {
     icon: Zap,
-    titel: "Snelle respons",
-    beschrijving: "Binnen 24u ter plaatse bij dringende gevallen",
+    titel: "35 min gemiddelde responstijd",
+    beschrijving: "Snelste service in Gent en omgeving — dag en nacht",
+  },
+  {
+    icon: Clock,
+    titel: "24/7 bereikbaar",
+    beschrijving: "Ook 's nachts, in het weekend en op feestdagen beschikbaar",
   },
   {
     icon: Receipt,
-    titel: "Transparante prijzen",
-    beschrijving: "Geen verborgen kosten — duidelijke offerte vooraf",
+    titel: "Vaste prijzen, geen verrassingen",
+    beschrijving: "€49 voorrijkosten incl. diagnose — altijd offerte vooraf",
   },
   {
     icon: ShieldCheck,
@@ -20,24 +27,32 @@ const ITEMS = [
 
 export default function USP() {
   return (
-    <section className="bg-[--color-navy] py-10">
+    <section className="bg-[--color-navy] py-16">
       <div className="max-w-7xl mx-auto px-5 md:px-8">
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+        <FadeIn className="text-center mb-10">
+          <span className="inline-block text-xs font-bold uppercase tracking-widest text-[--color-cyan] mb-3">
+            Waarom Oz?
+          </span>
+          <h2 className="text-2xl md:text-3xl text-white">
+            Waarom klanten ons kiezen
+          </h2>
+        </FadeIn>
+
+        <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
           {ITEMS.map(({ icon: Icon, titel, beschrijving }) => (
-            <div
-              key={titel}
-              className="flex items-center gap-4 bg-white/5 rounded-xl px-5 py-4"
-            >
-              <div className="w-10 h-10 bg-[--color-cyan]/15 rounded-lg flex items-center justify-center shrink-0">
-                <Icon size={20} className="text-[--color-cyan]" />
+            <StaggerItem key={titel}>
+              <div className="flex flex-col items-start gap-3 bg-white/5 hover:bg-white/10 rounded-2xl px-5 py-5 transition-colors h-full">
+                <div className="w-11 h-11 bg-[--color-cyan]/15 rounded-xl flex items-center justify-center shrink-0">
+                  <Icon size={22} className="text-[--color-cyan]" />
+                </div>
+                <div>
+                  <p className="font-bold text-white text-sm leading-snug mb-1">{titel}</p>
+                  <p className="text-xs text-slate-400 leading-relaxed">{beschrijving}</p>
+                </div>
               </div>
-              <div>
-                <p className="font-semibold text-white text-sm">{titel}</p>
-                <p className="text-xs text-slate-400 mt-0.5">{beschrijving}</p>
-              </div>
-            </div>
+            </StaggerItem>
           ))}
-        </div>
+        </StaggerContainer>
       </div>
     </section>
   );

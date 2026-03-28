@@ -1,7 +1,8 @@
-import { Check, Phone } from "lucide-react";
-import { TARIEVEN, TELEFOON_RAW } from "@/lib/constants";
+import { Check, Phone, Info } from "lucide-react";
+import { TARIEVEN, TELEFOON_RAW, VOORRIJKOSTEN } from "@/lib/constants";
 import FadeIn from "@/components/animations/FadeIn";
 import StaggerContainer, { StaggerItem } from "@/components/animations/StaggerContainer";
+
 
 export default function Pricing() {
   return (
@@ -93,6 +94,12 @@ export default function Pricing() {
             </StaggerItem>
           ))}
         </StaggerContainer>
+
+        {/* Voorrijkosten note */}
+        <FadeIn delay={0.3} className="mt-8 flex items-center justify-center gap-2 text-slate-400 text-sm">
+          <Info size={14} className="text-[--color-cyan] shrink-0" />
+          <span>Voorrijkosten {VOORRIJKOSTEN} inclusief diagnose ter plaatse. Materiaalkosten apart. Altijd prijsopgave vooraf.</span>
+        </FadeIn>
       </div>
     </section>
   );

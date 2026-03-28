@@ -7,16 +7,18 @@ interface CounterStatProps {
   value: number;
   suffix?: string;
   label: string;
+  /** If set, displays this string instead of the animated number */
+  staticDisplay?: string;
 }
 
-export default function CounterStat({ value, suffix = "", label }: CounterStatProps) {
+export default function CounterStat({ value, suffix = "", label, staticDisplay }: CounterStatProps) {
   const ref = useRef<HTMLDivElement>(null);
   const isInView = useInView(ref, { once: true, margin: "0px" });
   const [count, setCount] = useState(value);
   const animated = useRef(false);
 
   useEffect(() => {
-    if (!isInView || animated.current) return;
+    if (staticDisplay || !isInView || animated.current) return;
     animated.current = true;
 
     setCount(0);
@@ -33,12 +35,12 @@ export default function CounterStat({ value, suffix = "", label }: CounterStatPr
     }
 
     requestAnimationFrame(step);
-  }, [isInView, value]);
+  }, [isInView, value, staticDisplay]);
 
   return (
     <div ref={ref} className="text-center">
       <div className="text-4xl md:text-5xl font-extrabold text-[--color-cyan]">
-        {count}{suffix}
+        {staticDisplay ?? `${count}${suffix}`}
       </div>
       <div className="mt-1 text-sm font-medium text-slate-400 uppercase tracking-widest">
         {label}
