@@ -26,7 +26,7 @@ export default function Pricing() {
               <div
                 className={`relative rounded-2xl p-7 h-full flex flex-col transition-transform ${
                   tarief.featured
-                    ? "bg-white ring-2 ring-[--color-cyan] scale-[1.02]"
+                    ? "bg-white ring-2 ring-[--color-cyan] md:scale-[1.02]"
                     : "bg-white/5 border border-white/10"
                 }`}
               >

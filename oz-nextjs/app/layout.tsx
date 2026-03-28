@@ -23,15 +23,15 @@ const barlow = Barlow({
 });
 
 export const metadata: Metadata = {
-  title: "Oz Rioleringswerken | Rioleringen & Grondwerken Gent",
+  title: "Oz Rioleringswerken | 24/7 Spoedservice Gent & Oost-Vlaanderen",
   description:
-    "Oz Rioleringswerken — uw specialist voor riolering, septische putten, grondwerken en ondergrondse verwarming in Gent en Oost-Vlaanderen. Vraag gratis een offerte aan.",
+    "Oz Rioleringswerken — 24/7 spoedservice voor riool ontstoppen, camera-inspectie, septische putten en rioleringswerken in Gent. Gemiddeld binnen 35 min ter plaatse.",
   keywords:
-    "rioleringswerken Gent, septische put Oost-Vlaanderen, grondwerken Gent, leidingen aanleggen, vloerverwarming Gent, tegelwerken, riool herstellen",
+    "riool ontstoppen Gent, rioleringswerken Gent, septische put legen, camera-inspectie riolering, waterlekkage opsporen, spoedservice 24/7 Oost-Vlaanderen",
   openGraph: {
-    title: "Oz Rioleringswerken | Specialist in Gent & Oost-Vlaanderen",
+    title: "Oz Rioleringswerken | 24/7 Spoedservice Gent",
     description:
-      "Vakkundige rioleringswerken, septische putten, grondwerken en meer. Snel, betrouwbaar, met 2 jaar garantie.",
+      "Riool verstopt? Binnen 35 minuten ter plaatse. 24/7 bereikbaar, ook in het weekend. €49 voorrijkosten incl. diagnose.",
     locale: "nl_BE",
     type: "website",
   },
