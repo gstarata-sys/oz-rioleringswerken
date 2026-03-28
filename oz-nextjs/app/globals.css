@@ -121,4 +121,17 @@
   .skill-bar {
     transition: width 1s cubic-bezier(0.23, 1, 0.32, 1);
   }
+
+  /* Infinite marquee ticker */
+  .animate-marquee {
+    animation: marquee 22s linear infinite;
+  }
+  .animate-marquee:hover {
+    animation-play-state: paused;
+  }
+}
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
 }

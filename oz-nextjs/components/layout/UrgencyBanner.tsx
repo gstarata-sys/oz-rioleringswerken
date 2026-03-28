@@ -1,25 +1,56 @@
-"use client";
-
-import { Phone } from "lucide-react";
+import { Phone, Clock, Zap, MapPin, Receipt } from "lucide-react";
 import { TELEFOON, TELEFOON_RAW } from "@/lib/constants";
+
+const ITEMS = [
+  {
+    icon: <Phone size={14} strokeWidth={2.5} />,
+    label: TELEFOON,
+    href: `tel:${TELEFOON_RAW}`,
+  },
+  {
+    icon: <Clock size={14} strokeWidth={2.5} />,
+    label: "24/7 Bereikbaar",
+  },
+  {
+    icon: <Zap size={14} strokeWidth={2.5} />,
+    label: "Spoedservice",
+  },
+  {
+    icon: <MapPin size={14} strokeWidth={2.5} />,
+    label: "Oost-Vlaanderen",
+  },
+  {
+    icon: <Receipt size={14} strokeWidth={2.5} />,
+    label: "Transparante tarieven",
+  },
+];
+
+// Duplicate for seamless loop
+const TRACK = [...ITEMS, ...ITEMS, ...ITEMS, ...ITEMS];
 
 export default function UrgencyBanner() {
   return (
-    <div className="bg-[#f59e0b] text-white py-2 px-4">
-      <div className="max-w-7xl mx-auto flex items-center justify-between gap-3">
-        <p className="text-sm font-semibold hidden sm:block">
-          🔧 Verstopt riool of lekkage? Wij zijn 24/7 bereikbaar — ook in het weekend!
-        </p>
-        <p className="text-sm font-semibold sm:hidden">
-          🔧 24/7 spoedservice beschikbaar
-        </p>
-        <a
-          href={`tel:${TELEFOON_RAW}`}
-          className="flex items-center gap-2 bg-white text-[#f59e0b] font-black text-base md:text-lg px-4 py-1.5 rounded-lg hover:bg-amber-50 transition-colors shrink-0 tracking-wide"
-        >
-          <Phone size={18} strokeWidth={2.5} />
-          <span>{TELEFOON}</span>
-        </a>
+    <div className="bg-[#f59e0b] py-2 overflow-hidden">
+      <div className="flex items-center animate-marquee whitespace-nowrap w-max">
+        {TRACK.map((item, i) => (
+          <span key={i} className="inline-flex items-center">
+            {item.href ? (
+              <a
+                href={item.href}
+                className="inline-flex items-center gap-1.5 text-[#111111] text-sm font-bold px-6 hover:underline"
+              >
+                {item.icon}
+                {item.label}
+              </a>
+            ) : (
+              <span className="inline-flex items-center gap-1.5 text-[#111111] text-sm font-semibold px-6">
+                {item.icon}
+                {item.label}
+              </span>
+            )}
+            <span className="text-[#111111]/30 text-xs select-none">•</span>
+          </span>
+        ))}
       </div>
     </div>
   );
