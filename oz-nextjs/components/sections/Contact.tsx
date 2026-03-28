@@ -40,7 +40,7 @@ export default function Contact() {
                 >
                   <Phone size={18} className="text-[#06b6d4] shrink-0" />
                   <div>
-                    <p className="text-xs text-slate-400">Bellen</p>
+                    <p className="text-xs text-white">Bellen</p>
                     <p className="font-bold text-sm">{TELEFOON}</p>
                   </div>
                 </a>
@@ -52,7 +52,7 @@ export default function Contact() {
                 >
                   <WhatsAppIcon size={18} className="text-[#25D366] shrink-0" />
                   <div>
-                    <p className="text-xs text-slate-400">WhatsApp</p>
+                    <p className="text-xs text-white">WhatsApp</p>
                     <p className="font-bold text-sm">Stuur een bericht</p>
                   </div>
                 </a>
@@ -62,7 +62,7 @@ export default function Contact() {
                 >
                   <Mail size={18} className="text-[#06b6d4] shrink-0" />
                   <div>
-                    <p className="text-xs text-slate-400">E-mail</p>
+                    <p className="text-xs text-white">E-mail</p>
                     <p className="font-bold text-sm">{EMAIL}</p>
                   </div>
                 </a>
