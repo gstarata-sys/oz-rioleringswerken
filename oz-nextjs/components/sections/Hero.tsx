@@ -124,15 +124,15 @@ export default function Hero() {
             initial={{ x: 60, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             transition={{ duration: 0.7, delay: 0.4 }}
-            className="hidden lg:block relative rounded-2xl overflow-hidden shadow-2xl"
-            style={{ height: "480px" }}
+            className="hidden lg:flex justify-end"
           >
+            <div className="relative rounded-2xl overflow-hidden shadow-2xl" style={{ width: "340px", height: "400px" }}>
             <Image
               src="https://images.unsplash.com/photo-1621905251918-48416bd8575a?w=800&q=80&fit=crop"
               alt="Vakkundige loodgieter aan het werk"
               fill
               className="object-cover"
-              sizes="(max-width: 1024px) 0px, 50vw"
+              sizes="340px"
             />
             {/* Google reviews badge */}
             <div className="absolute bottom-4 left-4 right-4 bg-white rounded-xl px-4 py-3 flex items-center gap-3 shadow-lg">
@@ -145,6 +145,7 @@ export default function Hero() {
                 <span className="font-bold text-[#0f172a] text-sm">4.6/5</span>
                 <span className="text-[#4a5568] text-xs ml-1">· 291 Google reviews</span>
               </div>
+            </div>
             </div>
           </motion.div>
 
