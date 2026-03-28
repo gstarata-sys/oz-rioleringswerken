@@ -1,0 +1,43 @@
+@import "tailwindcss";
+
+@theme {
+  /* Kleuren */
+  --color-navy:        #0f172a;
+  --color-navy-800:    #1e293b;
+  --color-navy-700:    #334155;
+  --color-cyan:        #06b6d4;
+  --color-cyan-dark:   #0891b2;
+  --color-cyan-light:  #cffafe;
+  --color-cyan-100:    #e0f7fa;
+  --color-amber:       #f59e0b;
+  --color-amber-dark:  #d97706;
+  --color-amber-light: #fef3c7;
+
+  /* Fonts */
+  --font-sans: var(--font-inter), system-ui, -apple-system, sans-serif;
+  --font-mono: var(--font-ibm-plex-mono), "Courier New", monospace;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply font-sans text-slate-900 bg-white antialiased;
+  }
+
+  h1, h2, h3, h4 {
+    @apply font-bold tracking-tight;
+  }
+}
+
+@layer utilities {
+  .section-pad {
+    @apply py-20 md:py-28;
+  }
+
+  .container-max {
+    @apply max-w-7xl mx-auto px-5 md:px-8;
+  }
+}
