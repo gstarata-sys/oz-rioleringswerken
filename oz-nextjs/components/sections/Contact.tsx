@@ -16,10 +16,10 @@ export default function Contact() {
     <section id="contact" className="py-20 md:py-28 bg-white">
       <div className="max-w-7xl mx-auto px-5 md:px-8">
         <FadeIn className="text-center mb-14">
-          <span className="inline-block text-xs font-bold uppercase tracking-widest text-[--color-cyan] mb-3">
+          <span className="inline-block text-xs font-bold uppercase tracking-widest text-[#06b6d4] mb-3">
             Neem contact op
           </span>
-          <h2 className="text-3xl md:text-4xl font-extrabold text-[--color-navy] mb-4">
+          <h2 className="text-3xl md:text-4xl font-extrabold text-[#0f172a] mb-4">
             Gratis offerte aanvragen
           </h2>
           <p className="text-slate-500 max-w-lg mx-auto text-base leading-relaxed">
@@ -31,14 +31,14 @@ export default function Contact() {
           {/* Left sidebar */}
           <FadeIn direction="left" className="lg:col-span-2 space-y-6">
             {/* Direct contact */}
-            <div className="bg-[--color-navy] rounded-2xl p-6 text-white">
+            <div className="bg-[#0f172a] rounded-2xl p-6 text-white">
               <h3 className="font-bold mb-4">Direct contact</h3>
               <div className="space-y-3">
                 <a
                   href={`tel:${TELEFOON_RAW}`}
                   className="flex items-center gap-3 bg-white/10 hover:bg-white/20 rounded-xl px-4 py-3 transition-colors"
                 >
-                  <Phone size={18} className="text-[--color-cyan] shrink-0" />
+                  <Phone size={18} className="text-[#06b6d4] shrink-0" />
                   <div>
                     <p className="text-xs text-slate-400">Bellen</p>
                     <p className="font-bold text-sm">{TELEFOON}</p>
@@ -60,7 +60,7 @@ export default function Contact() {
                   href={`mailto:${EMAIL}`}
                   className="flex items-center gap-3 bg-white/10 hover:bg-white/20 rounded-xl px-4 py-3 transition-colors"
                 >
-                  <Mail size={18} className="text-[--color-cyan] shrink-0" />
+                  <Mail size={18} className="text-[#06b6d4] shrink-0" />
                   <div>
                     <p className="text-xs text-slate-400">E-mail</p>
                     <p className="font-bold text-sm">{EMAIL}</p>
@@ -71,11 +71,11 @@ export default function Contact() {
 
             {/* Trust */}
             <div className="bg-slate-50 rounded-2xl p-5">
-              <h4 className="font-bold text-[--color-navy] text-sm mb-4">Waarom OZ Rioleringswerken?</h4>
+              <h4 className="font-bold text-[#0f172a] text-sm mb-4">Waarom OZ Rioleringswerken?</h4>
               <ul className="space-y-3">
                 {VERTROUWEN.map(({ icon: Icon, text }) => (
                   <li key={text} className="flex items-center gap-2.5 text-sm text-slate-600">
-                    <Icon size={16} className="text-[--color-cyan] shrink-0" />
+                    <Icon size={16} className="text-[#06b6d4] shrink-0" />
                     {text}
                   </li>
                 ))}

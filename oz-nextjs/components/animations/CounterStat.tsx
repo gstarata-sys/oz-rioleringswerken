@@ -39,7 +39,7 @@ export default function CounterStat({ value, suffix = "", label, staticDisplay }
 
   return (
     <div ref={ref} className="text-center">
-      <div className="text-4xl md:text-5xl font-extrabold text-[--color-cyan]">
+      <div className="text-4xl md:text-5xl font-extrabold text-[#06b6d4]">
         {staticDisplay ?? `${count}${suffix}`}
       </div>
       <div className="mt-1 text-sm font-medium text-slate-400 uppercase tracking-widest">

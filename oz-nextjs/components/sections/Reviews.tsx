@@ -8,17 +8,17 @@ export default function Reviews() {
     <section id="reviews" className="py-20 md:py-28 bg-slate-50">
       <div className="max-w-7xl mx-auto px-5 md:px-8">
         <FadeIn className="text-center mb-14">
-          <span className="inline-block text-xs font-bold uppercase tracking-widest text-[--color-cyan] mb-3">
+          <span className="inline-block text-xs font-bold uppercase tracking-widest text-[#06b6d4] mb-3">
             Wat klanten zeggen
           </span>
-          <h2 className="text-3xl md:text-4xl font-extrabold text-[--color-navy] mb-4">
+          <h2 className="text-3xl md:text-4xl font-extrabold text-[#0f172a] mb-4">
             Google recensies
           </h2>
           <div className="flex items-center justify-center gap-1.5">
             {[...Array(5)].map((_, i) => (
               <Star key={i} size={20} className="text-amber-400 fill-amber-400" />
             ))}
-            <span className="ml-2 font-bold text-[--color-navy]">5.0</span>
+            <span className="ml-2 font-bold text-[#0f172a]">5.0</span>
             <span className="text-slate-400 text-sm">/ 5 op Google</span>
           </div>
         </FadeIn>
@@ -28,13 +28,13 @@ export default function Reviews() {
             <StaggerItem key={review.naam}>
               <div className="bg-white rounded-2xl p-6 border border-slate-100 hover:shadow-md transition-shadow h-full flex flex-col">
                 <div className="flex items-center gap-3 mb-4">
-                  <div className="w-10 h-10 bg-[--color-cyan] rounded-full flex items-center justify-center shrink-0">
+                  <div className="w-10 h-10 bg-[#06b6d4] rounded-full flex items-center justify-center shrink-0">
                     <span className="font-bold text-white text-sm">
                       {review.naam.charAt(0)}
                     </span>
                   </div>
                   <div>
-                    <p className="font-semibold text-[--color-navy] text-sm">{review.naam}</p>
+                    <p className="font-semibold text-[#0f172a] text-sm">{review.naam}</p>
                     <p className="text-xs text-slate-400">{review.locatie}</p>
                   </div>
                   <div className="ml-auto flex gap-0.5">

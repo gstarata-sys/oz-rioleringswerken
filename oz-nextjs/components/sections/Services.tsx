@@ -1,11 +1,9 @@
 "use client";
 
-import { useRef } from "react";
 import {
   Waves, CircleDot, Shovel, Pipette, HardHat, Filter, Droplets, Camera, Phone,
 } from "lucide-react";
 import { DIENSTEN, TELEFOON_RAW } from "@/lib/constants";
-import { useGsapStaggerIn } from "@/components/animations/useGsapScrollFade";
 import FadeIn from "@/components/animations/FadeIn";
 
 const ICON_MAP: Record<string, React.ElementType> = {
@@ -13,8 +11,6 @@ const ICON_MAP: Record<string, React.ElementType> = {
 };
 
 export default function Services() {
-  const gridRef = useRef<HTMLDivElement>(null);
-  useGsapStaggerIn(gridRef, ".gsap-card", 0.08);
 
   return (
     <section id="diensten" className="py-20 md:py-28 bg-slate-50">
@@ -22,10 +18,10 @@ export default function Services() {
 
         {/* Header */}
         <FadeIn className="text-center mb-14">
-          <span className="inline-block text-xs font-bold uppercase tracking-widest text-[--color-cyan] mb-3">
+          <span className="inline-block text-xs font-bold uppercase tracking-widest text-[#06b6d4] mb-3">
             Onze diensten
           </span>
-          <h2 className="text-3xl md:text-4xl text-[--color-navy] mb-4">
+          <h2 className="text-3xl md:text-4xl text-[#0f172a] mb-4">
             Alles voor uw rioleringswerk
           </h2>
           <p className="text-slate-500 max-w-xl mx-auto text-base leading-relaxed">
@@ -33,24 +29,24 @@ export default function Services() {
           </p>
         </FadeIn>
 
-        {/* Cards grid — GSAP stagger */}
-        <div ref={gridRef} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+        {/* Cards grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
           {DIENSTEN.map((dienst) => {
             const Icon = ICON_MAP[dienst.icon];
             return (
-              <div key={dienst.id} className="gsap-card opacity-0">
-                <div className="group bg-white rounded-2xl p-6 border border-slate-100 hover:border-[--color-cyan]/40 hover:shadow-lg hover:-translate-y-1 hover:scale-[1.02] transition-all duration-200 h-full flex flex-col cursor-pointer">
+              <div key={dienst.id} className="gsap-card">
+                <div className="group bg-white rounded-2xl p-6 border border-slate-100 hover:border-[#06b6d4]/40 hover:shadow-lg hover:-translate-y-1 hover:scale-[1.02] transition-all duration-200 h-full flex flex-col cursor-pointer">
 
                   {/* Icon circle */}
-                  <div className="w-12 h-12 bg-[--color-cyan] rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                  <div className="w-12 h-12 bg-[#06b6d4] rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
                     {Icon && <Icon size={22} className="text-white" />}
                   </div>
 
                   {/* Title */}
-                  <h3 className="font-bold text-[--color-navy] text-base mb-1 normal-case">{dienst.titel}</h3>
+                  <h3 className="font-bold text-[#0f172a] text-base mb-1 normal-case">{dienst.titel}</h3>
 
                   {/* Price */}
-                  <p className="text-[--color-amber] font-black text-sm mb-3">{dienst.prijs}</p>
+                  <p className="text-[#f59e0b] font-black text-sm mb-3">{dienst.prijs}</p>
 
                   {/* Description */}
                   <p className="text-sm text-slate-500 leading-relaxed flex-1">{dienst.beschrijving}</p>
@@ -58,7 +54,7 @@ export default function Services() {
                   {/* Meer info link */}
                   <a
                     href={`tel:${TELEFOON_RAW}`}
-                    className="mt-4 inline-flex items-center text-sm font-semibold text-[--color-cyan] hover:text-[--color-cyan-dark] transition-colors"
+                    className="mt-4 inline-flex items-center text-sm font-semibold text-[#06b6d4] hover:text-[#0891b2] transition-colors"
                   >
                     Meer info →
                   </a>
@@ -69,14 +65,14 @@ export default function Services() {
         </div>
 
         {/* Spoed CTA */}
-        <FadeIn delay={0.3} className="mt-12 bg-[--color-amber]/10 border border-[--color-amber]/30 rounded-2xl px-6 py-5 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <FadeIn delay={0.3} className="mt-12 bg-[#f59e0b]/10 border border-[#f59e0b]/30 rounded-2xl px-6 py-5 flex flex-col sm:flex-row items-center justify-between gap-4">
           <div>
-            <p className="font-bold text-[--color-navy] text-base">Spoed? Wij komen direct!</p>
+            <p className="font-bold text-[#0f172a] text-base">Spoed? Wij komen direct!</p>
             <p className="text-sm text-slate-500 mt-0.5">Gemiddeld binnen 35 minuten ter plaatse in Gent en omgeving.</p>
           </div>
           <a
             href={`tel:${TELEFOON_RAW}`}
-            className="flex items-center gap-2 bg-[--color-amber] hover:bg-amber-500 hover:scale-105 text-white font-black px-5 py-3 rounded-xl transition-all shadow-sm shrink-0"
+            className="flex items-center gap-2 bg-[#f59e0b] hover:bg-amber-500 hover:scale-105 text-white font-black px-5 py-3 rounded-xl transition-all shadow-sm shrink-0"
           >
             <Phone size={16} strokeWidth={2.5} />
             Bel Nu

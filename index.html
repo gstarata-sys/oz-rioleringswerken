@@ -56,9 +56,9 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-  <link rel="stylesheet" href="css/style.css?v=6" />
+  <link rel="stylesheet" href="css/style.css?v=7" />
 </head>
-<body>
+<body class="has-banner">
 
   <!-- ===== SITE HEADER (banner + navbar samen vast) ===== -->
   <div class="site-header" id="siteHeader">
@@ -159,7 +159,7 @@
         </div>
         <!-- Vakman foto -->
         <img
-          src="https://images.unsplash.com/photo-1621905251189-08b45249b4b7?w=600&q=80&fit=crop&auto=format"
+          src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=600&q=80&fit=crop&auto=format"
           alt="Vakman aan het werk"
           class="hero__card-photo"
           loading="lazy"
@@ -873,7 +873,7 @@
             <input type="email" id="email" name="email" placeholder="uw@email.be" autocomplete="email" />
           </div>
 
-          <fieldset class="form__group form__checkboxes">
+          <fieldset class="form__group form__checkboxes" id="dienstenFieldset">
             <legend>Gewenste dienst(en) <span aria-hidden="true">*</span></legend>
             <div class="checkbox-grid">
               <label class="checkbox-item">
@@ -917,6 +917,7 @@
                 <span><i class="fas fa-bolt"></i> Spoedinterventie</span>
               </label>
             </div>
+            <p class="validation-msg" role="alert">Selecteer minstens 1 dienst.</p>
           </fieldset>
           <div class="form__group">
             <label for="bericht">Bericht <span aria-hidden="true">*</span></label>

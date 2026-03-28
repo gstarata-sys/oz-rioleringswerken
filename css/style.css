@@ -2076,11 +2076,11 @@ button {
   width: 100%;
   padding: 0.55rem 0.75rem;
   font-size: 0.85rem;
-  color: var(--color-navy-700);
+  color: var(--color-navy);
   border: 1.5px solid var(--color-gray-200);
   border-radius: var(--radius-md);
   background: var(--color-white);
-  transition: border-color var(--t-fast), background var(--t-fast), color var(--t-fast);
+  transition: border-color var(--t-fast), background var(--t-fast);
   user-select: none;
 }
 .checkbox-item span i { color: var(--color-gray-400); font-size: 0.85rem; flex-shrink: 0; transition: color var(--t-fast); }
@@ -2091,10 +2091,24 @@ button {
 .checkbox-item input:checked + span {
   border-color: var(--color-cyan);
   background: var(--color-cyan-100);
-  color: var(--color-cyan-dark);
+  color: var(--color-navy);
   font-weight: 600;
 }
 .checkbox-item input:checked + span i { color: var(--color-cyan-dark); }
+
+/* Validatie: rood kader als geen checkbox aangevinkt */
+.form__checkboxes.invalid .checkbox-grid {
+  outline: 2px solid var(--color-error);
+  outline-offset: 4px;
+  border-radius: var(--radius-md);
+}
+.form__checkboxes .validation-msg {
+  display: none;
+  font-size: 0.8rem;
+  color: var(--color-error);
+  margin-top: 0.4rem;
+}
+.form__checkboxes.invalid .validation-msg { display: block; }
 .checkbox-item input:focus-visible + span {
   outline: 3px solid var(--color-cyan);
   outline-offset: 2px;

@@ -27,10 +27,10 @@ const ITEMS = [
 
 export default function USP() {
   return (
-    <section className="bg-[--color-navy] py-16">
+    <section className="bg-[#0f172a] py-16">
       <div className="max-w-7xl mx-auto px-5 md:px-8">
         <FadeIn className="text-center mb-10">
-          <span className="inline-block text-xs font-bold uppercase tracking-widest text-[--color-cyan] mb-3">
+          <span className="inline-block text-xs font-bold uppercase tracking-widest text-[#06b6d4] mb-3">
             Waarom Oz?
           </span>
           <h2 className="text-2xl md:text-3xl text-white">
@@ -42,8 +42,8 @@ export default function USP() {
           {ITEMS.map(({ icon: Icon, titel, beschrijving }) => (
             <StaggerItem key={titel}>
               <div className="flex flex-col items-start gap-3 bg-white/5 hover:bg-white/10 rounded-2xl px-5 py-5 transition-colors h-full">
-                <div className="w-11 h-11 bg-[--color-cyan]/15 rounded-xl flex items-center justify-center shrink-0">
-                  <Icon size={22} className="text-[--color-cyan]" />
+                <div className="w-11 h-11 bg-[#06b6d4]/15 rounded-xl flex items-center justify-center shrink-0">
+                  <Icon size={22} className="text-[#06b6d4]" />
                 </div>
                 <div>
                   <p className="font-bold text-white text-sm leading-snug mb-1">{titel}</p>

@@ -40,7 +40,7 @@ export default function FloatingButtons() {
             transition={{ duration: 0.2 }}
             onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
             aria-label="Terug naar boven"
-            className="fixed bottom-24 right-6 z-40 w-11 h-11 bg-[--color-navy] hover:bg-[--color-navy-700] text-white rounded-full shadow-lg flex items-center justify-center transition-colors cursor-pointer"
+            className="fixed bottom-24 right-6 z-40 w-11 h-11 bg-[#0f172a] hover:bg-[#334155] text-white rounded-full shadow-lg flex items-center justify-center transition-colors cursor-pointer"
           >
             <ArrowUp size={20} />
           </motion.button>

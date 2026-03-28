@@ -10,12 +10,12 @@ const STATS = [
 
 export default function AboutUs() {
   return (
-    <section id="over-ons" className="py-20 md:py-28 bg-[--color-navy]">
+    <section id="over-ons" className="py-20 md:py-28 bg-[#0f172a]">
       <div className="max-w-7xl mx-auto px-5 md:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Text */}
           <FadeIn direction="left">
-            <span className="inline-block text-xs font-bold uppercase tracking-widest text-[--color-cyan] mb-3">
+            <span className="inline-block text-xs font-bold uppercase tracking-widest text-[#06b6d4] mb-3">
               Over ons
             </span>
             <h2 className="text-3xl md:text-4xl font-extrabold text-white mb-6">
@@ -31,7 +31,7 @@ export default function AboutUs() {
             <div className="grid grid-cols-3 gap-5">
               {STATS.map(({ icon: Icon, waarde, label }) => (
                 <div key={label} className="text-center bg-white/5 rounded-xl p-4">
-                  <Icon size={20} className="text-[--color-cyan] mx-auto mb-2" />
+                  <Icon size={20} className="text-[#06b6d4] mx-auto mb-2" />
                   <div className="text-2xl font-extrabold text-white">{waarde}</div>
                   <div className="text-xs text-slate-400 mt-0.5">{label}</div>
                 </div>
@@ -49,7 +49,7 @@ export default function AboutUs() {
                 className="object-cover"
                 sizes="(max-width: 1024px) 100vw, 50vw"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-[--color-navy]/60 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#0f172a]/60 to-transparent" />
             </div>
           </FadeIn>
         </div>

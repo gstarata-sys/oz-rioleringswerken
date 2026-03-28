@@ -10,10 +10,10 @@ export default function ServiceArea() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Left */}
           <FadeIn direction="left">
-            <span className="inline-block text-xs font-bold uppercase tracking-widest text-[--color-cyan] mb-3">
+            <span className="inline-block text-xs font-bold uppercase tracking-widest text-[#06b6d4] mb-3">
               Werkgebied
             </span>
-            <h2 className="text-3xl md:text-4xl font-extrabold text-[--color-navy] mb-5">
+            <h2 className="text-3xl md:text-4xl font-extrabold text-[#0f172a] mb-5">
               Actief in Gent<br />& Oost-Vlaanderen
             </h2>
             <p className="text-slate-500 text-base leading-relaxed mb-7">
@@ -26,7 +26,7 @@ export default function ServiceArea() {
                   key={stad}
                   className="flex items-center gap-2 bg-slate-50 rounded-lg px-3 py-2 text-sm text-slate-600"
                 >
-                  <MapPin size={13} className="text-[--color-cyan] shrink-0" />
+                  <MapPin size={13} className="text-[#06b6d4] shrink-0" />
                   {stad}
                 </div>
               ))}

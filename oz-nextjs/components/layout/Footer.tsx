@@ -26,14 +26,14 @@ export default function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="bg-[--color-navy] text-white">
+    <footer className="bg-[#0f172a] text-white">
       <div className="max-w-7xl mx-auto px-5 md:px-8 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-8">
           {/* Brand */}
           <div className="lg:col-span-1">
             <div className="flex items-center gap-1 mb-4">
               <span className="font-black text-xl text-white">Oz</span>
-              <span className="font-bold text-xl text-[--color-cyan]">Rioleringswerken</span>
+              <span className="font-bold text-xl text-[#06b6d4]">Rioleringswerken</span>
             </div>
             <p className="text-slate-400 text-sm leading-relaxed mb-5">
               Uw specialist voor riolering, septische putten en grondwerken. Vakkundig, betrouwbaar en altijd bereikbaar.
@@ -43,7 +43,7 @@ export default function Footer() {
                 href={`tel:${TELEFOON_RAW}`}
                 className="flex items-center gap-2 text-sm text-slate-300 hover:text-white transition-colors"
               >
-                <Phone size={14} className="text-[--color-cyan]" />
+                <Phone size={14} className="text-[#06b6d4]" />
                 {TELEFOON}
               </a>
               <a
@@ -59,15 +59,15 @@ export default function Footer() {
                 href={`mailto:${EMAIL}`}
                 className="flex items-center gap-2 text-sm text-slate-300 hover:text-white transition-colors"
               >
-                <Mail size={14} className="text-[--color-cyan]" />
+                <Mail size={14} className="text-[#06b6d4]" />
                 {EMAIL}
               </a>
               <div className="flex items-center gap-2 text-sm text-slate-400">
-                <MapPin size={14} className="text-[--color-cyan]" />
+                <MapPin size={14} className="text-[#06b6d4]" />
                 {STAD} & Oost-Vlaanderen
               </div>
               <div className="flex items-center gap-2 text-sm text-slate-400">
-                <Clock size={14} className="text-[--color-cyan]" />
+                <Clock size={14} className="text-[#06b6d4]" />
                 Ma–Za: 07:00–19:00
               </div>
             </div>

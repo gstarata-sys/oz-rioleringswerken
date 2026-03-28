@@ -1,19 +1,13 @@
 "use client";
 
-import { useRef } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { Phone, ChevronDown } from "lucide-react";
 import { TELEFOON, TELEFOON_RAW } from "@/lib/constants";
-import { useGsapScrollExit } from "@/components/animations/useGsapScrollFade";
 
 export default function Hero() {
-  const sectionRef = useRef<HTMLElement>(null);
-  useGsapScrollExit(sectionRef);
-
   return (
     <section
-      ref={sectionRef}
       id="home"
       className="relative min-h-[100svh] flex items-center overflow-hidden"
     >
@@ -28,7 +22,7 @@ export default function Hero() {
       />
 
       {/* Dark overlay */}
-      <div className="absolute inset-0 bg-gradient-to-r from-[--color-navy]/90 via-[--color-navy]/70 to-[--color-navy]/40" />
+      <div className="absolute inset-0 bg-gradient-to-r from-[#0f172a]/90 via-[#0f172a]/70 to-[#0f172a]/40" />
 
       {/* Cyan diagonal band */}
       <motion.div
@@ -52,7 +46,7 @@ export default function Hero() {
             initial={{ y: 20, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="inline-flex items-center gap-2 bg-[--color-amber] text-[--color-navy] text-xs font-black px-3.5 py-2 rounded-full mb-6"
+            className="inline-flex items-center gap-2 bg-[#f59e0b] text-[#0f172a] text-xs font-black px-3.5 py-2 rounded-full mb-6"
           >
             ⏱ 24/7 Spoedservice
           </motion.div>
@@ -67,7 +61,7 @@ export default function Hero() {
           >
             Snel.<br />
             Professioneel.<br />
-            <span className="text-[--color-cyan]">Altijd beschikbaar.</span>
+            <span className="text-[#06b6d4]">Altijd beschikbaar.</span>
           </motion.h1>
 
           {/* Description */}
@@ -90,7 +84,7 @@ export default function Hero() {
           >
             <a
               href={`tel:${TELEFOON_RAW}`}
-              className="flex items-center gap-2.5 bg-[--color-amber] hover:bg-amber-500 hover:scale-105 text-white font-black text-base px-6 py-3.5 rounded-xl transition-all shadow-lg shadow-amber-500/30"
+              className="flex items-center gap-2.5 bg-[#f59e0b] hover:bg-amber-500 hover:scale-105 text-white font-black text-base px-6 py-3.5 rounded-xl transition-all shadow-lg shadow-amber-500/30"
               style={{ fontFamily: "var(--font-display)" }}
             >
               <Phone size={20} strokeWidth={2.5} />
@@ -113,13 +107,13 @@ export default function Hero() {
             className="flex flex-wrap items-center gap-5 mt-10 text-white/70 text-sm"
           >
             <span className="flex items-center gap-1.5">
-              <span className="text-[--color-amber]">✓</span> Voorrijkosten €49 incl. diagnose
+              <span className="text-[#f59e0b]">✓</span> Voorrijkosten €49 incl. diagnose
             </span>
             <span className="flex items-center gap-1.5">
-              <span className="text-[--color-amber]">✓</span> 2 jaar garantie
+              <span className="text-[#f59e0b]">✓</span> 2 jaar garantie
             </span>
             <span className="flex items-center gap-1.5">
-              <span className="text-[--color-amber]">✓</span> Geen verborgen kosten
+              <span className="text-[#f59e0b]">✓</span> Geen verborgen kosten
             </span>
           </motion.div>
         </div>

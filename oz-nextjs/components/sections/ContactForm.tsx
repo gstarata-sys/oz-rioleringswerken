@@ -67,7 +67,7 @@ export default function ContactForm() {
         className="flex flex-col items-center justify-center text-center py-16 gap-4"
       >
         <CheckCircle size={52} className="text-green-500" />
-        <h3 className="text-xl font-bold text-[--color-navy]">Aanvraag verstuurd!</h3>
+        <h3 className="text-xl font-bold text-[#0f172a]">Aanvraag verstuurd!</h3>
         <p className="text-slate-500 max-w-sm">
           Bedankt! Wij nemen zo snel mogelijk contact met u op.
         </p>
@@ -80,7 +80,7 @@ export default function ContactForm() {
       {/* Name + Phone */}
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         <div>
-          <label htmlFor="naam" className="block text-xs font-semibold text-[--color-navy] mb-1.5 uppercase tracking-wide">
+          <label htmlFor="naam" className="block text-xs font-semibold text-[#0f172a] mb-1.5 uppercase tracking-wide">
             Naam <span className="text-red-500">*</span>
           </label>
           <input
@@ -90,11 +90,11 @@ export default function ContactForm() {
             value={naam}
             onChange={(e) => setNaam(e.target.value)}
             placeholder="Uw naam"
-            className="w-full border border-slate-200 rounded-xl px-4 py-3 text-sm text-[--color-navy] placeholder:text-slate-300 focus:outline-none focus:border-[--color-cyan] focus:ring-2 focus:ring-[--color-cyan]/20 transition-colors"
+            className="w-full border border-slate-200 rounded-xl px-4 py-3 text-sm text-[#0f172a] placeholder:text-slate-300 focus:outline-none focus:border-[#06b6d4] focus:ring-2 focus:ring-[#06b6d4]/20 transition-colors"
           />
         </div>
         <div>
-          <label htmlFor="telefoon" className="block text-xs font-semibold text-[--color-navy] mb-1.5 uppercase tracking-wide">
+          <label htmlFor="telefoon" className="block text-xs font-semibold text-[#0f172a] mb-1.5 uppercase tracking-wide">
             Telefoon <span className="text-red-500">*</span>
           </label>
           <input
@@ -104,14 +104,14 @@ export default function ContactForm() {
             value={telefoon}
             onChange={(e) => setTelefoon(e.target.value)}
             placeholder="+32 ..."
-            className="w-full border border-slate-200 rounded-xl px-4 py-3 text-sm text-[--color-navy] placeholder:text-slate-300 focus:outline-none focus:border-[--color-cyan] focus:ring-2 focus:ring-[--color-cyan]/20 transition-colors"
+            className="w-full border border-slate-200 rounded-xl px-4 py-3 text-sm text-[#0f172a] placeholder:text-slate-300 focus:outline-none focus:border-[#06b6d4] focus:ring-2 focus:ring-[#06b6d4]/20 transition-colors"
           />
         </div>
       </div>
 
       {/* Email */}
       <div>
-        <label htmlFor="email" className="block text-xs font-semibold text-[--color-navy] mb-1.5 uppercase tracking-wide">
+        <label htmlFor="email" className="block text-xs font-semibold text-[#0f172a] mb-1.5 uppercase tracking-wide">
           E-mailadres
         </label>
         <input
@@ -120,13 +120,13 @@ export default function ContactForm() {
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           placeholder="uw@email.be"
-          className="w-full border border-slate-200 rounded-xl px-4 py-3 text-sm text-[--color-navy] placeholder:text-slate-300 focus:outline-none focus:border-[--color-cyan] focus:ring-2 focus:ring-[--color-cyan]/20 transition-colors"
+          className="w-full border border-slate-200 rounded-xl px-4 py-3 text-sm text-[#0f172a] placeholder:text-slate-300 focus:outline-none focus:border-[#06b6d4] focus:ring-2 focus:ring-[#06b6d4]/20 transition-colors"
         />
       </div>
 
       {/* Diensten checkboxes */}
       <div>
-        <p className="text-xs font-semibold text-[--color-navy] mb-2 uppercase tracking-wide">
+        <p className="text-xs font-semibold text-[#0f172a] mb-2 uppercase tracking-wide">
           Gewenste dienst(en) <span className="text-red-500">*</span>
         </p>
         <div
@@ -141,8 +141,8 @@ export default function ContactForm() {
                 key={opt.value}
                 className={`flex items-center gap-2.5 px-3 py-2.5 rounded-lg border text-sm cursor-pointer transition-all select-none ${
                   checked
-                    ? "border-[--color-cyan] bg-[--color-cyan]/10 text-[--color-navy] font-semibold"
-                    : "border-slate-200 bg-white text-slate-600 hover:border-[--color-cyan]/50"
+                    ? "border-[#06b6d4] bg-[#06b6d4]/10 text-[#0f172a] font-semibold"
+                    : "border-slate-200 bg-white text-slate-600 hover:border-[#06b6d4]/50"
                 }`}
               >
                 <input
@@ -154,7 +154,7 @@ export default function ContactForm() {
                 />
                 <span
                   className={`w-4 h-4 rounded border flex items-center justify-center shrink-0 transition-colors ${
-                    checked ? "bg-[--color-cyan] border-[--color-cyan]" : "border-slate-300 bg-white"
+                    checked ? "bg-[#06b6d4] border-[#06b6d4]" : "border-slate-300 bg-white"
                   }`}
                 >
                   {checked && (
@@ -184,7 +184,7 @@ export default function ContactForm() {
 
       {/* Message */}
       <div>
-        <label htmlFor="bericht" className="block text-xs font-semibold text-[--color-navy] mb-1.5 uppercase tracking-wide">
+        <label htmlFor="bericht" className="block text-xs font-semibold text-[#0f172a] mb-1.5 uppercase tracking-wide">
           Uw bericht
         </label>
         <textarea
@@ -193,7 +193,7 @@ export default function ContactForm() {
           value={bericht}
           onChange={(e) => setBericht(e.target.value)}
           placeholder="Beschrijf kort de situatie of uw vraag..."
-          className="w-full border border-slate-200 rounded-xl px-4 py-3 text-sm text-[--color-navy] placeholder:text-slate-300 focus:outline-none focus:border-[--color-cyan] focus:ring-2 focus:ring-[--color-cyan]/20 transition-colors resize-none"
+          className="w-full border border-slate-200 rounded-xl px-4 py-3 text-sm text-[#0f172a] placeholder:text-slate-300 focus:outline-none focus:border-[#06b6d4] focus:ring-2 focus:ring-[#06b6d4]/20 transition-colors resize-none"
         />
       </div>
 
@@ -201,7 +201,7 @@ export default function ContactForm() {
       <button
         type="submit"
         disabled={status === "sending"}
-        className="w-full flex items-center justify-center gap-2 bg-[--color-cyan] hover:bg-[--color-cyan-dark] disabled:opacity-60 text-white font-bold py-3.5 rounded-xl transition-colors cursor-pointer"
+        className="w-full flex items-center justify-center gap-2 bg-[#06b6d4] hover:bg-[#0891b2] disabled:opacity-60 text-white font-bold py-3.5 rounded-xl transition-colors cursor-pointer"
       >
         {status === "sending" ? (
           <>

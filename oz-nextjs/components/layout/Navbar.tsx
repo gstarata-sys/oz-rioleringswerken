@@ -22,8 +22,8 @@ export default function Navbar() {
 
         {/* Logo */}
         <Link href="/" className="flex items-center gap-1 shrink-0">
-          <span className="font-black text-xl text-[--color-navy]">Oz</span>
-          <span className="font-bold text-xl text-[--color-cyan]">Rioleringswerken</span>
+          <span className="font-black text-xl text-[#0f172a]">Oz</span>
+          <span className="font-bold text-xl text-[#06b6d4]">Rioleringswerken</span>
         </Link>
 
         {/* Desktop nav links */}
@@ -32,7 +32,7 @@ export default function Navbar() {
             <li key={link.href}>
               <a
                 href={link.href}
-                className="text-sm font-medium text-slate-600 hover:text-[--color-navy] transition-colors"
+                className="text-sm font-medium text-slate-600 hover:text-[#0f172a] transition-colors"
               >
                 {link.label}
               </a>
@@ -44,7 +44,7 @@ export default function Navbar() {
         <div className="hidden lg:flex items-center gap-3">
           <a
             href={`tel:${TELEFOON_RAW}`}
-            className="flex items-center gap-2 bg-[--color-amber] hover:bg-amber-500 text-white font-black px-5 py-2.5 rounded-xl transition-colors shadow-sm"
+            className="flex items-center gap-2 bg-[#f59e0b] hover:bg-amber-500 text-white font-black px-5 py-2.5 rounded-xl transition-colors shadow-sm"
           >
             <Phone size={16} strokeWidth={2.5} />
             <span>Bel Nu: {TELEFOON}</span>
@@ -55,7 +55,7 @@ export default function Navbar() {
         <div className="lg:hidden flex items-center gap-2">
           <a
             href={`tel:${TELEFOON_RAW}`}
-            className="flex items-center gap-1.5 bg-[--color-amber] hover:bg-amber-500 text-white font-black text-sm px-3 py-2 rounded-lg transition-colors"
+            className="flex items-center gap-1.5 bg-[#f59e0b] hover:bg-amber-500 text-white font-black text-sm px-3 py-2 rounded-lg transition-colors"
           >
             <Phone size={15} strokeWidth={2.5} />
             <span className="hidden sm:inline">{TELEFOON}</span>
@@ -64,7 +64,7 @@ export default function Navbar() {
           <button
             onClick={() => setMobileOpen((o) => !o)}
             aria-label="Menu openen"
-            className="p-2 text-slate-600 hover:text-[--color-navy] transition-colors cursor-pointer"
+            className="p-2 text-slate-600 hover:text-[#0f172a] transition-colors cursor-pointer"
           >
             {mobileOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
@@ -87,7 +87,7 @@ export default function Navbar() {
                   key={link.href}
                   href={link.href}
                   onClick={() => setMobileOpen(false)}
-                  className="text-base font-medium text-slate-700 hover:text-[--color-navy] hover:bg-slate-50 px-3 py-2.5 rounded-lg transition-colors"
+                  className="text-base font-medium text-slate-700 hover:text-[#0f172a] hover:bg-slate-50 px-3 py-2.5 rounded-lg transition-colors"
                 >
                   {link.label}
                 </a>

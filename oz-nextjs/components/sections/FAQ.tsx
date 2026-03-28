@@ -17,10 +17,10 @@ export default function FAQ() {
     <section id="faq" className="py-20 md:py-28 bg-slate-50">
       <div className="max-w-3xl mx-auto px-5 md:px-8">
         <FadeIn className="text-center mb-12">
-          <span className="inline-block text-xs font-bold uppercase tracking-widest text-[--color-cyan] mb-3">
+          <span className="inline-block text-xs font-bold uppercase tracking-widest text-[#06b6d4] mb-3">
             Vragen
           </span>
-          <h2 className="text-3xl md:text-4xl font-extrabold text-[--color-navy] mb-4">
+          <h2 className="text-3xl md:text-4xl font-extrabold text-[#0f172a] mb-4">
             Veelgestelde vragen
           </h2>
         </FadeIn>
@@ -34,12 +34,12 @@ export default function FAQ() {
                   aria-expanded={openIndex === i}
                   className="w-full flex items-center justify-between gap-4 px-6 py-4 text-left cursor-pointer group"
                 >
-                  <span className="font-semibold text-[--color-navy] text-sm leading-snug group-hover:text-[--color-cyan] transition-colors">
+                  <span className="font-semibold text-[#0f172a] text-sm leading-snug group-hover:text-[#06b6d4] transition-colors">
                     {item.vraag}
                   </span>
-                  <div className="w-7 h-7 bg-slate-100 rounded-full flex items-center justify-center shrink-0 group-hover:bg-[--color-cyan]/10 transition-colors">
+                  <div className="w-7 h-7 bg-slate-100 rounded-full flex items-center justify-center shrink-0 group-hover:bg-[#06b6d4]/10 transition-colors">
                     {openIndex === i ? (
-                      <Minus size={14} className="text-[--color-cyan]" />
+                      <Minus size={14} className="text-[#06b6d4]" />
                     ) : (
                       <Plus size={14} className="text-slate-500" />
                     )}

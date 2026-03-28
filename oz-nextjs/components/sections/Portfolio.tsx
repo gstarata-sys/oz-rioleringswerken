@@ -30,10 +30,10 @@ export default function Portfolio() {
     <section id="realisaties" className="py-20 md:py-28 bg-white">
       <div className="max-w-7xl mx-auto px-5 md:px-8">
         <FadeIn className="text-center mb-14">
-          <span className="inline-block text-xs font-bold uppercase tracking-widest text-[--color-cyan] mb-3">
+          <span className="inline-block text-xs font-bold uppercase tracking-widest text-[#06b6d4] mb-3">
             Ons werk
           </span>
-          <h2 className="text-3xl md:text-4xl font-extrabold text-[--color-navy] mb-4">
+          <h2 className="text-3xl md:text-4xl font-extrabold text-[#0f172a] mb-4">
             Recente realisaties
           </h2>
           <p className="text-slate-500 max-w-lg mx-auto text-base leading-relaxed">
@@ -46,7 +46,7 @@ export default function Portfolio() {
             <StaggerItem key={item.id}>
               <button
                 onClick={() => open(i)}
-                className="group relative w-full rounded-2xl overflow-hidden aspect-[4/3] cursor-pointer focus:outline-none focus:ring-2 focus:ring-[--color-cyan] focus:ring-offset-2"
+                className="group relative w-full rounded-2xl overflow-hidden aspect-[4/3] cursor-pointer focus:outline-none focus:ring-2 focus:ring-[#06b6d4] focus:ring-offset-2"
                 aria-label={`Bekijk foto: ${item.titel}`}
               >
                 <Image
@@ -56,15 +56,15 @@ export default function Portfolio() {
                   className="object-cover group-hover:scale-105 transition-transform duration-500"
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                 />
-                <div className="absolute inset-0 bg-[--color-navy]/0 group-hover:bg-[--color-navy]/50 transition-all duration-300 flex items-center justify-center">
+                <div className="absolute inset-0 bg-[#0f172a]/0 group-hover:bg-[#0f172a]/50 transition-all duration-300 flex items-center justify-center">
                   <ZoomIn
                     size={32}
                     className="text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300"
                   />
                 </div>
-                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-[--color-navy]/80 to-transparent p-4 translate-y-2 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-300">
+                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-[#0f172a]/80 to-transparent p-4 translate-y-2 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-300">
                   <p className="text-white font-semibold text-sm">{item.titel}</p>
-                  <p className="text-[--color-cyan] text-xs mt-0.5">{item.categorie}</p>
+                  <p className="text-[#06b6d4] text-xs mt-0.5">{item.categorie}</p>
                 </div>
               </button>
             </StaggerItem>
@@ -128,7 +128,7 @@ export default function Portfolio() {
               />
               <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-5">
                 <p className="text-white font-bold">{PORTFOLIO_ITEMS[lightboxIndex].titel}</p>
-                <p className="text-[--color-cyan] text-sm">{PORTFOLIO_ITEMS[lightboxIndex].categorie}</p>
+                <p className="text-[#06b6d4] text-sm">{PORTFOLIO_ITEMS[lightboxIndex].categorie}</p>
               </div>
             </motion.div>
           </motion.div>

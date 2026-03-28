@@ -118,8 +118,7 @@ document.addEventListener('DOMContentLoaded', () => {
   if (urgencyBanner) {
     if (localStorage.getItem('urgency-closed') === '1') {
       urgencyBanner.classList.add('hidden');
-    } else {
-      document.body.classList.add('has-banner');
+      document.body.classList.remove('has-banner');
     }
 
     if (urgencyClose) {
@@ -422,6 +421,16 @@ document.addEventListener('DOMContentLoaded', () => {
   if (contactForm) {
     contactForm.addEventListener('submit', async (e) => {
       e.preventDefault();
+
+      // Valideer: minstens 1 dienst aangevinkt
+      const fieldset = document.getElementById('dienstenFieldset');
+      const checked  = contactForm.querySelectorAll('input[name="dienst[]"]:checked');
+      if (fieldset && checked.length === 0) {
+        fieldset.classList.add('invalid');
+        fieldset.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        return;
+      }
+      if (fieldset) fieldset.classList.remove('invalid');
 
       const submitBtn = contactForm.querySelector('button[type="submit"]');
       submitBtn.disabled = true;
