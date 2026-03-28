@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Syne, Rubik } from "next/font/google";
+import { Inter } from "next/font/google";
 import "./globals.css";
 
 import UrgencyBanner   from "@/components/layout/UrgencyBanner";
@@ -8,16 +8,9 @@ import Footer          from "@/components/layout/Footer";
 import FloatingButtons from "@/components/layout/FloatingButtons";
 import CookieBanner    from "@/components/layout/CookieBanner";
 
-const syne = Syne({
+const inter = Inter({
   subsets: ["latin"],
-  weight: ["700", "800"],
-  display: "swap",
-  variable: "--font-display",
-});
-
-const rubik = Rubik({
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
+  weight: ["400", "600", "700", "800"],
   display: "swap",
   variable: "--font-sans",
 });
@@ -43,7 +36,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="nl" className={`${syne.variable} ${rubik.variable}`}>
+    <html lang="nl" className={inter.variable}>
       <body className="antialiased">
         <UrgencyBanner />
         <Navbar />

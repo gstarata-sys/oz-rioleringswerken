@@ -1,5 +1,6 @@
 import Hero        from "@/components/sections/Hero";
 import Services    from "@/components/sections/Services";
+import Skills      from "@/components/sections/Skills";
 import Werkwijze   from "@/components/sections/Werkwijze";
 import Pricing     from "@/components/sections/Pricing";
 import USP         from "@/components/sections/USP";
@@ -12,6 +13,7 @@ export default function HomePage() {
     <>
       <Hero />
       <Services />
+      <Skills />
       <Werkwijze />
       <Pricing />
       <USP />

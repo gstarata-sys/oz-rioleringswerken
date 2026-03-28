@@ -35,7 +35,11 @@ export default function Services() {
             const Icon = ICON_MAP[dienst.icon];
             return (
               <div key={dienst.id} className="gsap-card">
-                <div className="group bg-white rounded-2xl p-6 border border-slate-100 hover:border-[#06b6d4]/40 hover:-translate-y-1 hover:scale-[1.02] h-full flex flex-col cursor-pointer card-shadow hover-glow">
+                <div className="group bg-white rounded-[12px] p-6 border-2 border-transparent hover:border-[#00b4d8] hover:-translate-y-1 h-full flex flex-col cursor-pointer transition-all duration-300"
+                  style={{ boxShadow: "0 1px 3px rgba(0,0,0,0.06), 0 4px 12px rgba(0,0,0,0.05)" }}
+                  onMouseEnter={e => (e.currentTarget.style.boxShadow = "0 0 0 4px rgba(0,180,216,0.25), 0 8px 30px rgba(0,180,216,0.2)")}
+                  onMouseLeave={e => (e.currentTarget.style.boxShadow = "0 1px 3px rgba(0,0,0,0.06), 0 4px 12px rgba(0,0,0,0.05)")}
+                >
 
                   {/* Icon circle */}
                   <div className="w-12 h-12 bg-[#06b6d4] rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">

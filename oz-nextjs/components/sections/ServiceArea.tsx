@@ -1,6 +1,5 @@
 import { MapPin } from "lucide-react";
-import WhatsAppIcon from "@/components/ui/WhatsAppIcon";
-import { WERKGEBIED_STEDEN, WHATSAPP_URL } from "@/lib/constants";
+import { WERKGEBIED_STEDEN } from "@/lib/constants";
 import FadeIn from "@/components/animations/FadeIn";
 
 export default function ServiceArea() {
@@ -10,37 +9,27 @@ export default function ServiceArea() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Left */}
           <FadeIn direction="left">
-            <span className="inline-block text-xs font-bold uppercase tracking-widest text-[#06b6d4] mb-3">
+            <span className="inline-block text-xs font-bold uppercase tracking-[2px] text-[#00b4d8] mb-3">
               Werkgebied
             </span>
-            <h2 className="text-3xl md:text-4xl font-extrabold text-[#0f172a] mb-5">
+            <h2 className="text-3xl md:text-4xl font-bold text-[#1a3a5c] mb-5">
               Actief in Gent<br />& Oost-Vlaanderen
             </h2>
-            <p className="text-slate-500 text-base leading-relaxed mb-7">
-              Wij zijn actief in heel Oost-Vlaanderen. Niet zeker of wij bij u in de buurt werken? Stuur ons een berichtje via WhatsApp.
+            <p className="text-[#4a5568] text-base leading-relaxed mb-7">
+              Wij zijn actief in heel Oost-Vlaanderen. Gemiddeld zijn wij binnen 35 minuten bij u ter plaatse.
             </p>
 
-            <div className="grid grid-cols-2 sm:grid-cols-3 gap-2.5 mb-8">
+            <div className="grid grid-cols-2 sm:grid-cols-3 gap-2.5">
               {WERKGEBIED_STEDEN.map((stad) => (
                 <div
                   key={stad}
-                  className="flex items-center gap-2 bg-slate-50 rounded-lg px-3 py-2 text-sm text-slate-600"
+                  className="flex items-center gap-2 bg-slate-50 rounded-lg px-3 py-2 text-sm text-[#4a5568]"
                 >
-                  <MapPin size={13} className="text-[#06b6d4] shrink-0" />
+                  <MapPin size={13} className="text-[#00b4d8] shrink-0" />
                   {stad}
                 </div>
               ))}
             </div>
-
-            <a
-              href={WHATSAPP_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 bg-[#25D366] hover:bg-[#20b858] text-white font-bold px-5 py-3 rounded-xl transition-colors"
-            >
-              <WhatsAppIcon size={18} />
-              Controleer uw gemeente
-            </a>
           </FadeIn>
 
           {/* Map */}

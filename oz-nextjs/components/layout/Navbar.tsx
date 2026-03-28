@@ -44,10 +44,10 @@ export default function Navbar() {
         <div className="hidden lg:flex items-center gap-3">
           <a
             href={`tel:${TELEFOON_RAW}`}
-            className="flex items-center gap-2 bg-[#f59e0b] hover:bg-amber-500 text-white font-black px-5 py-2.5 rounded-xl shadow-sm btn-press"
+            className="flex items-center gap-2 bg-[#f59e0b] hover:bg-amber-500 font-black px-5 py-2.5 rounded-xl shadow-sm btn-press text-[#111111]"
           >
-            <Phone size={16} strokeWidth={2.5} />
-            <span>Bel Nu: {TELEFOON}</span>
+            <Phone size={16} strokeWidth={2.5} className="text-[#111111]" />
+            <span className="text-[#111111]">Bel Nu: {TELEFOON}</span>
           </a>
         </div>
 
@@ -55,11 +55,11 @@ export default function Navbar() {
         <div className="lg:hidden flex items-center gap-2">
           <a
             href={`tel:${TELEFOON_RAW}`}
-            className="flex items-center gap-1.5 bg-[#f59e0b] hover:bg-amber-500 text-white font-black text-sm px-3 py-2 rounded-lg btn-press"
+            className="flex items-center gap-1.5 bg-[#f59e0b] hover:bg-amber-500 font-black text-sm px-3 py-2 rounded-lg btn-press text-[#111111]"
           >
-            <Phone size={15} strokeWidth={2.5} />
-            <span className="hidden sm:inline">{TELEFOON}</span>
-            <span className="sm:hidden">Bellen</span>
+            <Phone size={15} strokeWidth={2.5} className="text-[#111111]" />
+            <span className="hidden sm:inline text-[#111111]">{TELEFOON}</span>
+            <span className="sm:hidden text-[#111111]">Bellen</span>
           </a>
           <button
             onClick={() => setMobileOpen((o) => !o)}
