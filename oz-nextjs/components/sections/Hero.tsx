@@ -1,14 +1,19 @@
 "use client";
 
+import { useRef } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { Phone, ChevronDown } from "lucide-react";
-import { TELEFOON, TELEFOON_RAW, WHATSAPP_URL } from "@/lib/constants";
-import WhatsAppIcon from "@/components/ui/WhatsAppIcon";
+import { TELEFOON, TELEFOON_RAW } from "@/lib/constants";
+import { useGsapScrollExit } from "@/components/animations/useGsapScrollFade";
 
 export default function Hero() {
+  const sectionRef = useRef<HTMLElement>(null);
+  useGsapScrollExit(sectionRef);
+
   return (
     <section
+      ref={sectionRef}
       id="home"
       className="relative min-h-[100svh] flex items-center overflow-hidden"
     >
@@ -65,7 +70,7 @@ export default function Hero() {
             <span className="text-[--color-cyan]">Altijd beschikbaar.</span>
           </motion.h1>
 
-          {/* Description — separate block, never overlapping H1 */}
+          {/* Description */}
           <motion.p
             initial={{ y: 20, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
@@ -83,20 +88,18 @@ export default function Hero() {
             transition={{ duration: 0.5, delay: 0.65 }}
             className="flex flex-wrap gap-3"
           >
-            {/* Primary: phone */}
             <a
               href={`tel:${TELEFOON_RAW}`}
-              className="flex items-center gap-2.5 bg-[--color-amber] hover:bg-amber-500 text-white font-black text-base px-6 py-3.5 rounded-xl transition-colors shadow-lg shadow-amber-500/30"
+              className="flex items-center gap-2.5 bg-[--color-amber] hover:bg-amber-500 hover:scale-105 text-white font-black text-base px-6 py-3.5 rounded-xl transition-all shadow-lg shadow-amber-500/30"
               style={{ fontFamily: "var(--font-display)" }}
             >
               <Phone size={20} strokeWidth={2.5} />
               Bel Nu: {TELEFOON}
             </a>
 
-            {/* Secondary: bekijk diensten */}
             <a
               href="#diensten"
-              className="flex items-center gap-2 bg-transparent hover:bg-white/10 text-white font-bold text-base px-6 py-3.5 rounded-xl border-2 border-white/60 hover:border-white transition-colors"
+              className="flex items-center gap-2 bg-transparent hover:bg-white/10 hover:scale-105 text-white font-bold text-base px-6 py-3.5 rounded-xl border-2 border-white/60 hover:border-white transition-all"
             >
               Bekijk diensten →
             </a>

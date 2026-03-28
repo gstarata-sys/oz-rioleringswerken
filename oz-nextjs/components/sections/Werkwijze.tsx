@@ -1,10 +1,16 @@
+"use client";
+
+import { useRef } from "react";
 import { Phone } from "lucide-react";
 import { WERKWIJZE_STAPPEN, TELEFOON_RAW } from "@/lib/constants";
 import FadeIn from "@/components/animations/FadeIn";
-import StaggerContainer, { StaggerItem } from "@/components/animations/StaggerContainer";
 import CounterStat from "@/components/animations/CounterStat";
+import { useGsapStaggerIn } from "@/components/animations/useGsapScrollFade";
 
 export default function Werkwijze() {
+  const stepsRef = useRef<HTMLDivElement>(null);
+  useGsapStaggerIn(stepsRef, ".gsap-step", 0.12);
+
   return (
     <section id="werkwijze" className="py-20 md:py-28 bg-white">
       <div className="max-w-7xl mx-auto px-5 md:px-8">
@@ -20,24 +26,23 @@ export default function Werkwijze() {
           </p>
         </FadeIn>
 
-        {/* Steps */}
-        <StaggerContainer className="grid grid-cols-1 md:grid-cols-5 gap-6 mb-16">
+        {/* Steps — GSAP stagger */}
+        <div ref={stepsRef} className="grid grid-cols-1 md:grid-cols-5 gap-6 mb-16">
           {WERKWIJZE_STAPPEN.map((stap, index) => (
-            <StaggerItem key={stap.nummer}>
+            <div key={stap.nummer} className="gsap-step opacity-0">
               <div className="relative flex flex-col items-center text-center">
-                {/* Connector line */}
                 {index < WERKWIJZE_STAPPEN.length - 1 && (
                   <div className="hidden md:block absolute top-5 left-[calc(50%+28px)] right-[-50%] h-px bg-slate-200" />
                 )}
                 <div className="w-11 h-11 bg-[--color-navy] text-white rounded-full flex items-center justify-center font-mono font-bold text-sm mb-4 relative z-10 shrink-0">
                   {stap.nummer}
                 </div>
-                <h3 className="font-bold text-[--color-navy] text-sm mb-2">{stap.titel}</h3>
+                <h3 className="font-bold text-[--color-navy] text-sm mb-2 normal-case">{stap.titel}</h3>
                 <p className="text-xs text-slate-500 leading-relaxed">{stap.beschrijving}</p>
               </div>
-            </StaggerItem>
+            </div>
           ))}
-        </StaggerContainer>
+        </div>
 
         {/* Stats banner */}
         <div className="bg-[--color-navy] rounded-2xl py-10 px-8">
@@ -49,7 +54,7 @@ export default function Werkwijze() {
           <div className="mt-8 text-center">
             <a
               href={`tel:${TELEFOON_RAW}`}
-              className="inline-flex items-center gap-2 bg-[--color-amber] hover:bg-amber-500 text-white font-black px-6 py-3.5 rounded-xl transition-colors"
+              className="inline-flex items-center gap-2 bg-[--color-amber] hover:bg-amber-500 hover:scale-105 text-white font-black px-6 py-3.5 rounded-xl transition-all"
             >
               <Phone size={18} />
               Bel ons direct aan
