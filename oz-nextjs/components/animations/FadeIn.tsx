@@ -21,7 +21,7 @@ export default function FadeIn({
   once = true,
 }: FadeInProps) {
   const ref = useRef<HTMLDivElement>(null);
-  const isInView = useInView(ref, { once, margin: "-80px" });
+  const isInView = useInView(ref, { once, margin: "-20px" });
 
   const directionMap = {
     up:    { y: 32, x: 0 },

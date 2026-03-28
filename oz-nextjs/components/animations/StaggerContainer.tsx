@@ -24,7 +24,7 @@ export function StaggerItem({ children, className, index = 0, staggerDelay = 0.0
     <motion.div
       initial={{ opacity: 0, y: 28 }}
       whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: "-60px" }}
+      viewport={{ once: true, margin: "-20px" }}
       transition={{ duration: 0.5, delay: index * staggerDelay, ease: "easeOut" }}
       className={className}
     >
@@ -40,7 +40,7 @@ export default function StaggerContainer({
   staggerDelay = 0.08,
 }: StaggerContainerProps) {
   const ref = useRef<HTMLDivElement>(null);
-  const isInView = useInView(ref, { once: true, margin: "-60px" });
+  const isInView = useInView(ref, { once: true, margin: "-20px" });
 
   return (
     <div ref={ref} className={className}>

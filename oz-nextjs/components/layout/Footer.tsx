@@ -1,5 +1,6 @@
 import Image from "next/image";
-import { Phone, MessageCircle, MapPin, Clock } from "lucide-react";
+import { Phone, MapPin, Clock } from "lucide-react";
+import WhatsAppIcon from "@/components/ui/WhatsAppIcon";
 import { TELEFOON, TELEFOON_RAW, WHATSAPP_URL, WERKGEBIED_STEDEN } from "@/lib/constants";
 
 const DIENSTEN_FOOTER = [
@@ -61,7 +62,7 @@ export default function Footer() {
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 text-sm text-slate-300 hover:text-white transition-colors"
               >
-                <MessageCircle size={14} className="text-[#25D366]" />
+                <WhatsAppIcon size={14} className="text-[#25D366]" />
                 WhatsApp
               </a>
               <div className="flex items-center gap-2 text-sm text-slate-400">

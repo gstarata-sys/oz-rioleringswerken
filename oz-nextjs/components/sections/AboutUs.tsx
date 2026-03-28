@@ -43,8 +43,8 @@ export default function AboutUs() {
           <FadeIn direction="right">
             <div className="relative rounded-2xl overflow-hidden shadow-2xl aspect-[4/3]">
               <Image
-                src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=800&q=80&fit=crop&auto=format"
-                alt="Vakman van Oz Rioleringswerken aan het werk"
+                src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=800&q=80&fit=crop&auto=format"
+                alt="Team van Oz Rioleringswerken aan het werk"
                 fill
                 className="object-cover"
                 sizes="(max-width: 1024px) 100vw, 50vw"

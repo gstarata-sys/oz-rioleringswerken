@@ -11,19 +11,21 @@ interface CounterStatProps {
 
 export default function CounterStat({ value, suffix = "", label }: CounterStatProps) {
   const ref = useRef<HTMLDivElement>(null);
-  const isInView = useInView(ref, { once: true });
-  const [count, setCount] = useState(0);
+  const isInView = useInView(ref, { once: true, margin: "0px" });
+  const [count, setCount] = useState(value);
+  const animated = useRef(false);
 
   useEffect(() => {
-    if (!isInView) return;
-    let start = 0;
+    if (!isInView || animated.current) return;
+    animated.current = true;
+
+    setCount(0);
     const duration = 1500;
     const startTime = performance.now();
 
     function step(now: number) {
       const elapsed = now - startTime;
       const progress = Math.min(elapsed / duration, 1);
-      // easeOutQuart
       const eased = 1 - Math.pow(1 - progress, 4);
       setCount(Math.floor(eased * value));
       if (progress < 1) requestAnimationFrame(step);

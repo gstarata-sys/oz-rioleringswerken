@@ -1,4 +1,5 @@
-import { Phone, MessageCircle, Award, ShieldCheck, Clock, MapPin } from "lucide-react";
+import { Phone, Award, ShieldCheck, Clock, MapPin } from "lucide-react";
+import WhatsAppIcon from "@/components/ui/WhatsAppIcon";
 import { TELEFOON, TELEFOON_RAW, WHATSAPP_URL } from "@/lib/constants";
 import FadeIn from "@/components/animations/FadeIn";
 import ContactForm from "./ContactForm";
@@ -49,7 +50,7 @@ export default function Contact() {
                   rel="noopener noreferrer"
                   className="flex items-center gap-3 bg-white/10 hover:bg-white/20 rounded-xl px-4 py-3 transition-colors"
                 >
-                  <MessageCircle size={18} className="text-[#25D366] shrink-0" />
+                  <WhatsAppIcon size={18} className="text-[#25D366] shrink-0" />
                   <div>
                     <p className="text-xs text-slate-400">WhatsApp</p>
                     <p className="font-bold text-sm">Stuur een bericht</p>

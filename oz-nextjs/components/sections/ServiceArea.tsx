@@ -1,4 +1,5 @@
-import { MapPin, MessageCircle } from "lucide-react";
+import { MapPin } from "lucide-react";
+import WhatsAppIcon from "@/components/ui/WhatsAppIcon";
 import { WERKGEBIED_STEDEN, WHATSAPP_URL } from "@/lib/constants";
 import FadeIn from "@/components/animations/FadeIn";
 
@@ -37,7 +38,7 @@ export default function ServiceArea() {
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 bg-[#25D366] hover:bg-[#20b858] text-white font-bold px-5 py-3 rounded-xl transition-colors"
             >
-              <MessageCircle size={18} />
+              <WhatsAppIcon size={18} />
               Controleer uw gemeente
             </a>
           </FadeIn>

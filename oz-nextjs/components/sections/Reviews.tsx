@@ -16,7 +16,7 @@ export default function Reviews() {
           </h2>
           <div className="flex items-center justify-center gap-1.5">
             {[...Array(5)].map((_, i) => (
-              <Star key={i} size={20} className="text-[--color-amber] fill-[--color-amber]" />
+              <Star key={i} size={20} className="text-amber-400 fill-amber-400" />
             ))}
             <span className="ml-2 font-bold text-[--color-navy]">5.0</span>
             <span className="text-slate-400 text-sm">/ 5 op Google</span>
@@ -39,7 +39,7 @@ export default function Reviews() {
                   </div>
                   <div className="ml-auto flex gap-0.5">
                     {[...Array(review.sterren)].map((_, i) => (
-                      <Star key={i} size={13} className="text-[--color-amber] fill-[--color-amber]" />
+                      <Star key={i} size={13} className="text-amber-400 fill-amber-400" />
                     ))}
                   </div>
                 </div>

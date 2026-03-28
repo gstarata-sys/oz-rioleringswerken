@@ -2,7 +2,8 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { Phone, ChevronDown, Star, Award, MessageCircle } from "lucide-react";
+import { Phone, ChevronDown, Star, Award } from "lucide-react";
+import WhatsAppIcon from "@/components/ui/WhatsAppIcon";
 import { TELEFOON, TELEFOON_RAW, WHATSAPP_URL } from "@/lib/constants";
 
 export default function Hero() {
@@ -48,7 +49,7 @@ export default function Hero() {
               transition={{ duration: 0.5, delay: 0.2 }}
               className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm text-white text-xs font-semibold px-3.5 py-2 rounded-full border border-white/20 mb-6"
             >
-              <Star size={13} className="text-[--color-amber] fill-[--color-amber]" />
+              <Star size={13} className="text-amber-400 fill-amber-400" />
               500+ tevreden klanten in Gent & Oost-Vlaanderen
             </motion.div>
 
@@ -93,7 +94,7 @@ export default function Hero() {
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 bg-white/10 hover:bg-white/20 backdrop-blur-sm text-white font-bold px-6 py-3.5 rounded-xl border border-white/25 transition-colors"
               >
-                <MessageCircle size={18} />
+                <WhatsAppIcon size={18} />
                 WhatsApp
               </a>
             </motion.div>
@@ -111,7 +112,7 @@ export default function Hero() {
               <div className="absolute top-3.5 right-3.5 z-10 flex items-center gap-1.5 bg-white/95 backdrop-blur-sm px-3 py-1.5 rounded-full shadow-md">
                 <div className="flex gap-0.5">
                   {[...Array(5)].map((_, i) => (
-                    <Star key={i} size={11} className="text-[--color-amber] fill-[--color-amber]" />
+                    <Star key={i} size={11} className="text-amber-400 fill-amber-400" />
                   ))}
                 </div>
                 <span className="font-bold text-[--color-navy] text-xs">5.0</span>
@@ -121,8 +122,8 @@ export default function Hero() {
               {/* Photo */}
               <div className="relative aspect-[3/4]">
                 <Image
-                  src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=600&q=80&fit=crop&auto=format"
-                  alt="Vakman aan het werk"
+                  src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=600&q=80&fit=crop&crop=center&auto=format"
+                  alt="Vakman rioleringswerken aan het werk"
                   fill
                   className="object-cover"
                   sizes="50vw"
