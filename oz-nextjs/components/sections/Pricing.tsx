@@ -26,11 +26,14 @@ export default function Pricing() {
           {TARIEVEN.map((tarief) => (
             <div key={tarief.naam} className="gsap-card">
               <div
-                className={`relative rounded-2xl p-7 h-full flex flex-col transition-all hover:scale-[1.02] ${
+                className={`relative rounded-2xl p-7 h-full flex flex-col transition-all duration-300 ${
                   tarief.featured
-                    ? "bg-white ring-2 ring-[#06b6d4] md:scale-[1.02]"
-                    : "bg-white/5 border border-white/10 hover:bg-white/10"
+                    ? "bg-white md:scale-[1.02]"
+                    : "bg-white/5 border border-white/10 hover:bg-white/10 hover-glow-dark"
                 }`}
+                style={tarief.featured ? {
+                  boxShadow: "0 0 0 2px #06b6d4, 0 0 40px rgba(6,182,212,0.25), 0 20px 40px rgba(0,0,0,0.3)"
+                } : undefined}
               >
                 {tarief.badge && (
                   <span className="absolute -top-3 left-1/2 -translate-x-1/2 bg-[#f59e0b] text-white text-xs font-black px-3 py-1 rounded-full">
@@ -69,7 +72,7 @@ export default function Pricing() {
 
                 <a
                   href={`tel:${TELEFOON_RAW}`}
-                  className={`mt-6 flex items-center justify-center gap-2 font-bold text-sm py-3 rounded-xl transition-all hover:scale-105 ${
+                  className={`mt-6 flex items-center justify-center gap-2 font-bold text-sm py-3 rounded-xl btn-press ${
                     tarief.featured
                       ? "bg-[#f59e0b] text-white hover:bg-amber-500"
                       : "bg-white/10 text-white hover:bg-white/20"

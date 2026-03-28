@@ -41,7 +41,7 @@ export default function USP() {
         <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
           {ITEMS.map(({ icon: Icon, titel, beschrijving }) => (
             <StaggerItem key={titel}>
-              <div className="flex flex-col items-start gap-3 bg-white/5 hover:bg-white/10 rounded-2xl px-5 py-5 transition-colors h-full">
+              <div className="flex flex-col items-start gap-3 bg-white/5 hover:bg-white/10 rounded-2xl px-5 py-5 h-full hover-glow-dark">
                 <div className="w-11 h-11 bg-[#06b6d4]/15 rounded-xl flex items-center justify-center shrink-0">
                   <Icon size={22} className="text-[#06b6d4]" />
                 </div>

@@ -26,7 +26,7 @@ export default function Werkwijze() {
         <div className="grid grid-cols-1 md:grid-cols-5 gap-6 mb-16">
           {WERKWIJZE_STAPPEN.map((stap, index) => (
             <div key={stap.nummer} className="gsap-step">
-              <div className="relative flex flex-col items-center text-center">
+              <div className="relative flex flex-col items-center text-center rounded-2xl p-4 hover:bg-slate-50 transition-colors duration-200">
                 {index < WERKWIJZE_STAPPEN.length - 1 && (
                   <div className="hidden md:block absolute top-5 left-[calc(50%+28px)] right-[-50%] h-px bg-slate-200" />
                 )}
@@ -50,7 +50,7 @@ export default function Werkwijze() {
           <div className="mt-8 text-center">
             <a
               href={`tel:${TELEFOON_RAW}`}
-              className="inline-flex items-center gap-2 bg-[#f59e0b] hover:bg-amber-500 hover:scale-105 text-white font-black px-6 py-3.5 rounded-xl transition-all"
+              className="inline-flex items-center gap-2 bg-[#f59e0b] hover:bg-amber-500 text-white font-black px-6 py-3.5 rounded-xl btn-press"
             >
               <Phone size={18} />
               Bel ons direct aan

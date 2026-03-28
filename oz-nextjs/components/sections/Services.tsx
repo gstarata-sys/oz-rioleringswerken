@@ -35,7 +35,7 @@ export default function Services() {
             const Icon = ICON_MAP[dienst.icon];
             return (
               <div key={dienst.id} className="gsap-card">
-                <div className="group bg-white rounded-2xl p-6 border border-slate-100 hover:border-[#06b6d4]/40 hover:shadow-lg hover:-translate-y-1 hover:scale-[1.02] transition-all duration-200 h-full flex flex-col cursor-pointer">
+                <div className="group bg-white rounded-2xl p-6 border border-slate-100 hover:border-[#06b6d4]/40 hover:-translate-y-1 hover:scale-[1.02] h-full flex flex-col cursor-pointer card-shadow hover-glow">
 
                   {/* Icon circle */}
                   <div className="w-12 h-12 bg-[#06b6d4] rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
@@ -72,7 +72,7 @@ export default function Services() {
           </div>
           <a
             href={`tel:${TELEFOON_RAW}`}
-            className="flex items-center gap-2 bg-[#f59e0b] hover:bg-amber-500 hover:scale-105 text-white font-black px-5 py-3 rounded-xl transition-all shadow-sm shrink-0"
+            className="flex items-center gap-2 bg-[#f59e0b] hover:bg-amber-500 text-white font-black px-5 py-3 rounded-xl shadow-sm shrink-0 btn-press"
           >
             <Phone size={16} strokeWidth={2.5} />
             Bel Nu

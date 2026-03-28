@@ -28,7 +28,7 @@ export default function FAQ() {
         <div className="space-y-3">
           {FAQ_ITEMS.map((item, i) => (
             <FadeIn key={i} delay={i * 0.06}>
-              <div className="bg-white rounded-2xl border border-slate-100 overflow-hidden">
+              <div className="bg-white rounded-2xl border border-slate-100 overflow-hidden card-shadow hover-glow">
                 <button
                   onClick={() => toggle(i)}
                   aria-expanded={openIndex === i}

@@ -44,7 +44,7 @@ export default function Navbar() {
         <div className="hidden lg:flex items-center gap-3">
           <a
             href={`tel:${TELEFOON_RAW}`}
-            className="flex items-center gap-2 bg-[#f59e0b] hover:bg-amber-500 text-white font-black px-5 py-2.5 rounded-xl transition-colors shadow-sm"
+            className="flex items-center gap-2 bg-[#f59e0b] hover:bg-amber-500 text-white font-black px-5 py-2.5 rounded-xl shadow-sm btn-press"
           >
             <Phone size={16} strokeWidth={2.5} />
             <span>Bel Nu: {TELEFOON}</span>
@@ -55,7 +55,7 @@ export default function Navbar() {
         <div className="lg:hidden flex items-center gap-2">
           <a
             href={`tel:${TELEFOON_RAW}`}
-            className="flex items-center gap-1.5 bg-[#f59e0b] hover:bg-amber-500 text-white font-black text-sm px-3 py-2 rounded-lg transition-colors"
+            className="flex items-center gap-1.5 bg-[#f59e0b] hover:bg-amber-500 text-white font-black text-sm px-3 py-2 rounded-lg btn-press"
           >
             <Phone size={15} strokeWidth={2.5} />
             <span className="hidden sm:inline">{TELEFOON}</span>

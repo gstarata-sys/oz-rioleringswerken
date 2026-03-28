@@ -17,15 +17,13 @@ interface StaggerItemProps {
   staggerDelay?: number;
 }
 
-// Context-free item: uses its own parent's inView state via CSS var trick
-// Simplest approach: each item reads its index from the parent via CSS custom property
-export function StaggerItem({ children, className, index = 0, staggerDelay = 0.08 }: StaggerItemProps) {
+export function StaggerItem({ children, className, index = 0, staggerDelay = 0.06 }: StaggerItemProps) {
   return (
     <motion.div
-      initial={{ opacity: 0, y: 28 }}
-      whileInView={{ opacity: 1, y: 0 }}
+      initial={{ opacity: 0, y: 20, scale: 0.98 }}
+      whileInView={{ opacity: 1, y: 0, scale: 1 }}
       viewport={{ once: true, margin: "-20px" }}
-      transition={{ duration: 0.5, delay: index * staggerDelay, ease: "easeOut" }}
+      transition={{ duration: 0.5, delay: index * staggerDelay, ease: [0.23, 1, 0.32, 1] }}
       className={className}
     >
       {children}
@@ -33,11 +31,10 @@ export function StaggerItem({ children, className, index = 0, staggerDelay = 0.0
   );
 }
 
-// Container passes index to children via React.Children.map
 export default function StaggerContainer({
   children,
   className,
-  staggerDelay = 0.08,
+  staggerDelay = 0.06,
 }: StaggerContainerProps) {
   const ref = useRef<HTMLDivElement>(null);
   const isInView = useInView(ref, { once: true, margin: "-20px" });
@@ -45,17 +42,14 @@ export default function StaggerContainer({
   return (
     <div ref={ref} className={className}>
       {isInView
-        ? // Render children with stagger when in view
-          (Array.isArray(children) ? children : [children]).map((child, i) => (
+        ? (Array.isArray(children) ? children : [children]).map((child, i) => (
             <StaggerItem key={i} index={i} staggerDelay={staggerDelay}>
-              {/* Strip StaggerItem wrapper if child already is one */}
               {(child as React.ReactElement<StaggerItemProps>)?.type === StaggerItem
                 ? (child as React.ReactElement<StaggerItemProps>).props.children
                 : child}
             </StaggerItem>
           ))
-        : // Hidden placeholder while not in view
-          (Array.isArray(children) ? children : [children]).map((child, i) => (
+        : (Array.isArray(children) ? children : [children]).map((child, i) => (
             <div key={i} style={{ opacity: 0 }}>
               {(child as React.ReactElement<StaggerItemProps>)?.type === StaggerItem
                 ? (child as React.ReactElement<StaggerItemProps>).props.children

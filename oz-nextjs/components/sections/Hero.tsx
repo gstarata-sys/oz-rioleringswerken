@@ -84,7 +84,7 @@ export default function Hero() {
           >
             <a
               href={`tel:${TELEFOON_RAW}`}
-              className="flex items-center gap-2.5 bg-[#f59e0b] hover:bg-amber-500 hover:scale-105 text-white font-black text-base px-6 py-3.5 rounded-xl transition-all shadow-lg shadow-amber-500/30"
+              className="flex items-center gap-2.5 bg-[#f59e0b] hover:bg-amber-500 text-white font-black text-base px-6 py-3.5 rounded-xl shadow-lg shadow-amber-500/30 btn-press"
               style={{ fontFamily: "var(--font-display)" }}
             >
               <Phone size={20} strokeWidth={2.5} />

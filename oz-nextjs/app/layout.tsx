@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Barlow_Condensed, Barlow } from "next/font/google";
+import { Syne, Rubik } from "next/font/google";
 import "./globals.css";
 
 import UrgencyBanner   from "@/components/layout/UrgencyBanner";
@@ -8,14 +8,14 @@ import Footer          from "@/components/layout/Footer";
 import FloatingButtons from "@/components/layout/FloatingButtons";
 import CookieBanner    from "@/components/layout/CookieBanner";
 
-const barlowCondensed = Barlow_Condensed({
+const syne = Syne({
   subsets: ["latin"],
-  weight: ["600", "700", "800", "900"],
+  weight: ["700", "800"],
   display: "swap",
   variable: "--font-display",
 });
 
-const barlow = Barlow({
+const rubik = Rubik({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
   display: "swap",
@@ -43,7 +43,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="nl" className={`${barlowCondensed.variable} ${barlow.variable}`}>
+    <html lang="nl" className={`${syne.variable} ${rubik.variable}`}>
       <body className="antialiased">
         <UrgencyBanner />
         <Navbar />

@@ -36,7 +36,7 @@ export default function Contact() {
               <div className="space-y-3">
                 <a
                   href={`tel:${TELEFOON_RAW}`}
-                  className="flex items-center gap-3 bg-white/10 hover:bg-white/20 rounded-xl px-4 py-3 transition-colors"
+                  className="flex items-center gap-3 bg-white/10 hover:bg-white/20 rounded-xl px-4 py-3 hover-glow-dark"
                 >
                   <Phone size={18} className="text-[#06b6d4] shrink-0" />
                   <div>
@@ -48,7 +48,7 @@ export default function Contact() {
                   href={WHATSAPP_URL}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-3 bg-white/10 hover:bg-white/20 rounded-xl px-4 py-3 transition-colors"
+                  className="flex items-center gap-3 bg-white/10 hover:bg-white/20 rounded-xl px-4 py-3 hover-glow-dark"
                 >
                   <WhatsAppIcon size={18} className="text-[#25D366] shrink-0" />
                   <div>
@@ -58,7 +58,7 @@ export default function Contact() {
                 </a>
                 <a
                   href={`mailto:${EMAIL}`}
-                  className="flex items-center gap-3 bg-white/10 hover:bg-white/20 rounded-xl px-4 py-3 transition-colors"
+                  className="flex items-center gap-3 bg-white/10 hover:bg-white/20 rounded-xl px-4 py-3 hover-glow-dark"
                 >
                   <Mail size={18} className="text-[#06b6d4] shrink-0" />
                   <div>
@@ -99,7 +99,7 @@ export default function Contact() {
 
           {/* Form */}
           <FadeIn direction="right" className="lg:col-span-3">
-            <div className="bg-white rounded-2xl border border-slate-100 shadow-sm p-7">
+            <div className="bg-white rounded-2xl border border-slate-100 p-7 card-shadow hover-glow">
               <ContactForm />
             </div>
           </FadeIn>
