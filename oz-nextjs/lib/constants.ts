@@ -266,41 +266,41 @@ export const PORTFOLIO_ITEMS = [
     titel: "Rioleringssanering Gent-Zuid",
     categorie: "Rioleringswerken",
     afbeelding:
-      "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&q=80&fit=crop&auto=format",
+      "https://images.unsplash.com/photo-1621905252507-b35492cc74b4?w=800&q=80&fit=crop&auto=format",
   },
   {
     id: 2,
     titel: "Septische put plaatsing Merelbeke",
     categorie: "Septische putten",
     afbeelding:
-      "https://images.unsplash.com/photo-1581094651181-35942459ef62?w=800&q=80&fit=crop&auto=format",
+      "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&q=80&fit=crop&auto=format",
   },
   {
     id: 3,
     titel: "Grondwerken nieuwbouw Wetteren",
     categorie: "Grondwerken",
     afbeelding:
-      "https://images.unsplash.com/photo-1579864905783-4e7f71c7bfda?w=800&q=80&fit=crop&auto=format",
+      "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=800&q=80&fit=crop&auto=format",
   },
   {
     id: 4,
     titel: "Tegelwerken afwerking Aalst",
     categorie: "Tegelwerken",
     afbeelding:
-      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80&fit=crop&auto=format",
+      "https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?w=800&q=80&fit=crop&auto=format",
   },
   {
     id: 5,
     titel: "Leidingen aanleg Sint-Niklaas",
     categorie: "Buizen & leidingen",
     afbeelding:
-      "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80&fit=crop&auto=format",
+      "https://images.unsplash.com/photo-1607472586893-edb57bdc0e39?w=800&q=80&fit=crop&auto=format",
   },
   {
     id: 6,
     titel: "Vloerverwarming installatie Gent",
     categorie: "Ondergrondse verwarming",
     afbeelding:
-      "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=800&q=80&fit=crop&auto=format",
+      "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80&fit=crop&auto=format",
   },
 ] as const;

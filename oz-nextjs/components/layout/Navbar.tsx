@@ -70,38 +70,37 @@ export default function Navbar() {
           ))}
         </ul>
 
-        {/* Desktop CTAs */}
-        <div className="hidden lg:flex items-center gap-2">
-          {/* Spoed button */}
+        {/* CTAs — phone always visible */}
+        <div className="flex items-center gap-2">
+          {/* Spoed button — desktop only */}
           <a
             href={`tel:${TELEFOON_RAW}`}
-            className="flex items-center gap-1.5 bg-red-500 hover:bg-red-600 text-white text-sm font-bold px-3 py-2 rounded-lg transition-colors animate-[pulse-red_2.5s_ease_infinite]"
-            style={{
-              animation: "pulse-red 2.5s ease infinite",
-            }}
+            className="hidden lg:flex items-center gap-1.5 bg-red-500 hover:bg-red-600 text-white text-sm font-bold px-3 py-2 rounded-lg transition-colors"
+            style={{ animation: "pulse-red 2.5s ease infinite" }}
           >
             <AlertCircle size={15} />
             <span>Spoed</span>
           </a>
 
-          {/* Phone button */}
+          {/* Phone button — always visible */}
           <a
             href={`tel:${TELEFOON_RAW}`}
-            className="flex items-center gap-1.5 bg-[--color-amber] hover:bg-[--color-amber-dark] text-white text-sm font-bold px-4 py-2 rounded-lg transition-colors"
+            className="flex items-center gap-1.5 bg-[--color-amber] hover:bg-amber-500 text-white font-black px-3 md:px-4 py-2 rounded-lg transition-colors text-sm md:text-base"
           >
-            <Phone size={15} />
-            <span>{TELEFOON}</span>
+            <Phone size={16} strokeWidth={2.5} />
+            <span className="hidden sm:inline">{TELEFOON}</span>
+            <span className="sm:hidden">Bellen</span>
           </a>
-        </div>
 
-        {/* Mobile hamburger */}
-        <button
-          onClick={() => setMobileOpen((o) => !o)}
-          aria-label="Menu openen"
-          className="lg:hidden p-2 text-slate-600 hover:text-[--color-navy] transition-colors cursor-pointer"
-        >
-          {mobileOpen ? <X size={24} /> : <Menu size={24} />}
-        </button>
+          {/* Mobile hamburger */}
+          <button
+            onClick={() => setMobileOpen((o) => !o)}
+            aria-label="Menu openen"
+            className="lg:hidden p-2 text-slate-600 hover:text-[--color-navy] transition-colors cursor-pointer"
+          >
+            {mobileOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
+        </div>
       </nav>
 
       {/* Mobile menu */}

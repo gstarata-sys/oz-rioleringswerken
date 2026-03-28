@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, IBM_Plex_Mono } from "next/font/google";
+import { Barlow_Condensed, Barlow } from "next/font/google";
 import "./globals.css";
 
 import UrgencyBanner   from "@/components/layout/UrgencyBanner";
@@ -8,17 +8,18 @@ import Footer          from "@/components/layout/Footer";
 import FloatingButtons from "@/components/layout/FloatingButtons";
 import CookieBanner    from "@/components/layout/CookieBanner";
 
-const inter = Inter({
+const barlowCondensed = Barlow_Condensed({
   subsets: ["latin"],
+  weight: ["600", "700", "800", "900"],
   display: "swap",
-  variable: "--font-inter",
+  variable: "--font-display",
 });
 
-const ibmPlexMono = IBM_Plex_Mono({
+const barlow = Barlow({
   subsets: ["latin"],
-  weight: ["400", "500"],
+  weight: ["400", "500", "600", "700"],
   display: "swap",
-  variable: "--font-ibm-plex-mono",
+  variable: "--font-sans",
 });
 
 export const metadata: Metadata = {
@@ -42,7 +43,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="nl" className={`${inter.variable} ${ibmPlexMono.variable}`}>
+    <html lang="nl" className={`${barlowCondensed.variable} ${barlow.variable}`}>
       <body className="antialiased">
         <UrgencyBanner />
         <Navbar />

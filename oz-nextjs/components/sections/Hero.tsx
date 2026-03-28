@@ -56,11 +56,12 @@ export default function Hero() {
               initial={{ y: 28, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.6, delay: 0.35 }}
-              className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white leading-[1.1] mb-5"
+              className="text-5xl md:text-7xl lg:text-8xl font-black text-white leading-[0.95] tracking-wide uppercase mb-5"
+              style={{ fontFamily: "var(--font-display)" }}
             >
               Vakkundig.<br />
               Betrouwbaar.<br />
-              <span className="text-[--color-cyan]">Altijd bereikbaar.</span>
+              <span className="text-[--color-amber]">Altijd bereikbaar.</span>
             </motion.h1>
 
             <motion.p
@@ -80,10 +81,11 @@ export default function Hero() {
             >
               <a
                 href={`tel:${TELEFOON_RAW}`}
-                className="flex items-center gap-2 bg-[--color-cyan] hover:bg-[--color-cyan-dark] text-white font-bold px-6 py-3.5 rounded-xl transition-colors shadow-lg shadow-[--color-cyan]/30"
+                className="flex items-center gap-2 bg-[--color-amber] hover:bg-amber-500 text-white font-black text-lg px-6 py-3.5 rounded-xl transition-colors shadow-lg shadow-amber-500/30 tracking-wide"
+                style={{ fontFamily: "var(--font-display)" }}
               >
-                <Phone size={18} />
-                Bel {TELEFOON}
+                <Phone size={20} strokeWidth={2.5} />
+                {TELEFOON}
               </a>
               <a
                 href={WHATSAPP_URL}
@@ -117,7 +119,7 @@ export default function Hero() {
               </div>
 
               {/* Photo */}
-              <div className="relative aspect-[4/3]">
+              <div className="relative aspect-[3/4]">
                 <Image
                   src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=600&q=80&fit=crop&auto=format"
                   alt="Vakman aan het werk"
