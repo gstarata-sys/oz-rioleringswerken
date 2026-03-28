@@ -43,11 +43,10 @@ export default function Navbar() {
         {/* Desktop CTA */}
         <div className="hidden lg:flex items-center gap-3">
           <a
-            href={`tel:${TELEFOON_RAW}`}
+            href="#contact"
             className="flex items-center gap-2 bg-[#f59e0b] hover:bg-amber-500 font-semibold text-base px-6 py-3.5 rounded-xl shadow-lg shadow-amber-500/30 btn-press text-[#111111]"
           >
-            <Phone size={18} strokeWidth={2.5} className="text-[#111111]" />
-            <span className="text-[#111111]">Bel Nu: {TELEFOON}</span>
+            <span className="text-[#111111]">Offerte aanvragen →</span>
           </a>
         </div>
 
