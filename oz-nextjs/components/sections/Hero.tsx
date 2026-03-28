@@ -46,7 +46,7 @@ export default function Hero() {
             initial={{ y: 20, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="inline-flex items-center gap-2 bg-[#f59e0b] text-[#0f172a] text-xs font-black px-3.5 py-2 rounded-full mb-6"
+            className="inline-flex items-center gap-2 bg-[#f59e0b] text-[#111111] text-sm font-semibold px-5 py-2.5 rounded-xl shadow-lg shadow-amber-500/30 mb-6"
           >
             ⏱ 24/7 Spoedservice
           </motion.div>
