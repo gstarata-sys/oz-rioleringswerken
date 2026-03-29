@@ -7,7 +7,7 @@ import FadeIn from "@/components/animations/FadeIn";
 export default function Pricing() {
 
   return (
-    <section id="tarieven" className="pt-20 md:pt-28 pb-2 bg-[#0f172a]">
+    <section id="tarieven" className="pt-10 md:pt-14 pb-2 bg-[#0f172a]">
       <div className="max-w-7xl mx-auto px-5 md:px-8">
         <FadeIn className="text-center mb-14">
           <span className="inline-block text-xs font-bold uppercase tracking-widest text-[#06b6d4] mb-3">
