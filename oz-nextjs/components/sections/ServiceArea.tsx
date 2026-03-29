@@ -1,4 +1,4 @@
-import { MapPin } from "lucide-react";
+import { MapPin, Info } from "lucide-react";
 import { WERKGEBIED_STEDEN } from "@/lib/constants";
 import FadeIn from "@/components/animations/FadeIn";
 
@@ -18,6 +18,14 @@ export default function ServiceArea() {
             <p className="text-[#4a5568] text-base leading-relaxed mb-7">
               Wij zijn actief in heel Oost-Vlaanderen. Gemiddeld zijn wij binnen 35 minuten bij u ter plaatse.
             </p>
+
+            <div className="flex items-start gap-3 bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 mb-6 text-sm text-[#4a5568]">
+              <Info size={15} className="text-[#00b4d8] shrink-0 mt-0.5" />
+              <p>
+                <span className="font-semibold text-[#1a3a5c]">Buiten Oost-Vlaanderen?</span>{" "}
+                Wij werken ook buiten de regio. Er wordt een kilometervergoeding van <span className="font-semibold">€0,45/km</span> (heen en terug) aangerekend bovenop de normale tarieven. Neem contact op voor een prijsopgave op maat.
+              </p>
+            </div>
 
             <div className="grid grid-cols-2 sm:grid-cols-3 gap-2.5">
               {WERKGEBIED_STEDEN.map((stad) => (

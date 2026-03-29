@@ -41,16 +41,16 @@ export const DIENSTEN = [
     },
   },
   {
-    id: "camera-inspectie",
-    icon: "Camera",
-    titel: "Camera-inspectie",
-    prijs: "vanaf €125",
-    beschrijving: "Exacte diagnose met HD camera in uw riolering.",
-    details: ["HD beeldkwaliteit", "Rapport + videobeelden", "Scheurinspectie", "Locatiebepaling lek"],
+    id: "vloerverwarming",
+    icon: "Flame",
+    titel: "Vloerverwarming",
+    prijs: "Op offerte",
+    beschrijving: "Installatie en herstelling van vloerverwarming (elektrisch & water).",
+    details: ["Elektrisch & watervloerverwarming", "Nieuwbouw & renovatie", "Thermostaat inbegrepen", "Gecombineerd met chape"],
     popup: {
-      intro: "Met onze HD camera-inspectie brengen wij de toestand van uw riolering exact in kaart. U ontvangt een visueel rapport met videobeelden — ideaal voor aan- en verkoop van een woning of bij aanhoudende problemen.",
-      punten: ["HD beeldkwaliteit in kleur", "Scheurdetectie & wortels opsporen", "Exacte locatiebepaling van lekken", "Rapport + videobeelden als bijlage", "Geschikt voor keuring bij verkoop woning"],
-      cta: "Plan een inspectie",
+      intro: "Vloerverwarming zorgt voor een aangenaam en energiezuinig binnenklimaat. Wij installeren zowel elektrische als watervloerverwarming, geschikt voor nieuwbouw én renovatie. Na een gratis plaatsbezoek bezorgen wij u een offerte op maat.",
+      punten: ["Elektrische & watervloerverwarming", "Nieuwbouw én bestaande woningen", "Thermostaat plaatsing inbegrepen", "Gecombineerd met chapewerken mogelijk", "Gratis plaatsbezoek en offerte"],
+      cta: "Vraag een gratis offerte",
     },
   },
   {
@@ -69,26 +69,26 @@ export const DIENSTEN = [
   {
     id: "septische-put",
     icon: "CircleDot",
-    titel: "Septische Put Ruimen",
+    titel: "Septische Put Plaatsen",
     prijs: "Op offerte",
-    beschrijving: "Professioneel ledigen en reinigen van septische putten.",
-    details: ["Vacuüm-lediging", "Reiniging binnenwanden", "Controle en keuring", "Verslag voor gemeente"],
+    beschrijving: "Plaatsing van beton of kunststof septische putten op maat.",
+    details: ["Betonnen & kunststof putten", "Graafwerken inbegrepen", "Keuring & attest", "Conform wetgeving"],
     popup: {
-      intro: "De prijs voor het ruimen van een septische put hangt af van het aantal liters en het type put (beton of kunststof). Een gemiddelde betonnen put van 3.000L start vanaf €180. Wij bezorgen u vooraf altijd een vaste prijs.",
-      punten: ["Vacuüm-lediging van alle putformaten", "Reiniging van binnenwanden inbegrepen", "Controle op scheuren en lekkages", "Officieel verslag voor gemeente of VMM", "Beton én kunststof septische putten"],
+      intro: "De prijs voor het plaatsen van een septische put hangt af van het volume en het type put (beton of kunststof). Wij voorzien de volledige plaatsing inclusief graafwerken en conformiteitsattest. Na een gratis plaatsbezoek ontvangt u een vaste offerte.",
+      punten: ["Betonnen én kunststof septische putten", "Graafwerken volledig inbegrepen", "Keuring en conformiteitsattest voorzien", "Conform VMM- en rioleringsnormen", "Offerte na gratis plaatsbezoek"],
       cta: "Vraag een offerte op maat",
     },
   },
   {
-    id: "vetafscheider",
-    icon: "Filter",
-    titel: "Vetafscheider Ruimen",
+    id: "chapewerken",
+    icon: "Layers",
+    titel: "Chapewerken",
     prijs: "Op offerte",
-    beschrijving: "Reinigen van vetafscheiders voor horeca en bedrijven.",
-    details: ["Horecasector", "Industrie & bedrijven", "Conform wetgeving", "Reinigingsattest"],
+    beschrijving: "Cementdekvloer voor nieuwbouw, renovatie en vloerverwarming.",
+    details: ["Cementdekvloer", "Nivellering", "Nieuwbouw & renovatie", "Sneldrogende chape"],
     popup: {
-      intro: "Vetafscheiders in horeca en industrie moeten wettelijk regelmatig gereinigd worden. Wij reinigen uw vetafscheider conform de geldende wetgeving en leveren ter plaatse een reinigingsattest af. De prijs hangt af van het volume en de vervuilingsgraad.",
-      punten: ["Horeca, bakkerijen & industriële keukens", "Reinigen + spoelen van alle compartimenten", "Reinigingsattest ter plaatse afgeleverd", "Conform wetgeving (VLAREM)", "Onderhoudscontract mogelijk voor vaste prijs"],
+      intro: "Een kwalitatieve dekvloer is de basis van elke afwerking. Wij leggen cementgebonden en anhydrietdekvloeren voor nieuwbouw, renovatie en in combinatie met vloerverwarming. De prijs wordt bepaald per m² na een gratis plaatsbezoek.",
+      punten: ["Cementgebonden & anhydrietdekvloer", "Voorbereiding & grondlaag inbegrepen", "Gecombineerd met vloerverwarming mogelijk", "Sneldrogende chape op aanvraag", "Prijs per m² op offerte"],
       cta: "Vraag een offerte",
     },
   },
@@ -106,16 +106,16 @@ export const DIENSTEN = [
     },
   },
   {
-    id: "lekdetectie",
-    icon: "Droplets",
-    titel: "Waterlekkage Opsporen",
-    prijs: "vanaf €79",
-    beschrijving: "Lekdetectie zonder destructief zoeken.",
-    details: ["Niet-destructief", "Thermische camera", "Exact lekpunt", "Snel rapport"],
+    id: "tegels-zetten",
+    icon: "Grid3X3",
+    titel: "Tegels Zetten",
+    prijs: "Op offerte",
+    beschrijving: "Vloer- en wandtegels voor badkamer, keuken en andere ruimtes.",
+    details: ["Vloer- & wandtegels", "Badkamer & keuken", "Waterdichte afwerking", "Nette voegen"],
     popup: {
-      intro: "Een verborgen waterlek kan grote schade veroorzaken. Met niet-destructieve technieken (thermische camera, akoestische detectie) vinden wij het exacte lekpunt zonder slopen. U ontvangt een rapport met de locatie en aanbevolen herstelwerkzaamheden.",
-      punten: ["Niet-destructief — geen onnodige sloopwerken", "Thermische camera & akoestische detectie", "Exact lekpunt bepaald in één bezoek", "Snel schriftelijk rapport achteraf", "Combineerbaar met herstel ter plaatse"],
-      cta: "Bel voor snelle lekdetectie",
+      intro: "Wij plaatsen vloer- en wandtegels in alle formaten en stijlen, van badkamer en keuken tot leefruimte en terras. Inclusief waterdichte ondervloer en nette voegen. De prijs wordt bepaald per m² na een gratis plaatsbezoek.",
+      punten: ["Vloer- & wandtegels in alle formaten", "Badkamer, keuken & leefruimte", "Waterdichte ondervloer voorzien", "Nette voegen & professionele afwerking", "Prijs per m² op offerte"],
+      cta: "Vraag een offerte",
     },
   },
 ] as const;
@@ -134,7 +134,7 @@ export const FAQ_ITEMS = [
   {
     vraag: "Werken jullie ook 's nachts en in het weekend?",
     antwoord:
-      "Ja, wij zijn 24/7 beschikbaar, ook op feestdagen. Het spoedtarief (€75/uur) is van toepassing buiten normale werkuren (ma–vr 07:00–19:00).",
+      "Ja, wij zijn 24/7 beschikbaar, ook op feestdagen. Het spoedtarief (€125/uur) is van toepassing buiten normale werkuren (ma–vr 07:00–19:00).",
   },
   {
     vraag: "Geven jullie garantie op uitgevoerde werken?",
@@ -144,12 +144,22 @@ export const FAQ_ITEMS = [
   {
     vraag: "In welke regio zijn jullie actief?",
     antwoord:
-      "Wij zijn actief in Gent en heel Oost-Vlaanderen: Merelbeke, Melle, Wetteren, Aalst, Dendermonde, Sint-Niklaas, Lochristi, Destelbergen en meer.",
+      "Wij zijn actief in Gent en heel Oost-Vlaanderen: Merelbeke, Melle, Wetteren, Aalst, Dendermonde, Sint-Niklaas, Lochristi, Destelbergen en meer. Buiten Oost-Vlaanderen werken wij ook — hiervoor rekenen wij een kilometervergoeding van €0,45/km.",
   },
   {
     vraag: "Wat zijn de voorrijkosten?",
     antwoord:
       "Wij rekenen €49 voorrijkosten, inclusief de eerste diagnose ter plaatse. Geen verborgen kosten — altijd transparante prijzen.",
+  },
+  {
+    vraag: "Doen jullie ook vloerverwarming, chapewerken en tegelwerken?",
+    antwoord:
+      "Ja, naast rioleringswerken voeren wij ook vloerverwarming (elektrisch & water), chapewerken en tegelwerken uit. Vraag een gratis offerte aan via ons contactformulier of bel ons direct.",
+  },
+  {
+    vraag: "Plaatsen jullie ook septische putten?",
+    antwoord:
+      "Ja, wij plaatsen zowel betonnen als kunststof septische putten, inclusief graafwerken, keuring en conformiteitsattest. Na een gratis plaatsbezoek ontvangt u een offerte op maat.",
   },
 ] as const;
 
@@ -184,7 +194,7 @@ export const TARIEVEN = [
   },
   {
     naam: "Spoedreparatie",
-    prijs: "€75/uur",
+    prijs: "€125/uur",
     omschrijving: "Avond, weekend & feestdagen",
     kenmerken: [
       "Respons binnen 35 min",
@@ -194,19 +204,6 @@ export const TARIEVEN = [
     ],
     featured: true,
     badge: "MEEST GEVRAAGD",
-  },
-  {
-    naam: "Onderhoudscontract",
-    prijs: "Op maat",
-    omschrijving: "Periodiek onderhoud voor bedrijven",
-    kenmerken: [
-      "Vaste onderhoudsplanning",
-      "Prioriteit bij storingen",
-      "Jaarlijkse camera-inspectie",
-      "Voordelig tarief",
-    ],
-    featured: false,
-    badge: null,
   },
 ] as const;
 

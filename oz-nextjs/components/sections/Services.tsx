@@ -2,14 +2,14 @@
 
 import { useState } from "react";
 import {
-  Waves, CircleDot, Shovel, Pipette, HardHat, Filter, Droplets, Camera, Phone,
+  Waves, CircleDot, Shovel, Pipette, HardHat, Flame, Layers, Grid3X3, Phone,
 } from "lucide-react";
 import { DIENSTEN, TELEFOON_RAW } from "@/lib/constants";
 import FadeIn from "@/components/animations/FadeIn";
 import ServiceModal from "@/components/sections/ServiceModal";
 
 const ICON_MAP: Record<string, React.ElementType> = {
-  Waves, CircleDot, Shovel, Pipette, HardHat, Filter, Droplets, Camera,
+  Waves, CircleDot, Shovel, Pipette, HardHat, Flame, Layers, Grid3X3,
 };
 
 type Dienst = typeof DIENSTEN[number];
