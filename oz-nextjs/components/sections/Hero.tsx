@@ -44,11 +44,11 @@ export default function Hero() {
         transition={{ duration: 0.8, delay: 0.5 }}
         className="hidden lg:block absolute z-20"
         style={{
-          bottom: "10%",
-          left: "38%",
-          width: "280px",
-          height: "340px",
-          transform: "rotate(-2deg)",
+          top: "50%",
+          right: "8%",
+          transform: "translateY(-50%) rotate(-2deg)",
+          width: "320px",
+          height: "390px",
           boxShadow: "0 25px 60px rgba(0,0,0,0.55), 0 10px 30px rgba(0,0,0,0.35), 0 0 0 1px rgba(255,255,255,0.08)",
           borderRadius: "16px",
           overflow: "hidden",
