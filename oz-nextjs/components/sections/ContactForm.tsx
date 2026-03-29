@@ -6,27 +6,36 @@ import { Send, CheckCircle, AlertCircle, Loader } from "lucide-react";
 import { FORMSPREE_ID } from "@/lib/constants";
 
 const DIENSTEN_OPTIES = [
-  { value: "rioleringswerken",  label: "Rioleringswerken"   },
-  { value: "septische-put",     label: "Septische putten"   },
+  { value: "rioleringswerken",  label: "Rioleringswerken"    },
+  { value: "septische-put",     label: "Septische putten"    },
   { value: "grondwerken",       label: "Grond- & graafwerken"},
-  { value: "buizen-leidingen",  label: "Buizen & leidingen" },
-  { value: "herstellingen",     label: "Herstellingen"      },
-  { value: "tegelwerken",       label: "Tegelwerken"        },
-  { value: "vloerverwarming",   label: "Vloerverwarming"    },
-  { value: "algemene-werken",   label: "Algemene werken"    },
-  { value: "spoed",             label: "Spoedinterventie"   },
-  { value: "onderhoud",         label: "Onderhoudscontract" },
+  { value: "buizen-leidingen",  label: "Buizen & leidingen"  },
+  { value: "herstellingen",     label: "Herstellingen"       },
+  { value: "tegelwerken",       label: "Tegelwerken"         },
+  { value: "vloerverwarming",   label: "Vloerverwarming"     },
+  { value: "algemene-werken",   label: "Algemene werken"     },
+  { value: "spoed",             label: "Spoedinterventie"    },
+  { value: "andere",            label: "Andere"              },
+];
+
+const PLANNING_OPTIES = [
+  { value: "zo-snel-mogelijk", label: "Zo snel mogelijk" },
+  { value: "deze-week",        label: "Deze week"        },
+  { value: "deze-maand",       label: "Deze maand"       },
+  { value: "specifieke-datum", label: "Specifieke datum" },
 ];
 
 type Status = "idle" | "sending" | "success" | "error";
 
 export default function ContactForm() {
-  const [naam, setNaam]       = useState("");
-  const [telefoon, setTelefoon] = useState("");
-  const [email, setEmail]     = useState("");
-  const [bericht, setBericht] = useState("");
-  const [diensten, setDiensten] = useState<string[]>([]);
-  const [status, setStatus]   = useState<Status>("idle");
+  const [naam, setNaam]           = useState("");
+  const [telefoon, setTelefoon]   = useState("");
+  const [email, setEmail]         = useState("");
+  const [bericht, setBericht]     = useState("");
+  const [diensten, setDiensten]   = useState<string[]>([]);
+  const [planning, setPlanning]   = useState("");
+  const [datum, setDatum]         = useState("");
+  const [status, setStatus]       = useState<Status>("idle");
   const [dienstError, setDienstError] = useState(false);
 
   function toggleDienst(value: string) {
@@ -44,16 +53,18 @@ export default function ContactForm() {
     }
     setStatus("sending");
     try {
+      const payload: Record<string, unknown> = {
+        naam, telefoon, email, bericht, diensten, planning,
+      };
+      if (planning === "specifieke-datum" && datum) {
+        payload.datum = datum;
+      }
       const res = await fetch(`https://formspree.io/f/${FORMSPREE_ID}`, {
         method: "POST",
         headers: { "Content-Type": "application/json", Accept: "application/json" },
-        body: JSON.stringify({ naam, telefoon, email, bericht, diensten }),
+        body: JSON.stringify(payload),
       });
-      if (res.ok) {
-        setStatus("success");
-      } else {
-        setStatus("error");
-      }
+      setStatus(res.ok ? "success" : "error");
     } catch {
       setStatus("error");
     }
@@ -77,7 +88,7 @@ export default function ContactForm() {
 
   return (
     <form onSubmit={handleSubmit} noValidate className="space-y-5">
-      {/* Name + Phone */}
+      {/* Naam + Telefoon */}
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         <div>
           <label htmlFor="naam" className="block text-xs font-semibold text-[#0f172a] mb-1.5 uppercase tracking-wide">
@@ -109,7 +120,7 @@ export default function ContactForm() {
         </div>
       </div>
 
-      {/* Email */}
+      {/* E-mail */}
       <div>
         <label htmlFor="email" className="block text-xs font-semibold text-[#0f172a] mb-1.5 uppercase tracking-wide">
           E-mailadres
@@ -182,7 +193,67 @@ export default function ContactForm() {
         </AnimatePresence>
       </div>
 
-      {/* Message */}
+      {/* Planning */}
+      <div>
+        <p className="text-xs font-semibold text-[#0f172a] mb-2 uppercase tracking-wide">
+          Wanneer wenst u de werken?
+        </p>
+        <div className="grid grid-cols-2 gap-2 p-3 bg-slate-50 rounded-xl">
+          {PLANNING_OPTIES.map((opt) => {
+            const selected = planning === opt.value;
+            return (
+              <button
+                key={opt.value}
+                type="button"
+                onClick={() => setPlanning(opt.value)}
+                className={`flex items-center gap-2.5 px-3 py-2.5 rounded-lg border text-sm cursor-pointer transition-all select-none text-left ${
+                  selected
+                    ? "border-[#06b6d4] bg-[#06b6d4]/10 text-[#0f172a] font-semibold"
+                    : "border-slate-200 bg-white text-slate-600 hover:border-[#06b6d4]/50"
+                }`}
+              >
+                <span
+                  className={`w-4 h-4 rounded-full border flex items-center justify-center shrink-0 transition-colors ${
+                    selected ? "bg-[#06b6d4] border-[#06b6d4]" : "border-slate-300 bg-white"
+                  }`}
+                >
+                  {selected && <span className="w-2 h-2 rounded-full bg-white block" />}
+                </span>
+                {opt.label}
+              </button>
+            );
+          })}
+        </div>
+
+        {/* Datum picker */}
+        <AnimatePresence>
+          {planning === "specifieke-datum" && (
+            <motion.div
+              initial={{ opacity: 0, height: 0 }}
+              animate={{ opacity: 1, height: "auto" }}
+              exit={{ opacity: 0, height: 0 }}
+              transition={{ duration: 0.2 }}
+              className="overflow-hidden"
+            >
+              <div className="mt-3">
+                <label htmlFor="datum" className="block text-xs font-semibold text-[#0f172a] mb-1.5 uppercase tracking-wide">
+                  Gewenste datum
+                </label>
+                <input
+                  id="datum"
+                  type="date"
+                  value={datum}
+                  onChange={(e) => setDatum(e.target.value)}
+                  min={new Date().toISOString().split("T")[0]}
+                  className="w-full border border-slate-200 rounded-xl px-4 py-3 text-sm text-[#0f172a] focus:outline-none focus:border-[#06b6d4] focus:ring-2 focus:ring-[#06b6d4]/20 transition-colors"
+                />
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
+      </div>
+
+      {/* Bericht */}
       <div>
         <label htmlFor="bericht" className="block text-xs font-semibold text-[#0f172a] mb-1.5 uppercase tracking-wide">
           Uw bericht
