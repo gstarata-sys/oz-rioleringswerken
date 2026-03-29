@@ -9,6 +9,17 @@ export const FORMSPREE_ID = "xreobepr";
 // Kept for Portfolio component (not shown on main page)
 export const PORTFOLIO_ITEMS: Array<{ id: number; titel: string; categorie: string; afbeelding: string }> = [];
 
+export const REALISATIES = [
+  { id: 1, locatie: "Gent",         afbeelding: "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=600&q=80&fit=crop" },
+  { id: 2, locatie: "Merelbeke",    afbeelding: "https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=600&q=80&fit=crop" },
+  { id: 3, locatie: "Aalst",        afbeelding: "https://images.unsplash.com/photo-1621905251918-48416bd8575a?w=600&q=80&fit=crop" },
+  { id: 4, locatie: "Wetteren",     afbeelding: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80&fit=crop" },
+  { id: 5, locatie: "Sint-Niklaas", afbeelding: "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=600&q=80&fit=crop" },
+  { id: 6, locatie: "Dendermonde",  afbeelding: "https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=600&q=80&fit=crop" },
+  { id: 7, locatie: "Lochristi",    afbeelding: "https://images.unsplash.com/photo-1621905251918-48416bd8575a?w=600&q=80&fit=crop" },
+  { id: 8, locatie: "Destelbergen", afbeelding: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80&fit=crop" },
+];
+
 export const REVIEWS: Array<{ naam: string; locatie: string; tekst: string; sterren: number }> = [];
 
 export const WHATSAPP_URL = `https://wa.me/${WHATSAPP_NUMBER}?text=Goedendag%2C%20ik%20wil%20graag%20een%20offerte%20aanvragen.`;

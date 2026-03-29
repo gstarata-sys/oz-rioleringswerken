@@ -129,6 +129,16 @@
   .animate-marquee:hover {
     animation-play-state: paused;
   }
+
+  /* Realisaties infinite scroll */
+  .animate-marquee-realisaties {
+    animation: marquee-realisaties 30s linear infinite;
+  }
+}
+
+@keyframes marquee-realisaties {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-33.333%); }
 }
 
 @keyframes marquee {
