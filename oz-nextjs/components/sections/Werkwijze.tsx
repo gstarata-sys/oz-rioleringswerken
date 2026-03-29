@@ -79,8 +79,8 @@ export default function Werkwijze() {
 
         {/* Stats + CTA banner */}
         <FadeIn delay={0.3}>
-          <div className="border border-slate-100 rounded-2xl py-10 px-8"
-            style={{ boxShadow: "0 1px 3px rgba(0,0,0,0.05), 0 8px 24px rgba(0,0,0,0.05)" }}>
+          <div className="border border-slate-200 rounded-2xl py-10 px-8 bg-white"
+            style={{ boxShadow: "0 4px 6px rgba(0,0,0,0.04), 0 12px 40px rgba(0,0,0,0.10), 0 2px 0px rgba(0,180,216,0.15)" }}>
             <div className="grid grid-cols-3 gap-6 divide-x divide-slate-200 mb-8">
               <CounterStat value={35} suffix=" min" label="Gemiddelde responstijd" />
               <CounterStat value={0} suffix="" label="Beschikbaar, ook feestdagen" staticDisplay="24/7" />
