@@ -56,7 +56,7 @@ export default function Skills() {
   }
 
   return (
-    <section id="expertise" className="py-20 md:py-28 bg-[#f8fafc]">
+    <section id="expertise" className="pt-10 md:pt-14 pb-20 md:pb-28 bg-[#f8fafc]">
       <div className="max-w-4xl mx-auto px-5 md:px-8">
         <FadeIn className="text-center mb-14">
           <span className="inline-block text-xs font-bold uppercase tracking-[2px] text-[#00b4d8] mb-3">

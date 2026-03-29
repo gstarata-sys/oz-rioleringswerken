@@ -19,7 +19,7 @@ export default function Services() {
 
   return (
     <>
-      <section id="diensten" className="py-20 md:py-28 bg-slate-50">
+      <section id="diensten" className="pt-20 md:pt-28 pb-10 bg-slate-50">
         <div className="max-w-7xl mx-auto px-5 md:px-8">
 
           {/* Header */}
