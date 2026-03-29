@@ -7,7 +7,7 @@ const TRACK = [...REALISATIES, ...REALISATIES, ...REALISATIES];
 
 export default function Realisaties() {
   return (
-    <section id="realisaties" className="py-16 md:py-20 bg-white overflow-hidden">
+    <section id="realisaties" className="py-20 md:py-28 bg-white overflow-hidden">
       {/* Header */}
       <FadeIn className="max-w-7xl mx-auto px-5 md:px-8 mb-10 text-center">
         <span className="inline-block text-xs font-bold uppercase tracking-widest text-[#06b6d4] mb-3">
@@ -47,6 +47,16 @@ export default function Realisaties() {
             </div>
           ))}
         </div>
+      </div>
+
+      {/* Link naar volledige pagina */}
+      <div className="max-w-7xl mx-auto px-5 md:px-8 mt-8 text-center">
+        <a
+          href="/realisaties"
+          className="inline-flex items-center gap-2 text-[#06b6d4] font-semibold text-sm hover:text-[#0891b2] transition-colors"
+        >
+          Bekijk alle realisaties →
+        </a>
       </div>
     </section>
   );

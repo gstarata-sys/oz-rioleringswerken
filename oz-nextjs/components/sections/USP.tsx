@@ -27,7 +27,7 @@ const ITEMS = [
 
 export default function USP() {
   return (
-    <section className="bg-[#0f172a] pt-2 pb-16">
+    <section className="bg-[#0f172a] pt-2 pb-20 md:pb-28">
       <div className="max-w-7xl mx-auto px-5 md:px-8">
         <FadeIn className="text-center mb-10">
           <span className="inline-block text-xs font-bold uppercase tracking-widest text-[#06b6d4] mb-3">
