@@ -32,7 +32,7 @@ export default function Contact() {
           <FadeIn direction="left" className="lg:col-span-2 space-y-6">
             {/* Direct contact */}
             <div className="bg-[#0f172a] rounded-2xl p-6 text-white">
-              <h3 className="font-bold mb-4">Direct contact</h3>
+              <h3 className="font-bold mb-4 text-[#f59e0b]">Direct contact</h3>
               <div className="space-y-3">
                 <a
                   href={`tel:${TELEFOON_RAW}`}
@@ -41,7 +41,7 @@ export default function Contact() {
                   <Phone size={18} className="text-[#06b6d4] shrink-0" />
                   <div>
                     <p className="text-xs text-white">Bellen</p>
-                    <p className="font-bold text-sm">{TELEFOON}</p>
+                    <p className="font-bold text-sm text-white">{TELEFOON}</p>
                   </div>
                 </a>
                 <a
@@ -53,7 +53,7 @@ export default function Contact() {
                   <WhatsAppIcon size={18} className="text-[#25D366] shrink-0" />
                   <div>
                     <p className="text-xs text-white">WhatsApp</p>
-                    <p className="font-bold text-sm">Stuur een bericht</p>
+                    <p className="font-bold text-sm text-white">Stuur een bericht</p>
                   </div>
                 </a>
                 <a
@@ -63,7 +63,7 @@ export default function Contact() {
                   <Mail size={18} className="text-[#06b6d4] shrink-0" />
                   <div>
                     <p className="text-xs text-white">E-mail</p>
-                    <p className="font-bold text-sm">{EMAIL}</p>
+                    <p className="font-bold text-sm text-white">{EMAIL}</p>
                   </div>
                 </a>
               </div>
