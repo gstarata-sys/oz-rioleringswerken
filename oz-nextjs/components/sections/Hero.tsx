@@ -38,7 +38,7 @@ export default function Hero() {
       />
 
       {/* Content */}
-      <div className="relative z-10 max-w-7xl mx-auto px-5 md:px-8 w-full py-24">
+      <div className="relative z-10 max-w-7xl mx-auto px-5 md:px-4 w-full py-24">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center w-full">
 
           {/* Left: text */}
