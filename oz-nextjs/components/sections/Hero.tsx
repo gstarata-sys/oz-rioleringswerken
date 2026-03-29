@@ -13,7 +13,7 @@ export default function Hero() {
     >
       {/* Background image */}
       <Image
-        src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1920&q=80&fit=crop&auto=format"
+        src="/hero-bg.jpg"
         alt="Loodgieter aan het werk onder aanrecht"
         fill
         priority
