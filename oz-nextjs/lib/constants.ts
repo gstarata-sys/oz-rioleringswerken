@@ -20,12 +20,12 @@ export const DIENSTEN = [
     titel: "Riool Ontstoppen",
     prijs: "vanaf €149",
     beschrijving: "Snelle en definitieve ontstopping van verstopte riolen.",
-    details: [
-      "Riool volledig vrijmaken",
-      "Camera-controle na werk",
-      "Ter plaatse binnen 35 min",
-      "2 jaar garantie",
-    ],
+    details: ["Riool volledig vrijmaken", "Camera-controle na werk", "Ter plaatse binnen 35 min", "2 jaar garantie"],
+    popup: {
+      intro: "Een verstopt riool kan leiden tot wateroverlast en onaangename geuren. Wij lossen het probleem snel en definitief op met professionele hogedrukspuiting. Na de ontstopping voeren wij standaard een camera-controle uit om te controleren of het riool volledig vrij is.",
+      punten: ["Hogedrukspuiting tot 200 bar", "Camera-controle inbegrepen na werk", "Gemiddeld ter plaatse binnen 35 min", "Vaste prijs — geen verrassingen achteraf", "2 jaar garantie op de uitvoering"],
+      cta: "Bel voor directe hulp",
+    },
   },
   {
     id: "afvoer-ontstoppen",
@@ -33,12 +33,12 @@ export const DIENSTEN = [
     titel: "Afvoer Ontstoppen",
     prijs: "vanaf €89",
     beschrijving: "Bad, douche, wastafel, keukenafvoer — snel opgelost.",
-    details: [
-      "Binnenhuisafvoeren",
-      "Keuken & badkamer",
-      "Geen beschadigingen",
-      "Directe service",
-    ],
+    details: ["Binnenhuisafvoeren", "Keuken & badkamer", "Geen beschadigingen", "Directe service"],
+    popup: {
+      intro: "Verstopte bad, douche, wastafel of keukenafvoer? Wij reinigen alle binnenhuisafvoeren snel en zonder beschadigingen. De meeste verstoppingen lossen wij op tijdens het eerste bezoek.",
+      punten: ["Bad, douche, wastafel & keuken", "Spiraalreiniging of hogedruk", "Geen beschadigingen aan leidingen", "Directe service — zelfde dag mogelijk", "Prijs vanaf €89 incl. diagnose"],
+      cta: "Bel of stuur een bericht",
+    },
   },
   {
     id: "camera-inspectie",
@@ -46,12 +46,12 @@ export const DIENSTEN = [
     titel: "Camera-inspectie",
     prijs: "vanaf €125",
     beschrijving: "Exacte diagnose met HD camera in uw riolering.",
-    details: [
-      "HD beeldkwaliteit",
-      "Rapport + videobeelden",
-      "Scheurinspectie",
-      "Locatiebepaling lek",
-    ],
+    details: ["HD beeldkwaliteit", "Rapport + videobeelden", "Scheurinspectie", "Locatiebepaling lek"],
+    popup: {
+      intro: "Met onze HD camera-inspectie brengen wij de toestand van uw riolering exact in kaart. U ontvangt een visueel rapport met videobeelden — ideaal voor aan- en verkoop van een woning of bij aanhoudende problemen.",
+      punten: ["HD beeldkwaliteit in kleur", "Scheurdetectie & wortels opsporen", "Exacte locatiebepaling van lekken", "Rapport + videobeelden als bijlage", "Geschikt voor keuring bij verkoop woning"],
+      cta: "Plan een inspectie",
+    },
   },
   {
     id: "rioleringswerken",
@@ -59,12 +59,12 @@ export const DIENSTEN = [
     titel: "Rioleringswerken & Aanleg",
     prijs: "Op offerte",
     beschrijving: "Nieuwe aanleg en renovatie van rioleringen.",
-    details: [
-      "Nieuwe riolering aanleggen",
-      "Renovatie bestaande riolering",
-      "Graafwerken inbegrepen",
-      "Conform EPB-normen",
-    ],
+    details: ["Nieuwe riolering aanleggen", "Renovatie bestaande riolering", "Graafwerken inbegrepen", "Conform EPB-normen"],
+    popup: {
+      intro: "Voor de aanleg van nieuwe rioleringen of renovatie van bestaande leidingen bezorgen wij u een vrijblijvende offerte na een gratis plaatsbezoek. De prijs hangt af van de lengte, het type leiding en de graafdiepte.",
+      punten: ["Nieuwe riolering aanleggen (DWA & RWA)", "Renovatie & relining bestaande leidingen", "Graafwerken volledig inbegrepen", "Conform EPB- en rioleringsnormen", "Offerte altijd gratis en vrijblijvend"],
+      cta: "Vraag een gratis offerte",
+    },
   },
   {
     id: "septische-put",
@@ -72,12 +72,12 @@ export const DIENSTEN = [
     titel: "Septische Put Ruimen",
     prijs: "Op offerte",
     beschrijving: "Professioneel ledigen en reinigen van septische putten.",
-    details: [
-      "Vacuüm-lediging",
-      "Reiniging binnenwanden",
-      "Controle en keuring",
-      "Verslag voor gemeente",
-    ],
+    details: ["Vacuüm-lediging", "Reiniging binnenwanden", "Controle en keuring", "Verslag voor gemeente"],
+    popup: {
+      intro: "De prijs voor het ruimen van een septische put hangt af van het aantal liters en het type put (beton of kunststof). Een gemiddelde betonnen put van 3.000L start vanaf €180. Wij bezorgen u vooraf altijd een vaste prijs.",
+      punten: ["Vacuüm-lediging van alle putformaten", "Reiniging van binnenwanden inbegrepen", "Controle op scheuren en lekkages", "Officieel verslag voor gemeente of VMM", "Beton én kunststof septische putten"],
+      cta: "Vraag een offerte op maat",
+    },
   },
   {
     id: "vetafscheider",
@@ -85,12 +85,12 @@ export const DIENSTEN = [
     titel: "Vetafscheider Ruimen",
     prijs: "Op offerte",
     beschrijving: "Reinigen van vetafscheiders voor horeca en bedrijven.",
-    details: [
-      "Horecasector",
-      "Industrie & bedrijven",
-      "Conform wetgeving",
-      "Reinigingsattest",
-    ],
+    details: ["Horecasector", "Industrie & bedrijven", "Conform wetgeving", "Reinigingsattest"],
+    popup: {
+      intro: "Vetafscheiders in horeca en industrie moeten wettelijk regelmatig gereinigd worden. Wij reinigen uw vetafscheider conform de geldende wetgeving en leveren ter plaatse een reinigingsattest af. De prijs hangt af van het volume en de vervuilingsgraad.",
+      punten: ["Horeca, bakkerijen & industriële keukens", "Reinigen + spoelen van alle compartimenten", "Reinigingsattest ter plaatse afgeleverd", "Conform wetgeving (VLAREM)", "Onderhoudscontract mogelijk voor vaste prijs"],
+      cta: "Vraag een offerte",
+    },
   },
   {
     id: "huisaansluiting",
@@ -98,12 +98,12 @@ export const DIENSTEN = [
     titel: "Huisaansluiting Riolering",
     prijs: "Op offerte",
     beschrijving: "Correcte aansluiting van uw woning op het rioolnet.",
-    details: [
-      "Nieuwbouw & renovatie",
-      "Aansluiting rioolnet",
-      "DWA & RWA gescheiden",
-      "Keuring voorzien",
-    ],
+    details: ["Nieuwbouw & renovatie", "Aansluiting rioolnet", "DWA & RWA gescheiden", "Keuring voorzien"],
+    popup: {
+      intro: "Bij nieuwbouw of renovatie is een correcte aansluiting op het rioolnet verplicht. Wij verzorgen de volledige aansluiting inclusief de scheiding van vuil water (DWA) en regenwater (RWA), en regelen het conformiteitsattest.",
+      punten: ["Nieuwbouw & bestaande woningen", "Gescheiden stelsel DWA & RWA", "Aansluiting op gemeentelijk rioolnet", "Keuring en conformiteitsattest voorzien", "Graafwerken volledig inbegrepen"],
+      cta: "Plan een plaatsbezoek",
+    },
   },
   {
     id: "lekdetectie",
@@ -111,12 +111,12 @@ export const DIENSTEN = [
     titel: "Waterlekkage Opsporen",
     prijs: "vanaf €79",
     beschrijving: "Lekdetectie zonder destructief zoeken.",
-    details: [
-      "Niet-destructief",
-      "Thermische camera",
-      "Exact lekpunt",
-      "Snel rapport",
-    ],
+    details: ["Niet-destructief", "Thermische camera", "Exact lekpunt", "Snel rapport"],
+    popup: {
+      intro: "Een verborgen waterlek kan grote schade veroorzaken. Met niet-destructieve technieken (thermische camera, akoestische detectie) vinden wij het exacte lekpunt zonder slopen. U ontvangt een rapport met de locatie en aanbevolen herstelwerkzaamheden.",
+      punten: ["Niet-destructief — geen onnodige sloopwerken", "Thermische camera & akoestische detectie", "Exact lekpunt bepaald in één bezoek", "Snel schriftelijk rapport achteraf", "Combineerbaar met herstel ter plaatse"],
+      cta: "Bel voor snelle lekdetectie",
+    },
   },
 ] as const;
 
